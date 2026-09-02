@@ -1,4 +1,5 @@
 ---
+import HeroReviewSlider from '@/components/HeroReviewSlider.astro';
 ---
 <section class="w-full relative overflow-hidden bg-[hsl(240_50%_11%)]" data-ps="src/components/area/AreaHero.astro:2v84my">
   <div class="relative min-h-[500px] md:min-h-[560px] flex items-center w-full" data-ps="src/components/area/AreaHero.astro:pbpulf">
@@ -17,8 +18,8 @@
 
     <!-- Main Content Container -->
     <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24 w-full z-10 relative" data-ps="src/components/area/AreaHero.astro:pbpulh">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center w-full" data-ps="src/components/area/AreaHero.astro:pbpuli">
-        <div class="lg:col-span-8 flex flex-col items-start text-left" data-ps="src/components/area/AreaHero.astro:pbpulj">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center w-full" data-ps="src/components/area/AreaHero.astro:pbpuli">
+        <div class="lg:col-span-7 flex flex-col items-start text-left" data-ps="src/components/area/AreaHero.astro:pbpulj">
           <span class="bg-white/10 border border-white/25 text-white text-[12px] font-medium px-3.5 py-1.5 rounded-full inline-flex items-center gap-2 mb-6 backdrop-blur-sm" data-ps="src/components/area/AreaHero.astro:7jxcat">
             <span class="w-2 h-2 rounded-full bg-emerald-400" data-ps="src/components/area/AreaHero.astro:7jxcas"></span>
             Service Area
@@ -40,10 +41,10 @@
               See services
             </a>
           </div>
-          <div class="flex items-center gap-2 mt-6 text-white/90 text-[14px]" data-ps="src/components/area/AreaHero.astro:pbpull">
-            <span class="text-amber-300 text-[14px]" data-ps="src/components/area/AreaHero.astro:7jxcap">★</span>
-            5.0 · 27 Google reviews
-          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex justify-center lg:justify-end w-full" data-ps="src/components/area/AreaHero.astro:cardcol">
+          <HeroReviewSlider />
         </div>
       </div>
     </div>

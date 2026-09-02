@@ -1,33 +1,15 @@
 ---
-const reviews = [
-  { name: 'Jim', initial: 'J', quote: "Jordan was fantastic. He came out quickly, explained everything along the way, and we had A/C again during the heat wave! Use JT's!!!!!", date: 'Aug 2026' },
-  { name: 'David Rosner', initial: 'D', quote: "Jordan is, without a doubt, one of the best HVAC professionals I've ever worked with. His knowledge and expertise are exceptional, and he takes the time to thoroughly explain the problem and the best solution without ever making you feel pressured.", date: 'Jul 2026' },
-  { name: 'Charissa Hunter', initial: 'C', quote: "Jordan was very knowledgeable and professional. He was able to give us some energy saving tips. I highly recommend him!", date: 'Jul 2026' },
-  { name: 'Roxy C', initial: 'R', quote: "Great experience with JT's Heating Cooling and Plumbing. Quick response, fair pricing, and our AC was fixed the same day. Honest, professional service with excellent communication throughout the process.", date: 'Jul 2026' },
-  { name: 'Mary McCarty', initial: 'M', quote: "Excellent service and great guy! I reached out to him at 7am and he was at my house at 10am and was quick to fix my AC issue. Even provided tips to keep it working and charge was very reasonable. He is now my go-to for heating & cooling!", date: 'Jul 2026' },
-  { name: 'Lacey T', initial: 'L', quote: "Had Jordan out for a quote and he was great! Very kind and helpful, got to the house quickly and communicated well! From my interaction so far, it's been great!", date: 'Jul 2026' },
-  { name: 'Jenn Love-Kippen', initial: 'J', quote: "Jordan did a fantastic job doing our yearly AC inspection and tune-up. I have already committed to having him back out in the Fall for our furnace maintenance. He is friendly, knowledgeable, thorough, and his prices are excellent. Highly recommend!", date: 'Jul 2026' },
-  { name: 'Amelia Pavelka', initial: 'A', quote: "Such a wonderful experience with JT's Heating, Cooling & Plumbing! From the very beginning, I experienced prompt, professional and personable communication and service. Even on the hottest day of 2026, Jordan worked effectively, efficiently, and expertly on installation of my new air and heating systems.", date: 'Jul 2026' },
-  { name: 'Tran Ho', initial: 'T', quote: "JT's was recommended to us by Angie's List which setup my meeting with Jordan who was a pleasure to speak with. I barely knew anything about hvac, but he patiently walked me through all concerns and put me at ease with his insights and transparency.", date: 'Jul 2026' },
-  { name: 'Aaron', initial: 'A', quote: "Don't let the small number of reviews stop you from using JT's, this new company is awesome. Fast, professional and super fair rates. I had a gas leak and they quickly detected the problem areas, made the repairs, and done!", date: 'Jul 2026' },
-  { name: 'Russell V', initial: 'R', quote: "My in laws had an old fuel oil Furnace and water heater and wanted to switch to natural gas. They got several quotes and chose JT and couldn't be more pleased. He installed a whole new gas line, furnace, water heater, and Ac.", date: 'Jul 2026' },
-  { name: 'Senada Delic', initial: 'S', quote: "Jordan did an excellent job installing my new furnace and A/C unit. He was very professional, knowledgeable, and took the time to explain everything I needed to know. I could tell he takes pride in his work—he is detail-oriented, careful, and truly a perfectionist.", date: 'Jul 2026' },
-  { name: 'Ian Barrie', initial: 'I', quote: "JT diagnosed our AC issue in just minutes. He has the diagnostic tools and even shows you the report. A stand up, honest guy. Call JT.", date: 'Jul 2026' },
-  { name: 'Jamaica Walston', initial: 'J', quote: "The owner is the technician and has a fine personality and friendliness. His prices are reasonable, the products he uses our quality and he backs his work up. He will give you options and doesn't try to sell you the most expensive thing he has to offer.", date: 'Jul 2026' },
-  { name: 'Liam Cunningham', initial: 'L', quote: "JT was very professional and knowledgeable. He gave me the unfortunate diagnosis of needing both a new AC unit and furnace, but gave me the confidence that it was the right thing to do. Never did I feel like he was trying to oversell.", date: 'Jun 2026' },
-  { name: 'Elizabeth Gallagher', initial: 'E', quote: "JT was prompt in responding to call and arrival was spot on with the time he gave. He explained the issues we were having with our AC using verbiage that we understood. We will definitely be calling for future needs.", date: 'Jun 2026' },
-  { name: 'Nancy Golin', initial: 'N', quote: "Jordan from JT heating and cooling came to our home in Zeeland and tuned up and serviced our AC unit. He was very professional and knowledgeable and offered options to improve the efficiency of our older unit. He didn't try to upsell or try to persuade us to get a new system like big companies often try to do.", date: 'Jun 2026' },
-  { name: 'Gary H', initial: 'G', quote: "Jordan did an amazing job installing my dryer vent duct work!! A very professional, friendly and knowledgeable young man!! I would highly recommend and will be using him again for future projects.", date: 'Jun 2026' },
-  { name: 'Leigh Hower', initial: 'L', quote: "Jordan is hard-working, conscientious, and knowledgeable. I'm glad to have JT's Heating Cooling & Plumbing as my new go-to!", date: 'Jun 2026' },
-  { name: 'Ken Valkenburg', initial: 'K', quote: "JT is great! He was very respectful of our time, explained our options thoroughly, and got everything done well in the time allotted. He's also kind and great to work with. I highly recommend him for your HVAC needs.", date: 'Jun 2026' },
-  { name: 'nik', initial: 'N', quote: "Prompt, professional, and personable. Jordan explains the process well. The price is excellent.", date: 'Jun 2026' },
-  { name: 'Joel Gritter', initial: 'J', quote: "Had a great experience working with Jordan/JT's! The work was done very well and professionally. Jordan was good at communicating on timing and on what was being done. Felt very comfortable with him and very happy with the results!", date: 'Jun 2026' },
-  { name: 'Christopher Anderson', initial: 'C', quote: "Jordan did an amazing job on our AC unit tune-up. Very professional and reasonably priced. We will definitely be using his services again going forward and would highly recommend to anyone in need of HVAC service.", date: 'Jun 2026' },
-  { name: 'Jakob Jackson', initial: 'J', quote: "JT has worked on multiple projects at our home and at family members homes. He is a great guy to work with, does great work and he is very friendly! I also appreciated clear communication and easy to understand and reasonable pricing!", date: 'Jun 2026' },
-  { name: 'Dan Mitchell', initial: 'D', quote: "Jordan was introduced by a contractor. Although not in his normal service area he agreed to move an outside unit to a new location running new lines in a basement ceiling. Realized unit was old and no longer effective. Installed a new unit on a cold wintery day in Dec.", date: 'Jun 2026' },
-  { name: 'Courtney Moskal', initial: 'C', quote: "JT is an honest trustworthy young man that came out to check on my A/C. I definitely will use him again.", date: 'Jun 2026' },
-  { name: 'Joan Gregg', initial: 'J', quote: "Prompt efficient and honest. Quoted a fair price compared to other companies and quickly had my A/C back up and running.", date: 'Jun 2026' },
-];
+import { getCollection } from 'astro:content';
+import HeroReviewSlider from '@/components/HeroReviewSlider.astro';
+
+const reviews = (await getCollection('reviews')).sort(
+  (a, b) => b.data.reviewDate.valueOf() - a.data.reviewDate.valueOf(),
+);
+const reviewCount = reviews.length;
+const avg =
+  reviewCount === 0
+    ? 5
+    : Math.round((reviews.reduce((sum, r) => sum + r.data.rating, 0) / reviewCount) * 10) / 10;
 ---
 
 <!-- Full-bleed Hero -->
@@ -48,8 +30,8 @@ const reviews = [
 
     <!-- Main Content Container -->
     <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24 w-full z-10 relative" data-ps="src/components/reviews/ReviewsHero.astro:9wmew8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center w-full" data-ps="src/components/reviews/ReviewsHero.astro:9wmew7">
-        <div class="lg:col-span-8 flex flex-col items-start text-left" data-ps="src/components/reviews/ReviewsHero.astro:9wmew6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center w-full" data-ps="src/components/reviews/ReviewsHero.astro:9wmew7">
+        <div class="lg:col-span-7 flex flex-col items-start text-left" data-ps="src/components/reviews/ReviewsHero.astro:9wmew6">
           <span class="bg-white/10 border border-white/25 text-white text-[12px] font-medium px-3.5 py-1.5 rounded-full inline-flex items-center gap-2 mb-6 backdrop-blur-sm" data-ps="src/components/reviews/ReviewsHero.astro:90qpbt">
             <span class="w-2 h-2 rounded-full bg-emerald-400" data-ps="src/components/reviews/ReviewsHero.astro:90qpbu"></span>
             Verified Customer Reviews
@@ -58,7 +40,7 @@ const reviews = [
             What West Michigan <span class="inline-block bg-white text-primary px-2.5 py-0 rounded-lg italic font-semibold" data-ps="src/components/reviews/ReviewsHero.astro:90qpbv">says about JT.</span>
           </h1>
           <p class="text-[17px] sm:text-[18px] text-white/90 leading-[1.625] max-w-[580px] mb-8 font-normal" data-ps="src/components/reviews/ReviewsHero.astro:7l8rt3">
-            5.0 stars across 27 Google reviews — real homeowners, real heating, cooling & plumbing work, zero pressure.
+            {avg.toFixed(1)} stars across {reviewCount} Google reviews — real homeowners, real heating, cooling & plumbing work, zero pressure.
           </p>
           <div class="flex flex-wrap items-center gap-4" data-ps="src/components/reviews/ReviewsHero.astro:9wmew5">
             <a href="/book/" class="bg-primary hover:bg-primary-hover text-white rounded-full px-7 py-3.5 text-[15px] sm:text-[16px] font-semibold flex items-center gap-2 shadow-lg transition-all no-underline" data-ps="src/components/reviews/ReviewsHero.astro:hav42">
@@ -71,10 +53,10 @@ const reviews = [
               Contact JT
             </a>
           </div>
-          <div class="flex items-center gap-2 mt-6 text-white/90 text-[14px]" data-ps="src/components/reviews/ReviewsHero.astro:9wmew4">
-            <span class="text-amber-300 text-[14px]" data-ps="src/components/reviews/ReviewsHero.astro:90qpci">★</span>
-            5.0 · 27 Google reviews
-          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex justify-center lg:justify-end w-full" data-ps="src/components/reviews/ReviewsHero.astro:cardcol">
+          <HeroReviewSlider />
         </div>
       </div>
     </div>
@@ -103,7 +85,7 @@ const reviews = [
       <div class="bg-white border border-[hsl(45_12%_93%)] rounded-2xl p-5 flex items-center gap-3 shadow-sm" data-ps="src/components/reviews/ReviewsHero.astro:9wmev8">
         <svg class="w-10 h-10 text-[hsl(210_100%_29%)] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         <div data-ps="src/components/reviews/ReviewsHero.astro:9wmev7">
-          <div class="text-[14px] font-semibold text-[hsl(240_4%_9%)]" data-ps="src/components/reviews/ReviewsHero.astro:9wmev6">5.0 · 27 reviews</div>
+          <div class="text-[14px] font-semibold text-[hsl(240_4%_9%)]" data-ps="src/components/reviews/ReviewsHero.astro:9wmev6">{avg.toFixed(1)} · {reviewCount} reviews</div>
           <div class="text-[12px] text-[hsl(240_4%_36%)]" data-ps="src/components/reviews/ReviewsHero.astro:9wmev5">Local & owner-operated</div>
         </div>
       </div>
@@ -111,7 +93,7 @@ const reviews = [
 
     <!-- Rating Summary Card -->
     <div class="max-w-[600px] mx-auto bg-white border border-[hsl(45_12%_93%)] rounded-[32px] p-8 text-center mb-16 shadow-sm" data-ps="src/components/reviews/ReviewsHero.astro:9wmev4">
-      <div class="text-[64px] font-bold text-[hsl(210_100%_29%)] leading-none mb-2" data-ps="src/components/reviews/ReviewsHero.astro:bi54o">5.0</div>
+      <div class="text-[64px] font-bold text-[hsl(210_100%_29%)] leading-none mb-2" data-ps="src/components/reviews/ReviewsHero.astro:bi54o">{avg.toFixed(1)}</div>
       <div class="flex items-center justify-center gap-1 mb-3" data-ps="src/components/reviews/ReviewsHero.astro:bi54n">
         <svg class="w-5 h-5 text-[#fbbf24]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         <svg class="w-5 h-5 text-[#fbbf24]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -119,7 +101,7 @@ const reviews = [
         <svg class="w-5 h-5 text-[#fbbf24]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         <svg class="w-5 h-5 text-[#fbbf24]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       </div>
-      <div class="text-[16px] text-[hsl(240_4%_36%)] mb-6" data-ps="src/components/reviews/ReviewsHero.astro:bi54m">Based on 27 verified Google reviews</div>
+      <div class="text-[16px] text-[hsl(240_4%_36%)] mb-6" data-ps="src/components/reviews/ReviewsHero.astro:bi54m">Based on {reviewCount} verified Google reviews</div>
       <a href="/book/" class="bg-[hsl(240_50%_11%)] hover:bg-[hsl(240_48%_6%)] text-white rounded-full px-7 py-3.5 text-[16px] font-semibold inline-flex items-center gap-2 transition-colors no-underline" data-ps="src/components/reviews/ReviewsHero.astro:hav40">
         Book your visit
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -132,20 +114,22 @@ const reviews = [
         <article class="bg-white border border-[hsl(45_12%_93%)] rounded-[24px] p-6 hover:shadow-lg transition-all duration-300" data-ps={`src/components/reviews/ReviewsHero.astro:sv9w54-${__psIdx}`}>
           <div class="flex items-center gap-3 mb-4" data-ps={`src/components/reviews/ReviewsHero.astro:bi54k-${__psIdx}`}>
             <div class="w-12 h-12 rounded-full bg-[hsl(210_100%_29%)] text-white flex items-center justify-center text-[18px] font-bold flex-shrink-0" data-ps={`src/components/reviews/ReviewsHero.astro:bi54j-${__psIdx}`}>
-              {review.initial}
+              {review.data.author.charAt(0).toUpperCase()}
             </div>
             <div data-ps={`src/components/reviews/ReviewsHero.astro:bi54i-${__psIdx}`}>
-              <div class="text-[15px] font-semibold text-[hsl(240_4%_9%)]" data-ps={`src/components/reviews/ReviewsHero.astro:bi54h-${__psIdx}`}>{review.name}</div>
-              <div class="text-[12px] text-[hsl(240_4%_36%)]" data-ps={`src/components/reviews/ReviewsHero.astro:bi54g-${__psIdx}`}>Verified Google review · {review.date}</div>
+              <div class="text-[15px] font-semibold text-[hsl(240_4%_9%)]" data-ps={`src/components/reviews/ReviewsHero.astro:bi54h-${__psIdx}`}>{review.data.author}</div>
+              <div class="text-[12px] text-[hsl(240_4%_36%)]" data-ps={`src/components/reviews/ReviewsHero.astro:bi54g-${__psIdx}`}>
+                Verified Google review · {review.data.reviewDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
+              </div>
             </div>
           </div>
           <div class="flex items-center gap-1 mb-4" data-ps={`src/components/reviews/ReviewsHero.astro:bi54f-${__psIdx}`}>
-            {[1,2,3,4,5].map(() => (
+            {Array.from({ length: Math.round(review.data.rating) }).map(() => (
               <svg class="w-4 h-4 text-[#fbbf24]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             ))}
           </div>
           <blockquote class="text-[14px] text-[hsl(240_4%_36%)] leading-[1.6] m-0">
-            "{review.quote}"
+            "{review.data.body}"
           </blockquote>
         </article>
       ))}

@@ -90,4 +90,14 @@ const services = defineCollection({
   }),
 });
 
-export const collections = { blog, docs, services };
+const reviews = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/reviews' }),
+  schema: z.object({
+    author: z.string(),
+    rating: z.number().min(1).max(5),
+    body: z.string(),
+    reviewDate: z.coerce.date(),
+  }),
+});
+
+export const collections = { blog, docs, services, reviews };

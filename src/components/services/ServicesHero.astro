@@ -1,5 +1,5 @@
 ---
-import { SITE } from '@/config/site';
+import HeroReviewSlider from '@/components/HeroReviewSlider.astro';
 ---
 
 <section id="services-hero" class="w-full relative overflow-hidden bg-[hsl(240_50%_11%)]" data-ps="src/components/services/ServicesHero.astro:sec1">
@@ -93,37 +93,8 @@ import { SITE } from '@/config/site';
           </div>
         </div>
 
-        <!-- Right Column: Glass Review Card -->
         <div class="lg:col-span-5 flex justify-center lg:justify-end w-full" data-ps="src/components/services/ServicesHero.astro:right1">
-          <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-[24px] p-6 sm:p-7 text-white max-w-[420px] shadow-2xl relative w-full" data-ps="src/components/services/ServicesHero.astro:card1">
-            <!-- Top Google Review Header -->
-            <div class="flex items-center gap-2 text-[12px] font-semibold text-white/90 tracking-wider uppercase mb-3" data-ps="src/components/services/ServicesHero.astro:rating">
-              <span class="text-amber-400 text-[14px]" data-ps="src/components/services/ServicesHero.astro:dy659">★</span>
-              <span data-ps="src/components/services/ServicesHero.astro:dy65a">5.0 · 27 GOOGLE REVIEWS</span>
-            </div>
-
-            <!-- 5 Stars -->
-            <div class="flex items-center gap-1 text-amber-400 text-[15px] mb-4" data-ps="src/components/services/ServicesHero.astro:stars">
-              <span data-ps="src/components/services/ServicesHero.astro:dy65b">★</span><span data-ps="src/components/services/ServicesHero.astro:dy65c">★</span><span data-ps="src/components/services/ServicesHero.astro:dqh3o8">★</span><span data-ps="src/components/services/ServicesHero.astro:dqh3o7">★</span><span data-ps="src/components/services/ServicesHero.astro:dqh3o6">★</span>
-            </div>
-
-            <!-- Review Quote -->
-            <blockquote class="text-[14px] sm:text-[15px] text-white/95 leading-[1.6] m-0 mb-4 font-normal" data-ps="src/components/services/ServicesHero.astro:quote">
-              "Jordan was fantastic. He came out quickly, explained everything along the way, and we had A/C again during the heat wave! Use JT's!!!!!"
-            </blockquote>
-
-            <!-- Author -->
-            <div class="text-[13px] text-white/70 font-medium mb-5" data-ps="src/components/services/ServicesHero.astro:author">
-              — Jim, verified Google review
-            </div>
-
-            <!-- Dots -->
-            <div class="flex items-center gap-2" data-ps="src/components/services/ServicesHero.astro:dots">
-              <div class="w-6 h-1.5 bg-white rounded-full" data-ps="src/components/services/ServicesHero.astro:ob3myh"></div>
-              <div class="w-1.5 h-1.5 bg-white/40 rounded-full" data-ps="src/components/services/ServicesHero.astro:ob3myg"></div>
-              <div class="w-1.5 h-1.5 bg-white/40 rounded-full" data-ps="src/components/services/ServicesHero.astro:ob3myf"></div>
-            </div>
-          </div>
+          <HeroReviewSlider />
         </div>
       </div>
     </div>

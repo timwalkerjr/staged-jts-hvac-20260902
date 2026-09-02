@@ -1,5 +1,12 @@
 ---
-// Testimonials Carousel Section
+import { getCollection } from 'astro:content';
+
+const allReviews = await getCollection('reviews');
+const sortedReviews = [...allReviews].sort(
+  (a, b) => b.data.reviewDate.valueOf() - a.data.reviewDate.valueOf(),
+);
+const reviewCount = allReviews.length;
+const featuredReviews = sortedReviews.slice(0, 6);
 ---
 
 <section id="reviews" class="max-w-[1400px] mx-auto px-4 py-20 sm:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center" data-ps="src/components/home/Testimonials.astro:rdr5t6">
@@ -12,107 +19,39 @@
       </svg>
       <div class="inline-flex items-center gap-1.5 bg-white border border-[hsl(45_12%_93%)] text-foreground text-[12px] font-semibold px-3 py-1.5 rounded-full shadow-sm" data-ps="src/components/home/Testimonials.astro:rl25j9">
         <span class="text-amber-400" data-ps="src/components/home/Testimonials.astro:pdgp6d">★</span>
-        <span data-ps="src/components/home/Testimonials.astro:pdgp6e">5.0 · 27 GOOGLE REVIEWS</span>
+        <span data-ps="src/components/home/Testimonials.astro:pdgp6e">5.0 · {reviewCount} GOOGLE REVIEWS</span>
       </div>
     </div>
 
     <!-- Testimonial Slides Container -->
     <div class="w-full relative min-h-[220px]" data-ps="src/components/home/Testimonials.astro:rl25jv">
-      <!-- Slide 1 -->
-      <div class="testimonial-slide transition-opacity duration-300 block" data-index="0" data-ps="src/components/home/Testimonials.astro:rl25jw">
-        <blockquote class="text-[22px] sm:text-[26px] md:text-[28px] font-medium leading-[1.35] text-foreground m-0 mb-6">
-          "Jordan was fantastic. He came out quickly, explained everything along the way, and we had A/C again during the heat wave! Use JT's!!!!!"
-        </blockquote>
-        <div class="flex items-center justify-between flex-wrap gap-2" data-ps="src/components/home/Testimonials.astro:rl25jx">
-          <div data-ps="src/components/home/Testimonials.astro:rl25jy">
-            <span class="text-[17px] font-semibold text-foreground block" data-ps="src/components/home/Testimonials.astro:pdgp6f">Jim</span>
-            <span class="text-[13px] text-muted-foreground block" data-ps="src/components/home/Testimonials.astro:pdgp6g">Verified Google review · Aug 2026</span>
+      {featuredReviews.map((review, idx) => (
+        <div class:list={["testimonial-slide transition-opacity duration-300", idx === 0 ? "block" : "hidden"]} data-index={idx} data-ps={`src/components/home/Testimonials.astro:slide-${idx}`}>
+          <blockquote class="text-[20px] sm:text-[23px] md:text-[25px] font-medium leading-[1.4] text-foreground m-0 mb-6">
+            "{review.data.body}"
+          </blockquote>
+          <div class="flex items-center justify-between flex-wrap gap-2" data-ps={`src/components/home/Testimonials.astro:slide-meta-${idx}`}>
+            <div data-ps={`src/components/home/Testimonials.astro:slide-author-${idx}`}>
+              <span class="text-[17px] font-semibold text-foreground block" data-ps={`src/components/home/Testimonials.astro:jsx5kd-${idx}`}>{review.data.author}</span>
+              <span class="text-[13px] text-muted-foreground block" data-ps={`src/components/home/Testimonials.astro:jsx5kc-${idx}`}>Verified Google review · {review.data.reviewDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
+            </div>
+            <div class="flex text-amber-400 text-sm" data-ps={`src/components/home/Testimonials.astro:jqcpxu-${idx}`}>
+              {Array.from({ length: Math.round(review.data.rating) }).map((__psIdx2) => (
+                <span data-ps={`src/components/home/Testimonials.astro:jsx5kb-${__psIdx2}`}>★</span>
+              ))}
+            </div>
           </div>
-          <div class="flex text-amber-400 text-sm" data-ps="src/components/home/Testimonials.astro:rl25jz">★★★★★</div>
         </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="testimonial-slide transition-opacity duration-300 hidden" data-index="1" data-ps="src/components/home/Testimonials.astro:rl25k0">
-        <blockquote class="text-[22px] sm:text-[26px] md:text-[28px] font-medium leading-[1.35] text-foreground m-0 mb-6">
-          "Jordan was very knowledgeable and professional. He was able to give us some energy saving tips. I highly recommend him!"
-        </blockquote>
-        <div class="flex items-center justify-between flex-wrap gap-2" data-ps="src/components/home/Testimonials.astro:rl25k1">
-          <div data-ps="src/components/home/Testimonials.astro:rl25k2">
-            <span class="text-[17px] font-semibold text-foreground block" data-ps="src/components/home/Testimonials.astro:pdgp6h">Charissa Hunter</span>
-            <span class="text-[13px] text-muted-foreground block" data-ps="src/components/home/Testimonials.astro:pdgp6i">Verified Google review · Jul 2026</span>
-          </div>
-          <div class="flex text-amber-400 text-sm" data-ps="src/components/home/Testimonials.astro:rl25k3">★★★★★</div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="testimonial-slide transition-opacity duration-300 hidden" data-index="2" data-ps="src/components/home/Testimonials.astro:rl25k4">
-        <blockquote class="text-[20px] sm:text-[22px] md:text-[24px] font-medium leading-[1.4] text-foreground m-0 mb-6">
-          "Great experience with JT's Heating Cooling and Plumbing. Quick response, fair pricing, and our AC was fixed the same day. Honest, professional service with excellent communication throughout the process. The issue was diagnosed quickly, repaired on the spot, and everything is working great. Highly recommend!"
-        </blockquote>
-        <div class="flex items-center justify-between flex-wrap gap-2" data-ps="src/components/home/Testimonials.astro:rl25kq">
-          <div data-ps="src/components/home/Testimonials.astro:rl25kr">
-            <span class="text-[17px] font-semibold text-foreground block" data-ps="src/components/home/Testimonials.astro:pdgp6j">Roxy C</span>
-            <span class="text-[13px] text-muted-foreground block" data-ps="src/components/home/Testimonials.astro:pdgp6k">Verified Google review · Jul 2026</span>
-          </div>
-          <div class="flex text-amber-400 text-sm" data-ps="src/components/home/Testimonials.astro:rl25ks">★★★★★</div>
-        </div>
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="testimonial-slide transition-opacity duration-300 hidden" data-index="3" data-ps="src/components/home/Testimonials.astro:rl25kt">
-        <blockquote class="text-[20px] sm:text-[23px] md:text-[25px] font-medium leading-[1.4] text-foreground m-0 mb-6">
-          "Excellent service and great guy! I reached out to him at 7am and he was at my house at 10am and was quick to fix my AC issue. Even provided tips to keep it working and charge was very reasonable. He is now my go-to for heating & cooling!"
-        </blockquote>
-        <div class="flex items-center justify-between flex-wrap gap-2" data-ps="src/components/home/Testimonials.astro:rl25ku">
-          <div data-ps="src/components/home/Testimonials.astro:rl25kv">
-            <span class="text-[17px] font-semibold text-foreground block" data-ps="src/components/home/Testimonials.astro:pdgp6l">Mary McCarty</span>
-            <span class="text-[13px] text-muted-foreground block" data-ps="src/components/home/Testimonials.astro:pdgp6m">Verified Google review · Jul 2026</span>
-          </div>
-          <div class="flex text-amber-400 text-sm" data-ps="src/components/home/Testimonials.astro:rl25kw">★★★★★</div>
-        </div>
-      </div>
-
-      <!-- Slide 5 -->
-      <div class="testimonial-slide transition-opacity duration-300 hidden" data-index="4" data-ps="src/components/home/Testimonials.astro:rl25kx">
-        <blockquote class="text-[22px] sm:text-[26px] md:text-[28px] font-medium leading-[1.35] text-foreground m-0 mb-6">
-          "Had Jordan out for a quote and he was great! Very kind and helpful, got to the house quickly and communicated well! From my interaction so far, it's been great!"
-        </blockquote>
-        <div class="flex items-center justify-between flex-wrap gap-2" data-ps="src/components/home/Testimonials.astro:rl25ky">
-          <div data-ps="src/components/home/Testimonials.astro:rl25kz">
-            <span class="text-[17px] font-semibold text-foreground block" data-ps="src/components/home/Testimonials.astro:pdgp78">Lacey T</span>
-            <span class="text-[13px] text-muted-foreground block" data-ps="src/components/home/Testimonials.astro:pdgp79">Verified Google review · Jul 2026</span>
-          </div>
-          <div class="flex text-amber-400 text-sm" data-ps="src/components/home/Testimonials.astro:jqcpy3">★★★★★</div>
-        </div>
-      </div>
-
-      <!-- Slide 6 -->
-      <div class="testimonial-slide transition-opacity duration-300 hidden" data-index="5" data-ps="src/components/home/Testimonials.astro:jqcpy2">
-        <blockquote class="text-[20px] sm:text-[22px] md:text-[24px] font-medium leading-[1.4] text-foreground m-0 mb-6">
-          "Jordan did a fantastic job doing our yearly AC inspection and tune-up. I have already committed to having him back out in the Fall for our furnace maintenance. He is friendly, knowledgeable, thorough, and his prices are excellent. Highly recommend!"
-        </blockquote>
-        <div class="flex items-center justify-between flex-wrap gap-2" data-ps="src/components/home/Testimonials.astro:jqcpy1">
-          <div data-ps="src/components/home/Testimonials.astro:jqcpy0">
-            <span class="text-[17px] font-semibold text-foreground block" data-ps="src/components/home/Testimonials.astro:pdgp7a">Jenn Love-Kippen</span>
-            <span class="text-[13px] text-muted-foreground block" data-ps="src/components/home/Testimonials.astro:pdgp7b">Verified Google review · Jul 2026</span>
-          </div>
-          <div class="flex text-amber-400 text-sm" data-ps="src/components/home/Testimonials.astro:jqcpxz">★★★★★</div>
-        </div>
-      </div>
+      ))}
     </div>
 
     <!-- Controls Row -->
     <div class="flex items-center justify-between w-full mt-8 pt-6 border-t border-[hsl(45_12%_93%)]" data-ps="src/components/home/Testimonials.astro:jqcpxy">
       <!-- Dots Indicator -->
       <div class="flex items-center gap-2" id="testimonial-dots" data-ps="src/components/home/Testimonials.astro:jqcpxx">
-        <button type="button" class="w-2.5 h-2.5 rounded-full bg-primary transition-all dot-btn" aria-label="Go to slide 1" data-ps="src/components/home/Testimonials.astro:ii0b55"></button>
-        <button type="button" class="w-2.5 h-2.5 rounded-full bg-[hsl(45_12%_93%)] transition-all dot-btn" aria-label="Go to slide 2" data-ps="src/components/home/Testimonials.astro:ii0b54"></button>
-        <button type="button" class="w-2.5 h-2.5 rounded-full bg-[hsl(45_12%_93%)] transition-all dot-btn" aria-label="Go to slide 3" data-ps="src/components/home/Testimonials.astro:ii0b53"></button>
-        <button type="button" class="w-2.5 h-2.5 rounded-full bg-[hsl(45_12%_93%)] transition-all dot-btn" aria-label="Go to slide 4" data-ps="src/components/home/Testimonials.astro:ii0b52"></button>
-        <button type="button" class="w-2.5 h-2.5 rounded-full bg-[hsl(45_12%_93%)] transition-all dot-btn" aria-label="Go to slide 5" data-ps="src/components/home/Testimonials.astro:ii0b51"></button>
-        <button type="button" class="w-2.5 h-2.5 rounded-full bg-[hsl(45_12%_93%)] transition-all dot-btn" aria-label="Go to slide 6" data-ps="src/components/home/Testimonials.astro:ii0b50"></button>
+        {featuredReviews.map((_, idx) => (
+          <button type="button" class:list={["w-2.5 h-2.5 rounded-full transition-all dot-btn", idx === 0 ? "bg-primary" : "bg-[hsl(45_12%_93%)]"]} aria-label={`Go to slide ${idx + 1}`} data-ps={`src/components/home/Testimonials.astro:dot-${idx}`}></button>
+        ))}
       </div>
 
       <!-- Arrow Buttons -->
@@ -137,10 +76,10 @@
     </div>
 
     <a
-      href="/#reviews"
+      href="/reviews/"
       class="text-[14px] font-semibold text-primary mt-6 hover:underline inline-flex items-center gap-1.5 no-underline"
      data-ps="src/components/home/Testimonials.astro:v3pdsp">
-      <span data-ps="src/components/home/Testimonials.astro:pdgp7c">Read all 27 reviews</span>
+      <span data-ps="src/components/home/Testimonials.astro:pdgp7c">Read all {reviewCount} reviews</span>
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" />
       </svg>
