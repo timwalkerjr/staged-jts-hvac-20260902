@@ -5,7 +5,7 @@ export const SITE = {
     'Honest furnace, A/C, heat pump, mini-split, and water heater repair and installation in Grand Rapids and West Michigan. Licensed, insured, and owner-operated.',
   url:
     (typeof process !== 'undefined' && process.env.SITE_URL) ||
-    'https://jts-hvac.netlify.app',
+    'https://jts-homeservices.newsitebuild.dev',
   lang: 'en',
   phone: '(616) 840-3105',
   phoneTel: '+16168403105',

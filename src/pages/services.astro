@@ -1,15 +1,57 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ServicesHero from '@/components/services/ServicesHero.astro';
 import ServicesQuotes from '@/components/services/ServicesQuotes.astro';
 import ServicesGrid from '@/components/services/ServicesGrid.astro';
 import EmergencyCallout from '@/components/services/EmergencyCallout.astro';
 import FinalCTA from '@/components/home/FinalCTA.astro';
+import { absoluteUrl, localBusiness, offerCatalog, webPage } from '@/config/jsonld';
+
+const title = 'HVAC & Plumbing Services | Grand Rapids, MI';
+const description =
+  'Furnace, A/C, heat pump, mini-split, and water heater services with honest, no-pressure pricing across Grand Rapids and West Michigan.';
+
+const services = (await getCollection('services', ({ data }) => data.draft !== true))
+  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+
+const catalog = offerCatalog(
+  services.map((entry) => ({
+    id: entry.id,
+    title: entry.data.title,
+    description: entry.data.seoDescription || entry.data.description,
+  })),
+);
+
+const jsonLd = [
+  webPage({
+    type: 'CollectionPage',
+    name: title,
+    description,
+    path: '/services/',
+    extra: {
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: services.length,
+        itemListElement: services.map((entry, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          url: absoluteUrl(`/services/${entry.id}/`),
+          name: entry.data.title,
+        })),
+      },
+    },
+  }),
+  localBusiness({
+    hasOfferCatalog: catalog,
+  }),
+];
 ---
 
 <BaseLayout
-  title="HVAC & Plumbing Services | Grand Rapids, MI"
-  description="Furnace, A/C, heat pump, mini-split, and water heater services with honest, no-pressure pricing across Grand Rapids and West Michigan."
+  title={title}
+  description={description}
+  jsonLd={jsonLd}
 >
   <ServicesHero />
   <ServicesQuotes />

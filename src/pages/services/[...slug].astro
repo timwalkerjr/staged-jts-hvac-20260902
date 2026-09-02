@@ -4,6 +4,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import FinalCTA from '@/components/home/FinalCTA.astro';
 import HeroReviewSlider from '@/components/HeroReviewSlider.astro';
 import { SITE } from '@/config/site';
+import { absoluteUrl, businessId, SERVICE_CITIES } from '@/config/jsonld';
 
 export async function getStaticPaths() {
   const entries = await getCollection('services', ({ data }) => data.draft !== true);
@@ -16,21 +17,23 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 const { title, description, image, audience, heroTitle, heroSubtext, seoTitle, seoDescription } = entry.data;
-const pageUrl = new URL(`/services/${entry.id}/`, SITE.url).toString();
+const pageUrl = absoluteUrl(`/services/${entry.id}/`);
 const mdxFilePath = `src/content/services/${entry.id}.mdx`;
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: title,
-  description: description,
+  serviceType: title,
+  description: seoDescription || description,
   url: pageUrl,
   image,
-  areaServed: {
+  areaServed: SERVICE_CITIES.map((name) => ({
     '@type': 'City',
-    name: 'Grand Rapids, MI',
-  },
+    name,
+  })),
   provider: {
+    '@id': businessId(),
     '@type': 'HVACBusiness',
     name: SITE.name,
     telephone: SITE.phone,
