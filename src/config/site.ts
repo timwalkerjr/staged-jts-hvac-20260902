@@ -6,6 +6,7 @@ export const SITE = {
   url:
     (typeof process !== 'undefined' && process.env.SITE_URL) ||
     'https://jts-hvac.netlify.app',
+  lang: 'en',
   phone: '(616) 840-3105',
   phoneTel: '+16168403105',
   twitterHandle: '',

@@ -7,7 +7,7 @@ import SEOHead from '@/components/SEOHead.astro';
 import { SITE } from '@/config/site';
 
 const { frontmatter, mdxFilePath = '' } = Astro.props;
-const htmlLang = frontmatter.lang ?? Astro.currentLocale ?? SITE.lang;
+const htmlLang = frontmatter.lang ?? Astro.currentLocale ?? (SITE as any).lang ?? 'en';
 
 // Debug logging (will show in Astro build output)
 console.log('[DocsLayout] MDX file path:', mdxFilePath);

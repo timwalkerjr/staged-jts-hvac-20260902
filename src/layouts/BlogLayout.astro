@@ -9,7 +9,7 @@ const { frontmatter, mdxFilePath = '' } = Astro.props as {
   frontmatter: any;
   mdxFilePath?: string;
 };
-const htmlLang = frontmatter.lang ?? Astro.currentLocale ?? SITE.lang;
+const htmlLang = frontmatter.lang ?? Astro.currentLocale ?? (SITE as any).lang ?? 'en';
 
 // Use ogImage if set, otherwise fall back to featured image
 const socialImage = frontmatter.ogImage || frontmatter.image;
@@ -190,8 +190,7 @@ if (schemaType === 'Recipe' && schemaData) {
           <img
             src={frontmatter.image}
             alt={frontmatter.imageAlt || frontmatter.title}
-            class="w-full rounded-lg md:rounded-xl object-cover"
-            style="max-height: 500px;" data-ps="src/layouts/BlogLayout.astro:h2r8qk" />
+            class="w-full max-h-[500px] rounded-lg md:rounded-xl object-cover" data-ps="src/layouts/BlogLayout.astro:h2r8qk" />
         </figure>
       )}
 

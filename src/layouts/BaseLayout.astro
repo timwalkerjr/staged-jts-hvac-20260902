@@ -17,7 +17,7 @@ export interface Props {
 }
 
 const { title, description, image, type, jsonLd, noIndex, canonicalUrl, lang } = Astro.props;
-const htmlLang = lang ?? Astro.currentLocale ?? SITE.lang;
+const htmlLang = lang ?? Astro.currentLocale ?? (SITE as any).lang ?? 'en';
 ---
 
 <!DOCTYPE html>
