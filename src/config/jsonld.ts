@@ -152,11 +152,26 @@ export function webPage(opts: {
   };
 }
 
-export function faqPage(): JsonLd {
+export function extractFaqsFromMarkdown(body = ''): { question: string; answer: string }[] {
+  const match = body.match(/## Frequently Asked Questions\s+([\s\S]*)$/i);
+  if (!match) return [];
+  return match[1]
+    .split(/^### /m)
+    .slice(1)
+    .map((chunk) => {
+      const newline = chunk.indexOf('\n');
+      const question = (newline === -1 ? chunk : chunk.slice(0, newline)).trim();
+      const answer = (newline === -1 ? '' : chunk.slice(newline)).replace(/\n+$/, '').trim();
+      return { question, answer };
+    })
+    .filter((item) => item.question && item.answer);
+}
+
+export function faqPageFromItems(items: { question: string; answer: string }[]): JsonLd {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: FAQS.map((faq) => ({
+    mainEntity: items.map((faq) => ({
       '@type': 'Question',
       name: faq.question,
       acceptedAnswer: {
@@ -165,6 +180,10 @@ export function faqPage(): JsonLd {
       },
     })),
   };
+}
+
+export function faqPage(): JsonLd {
+  return faqPageFromItems([...FAQS]);
 }
 
 export function offerCatalog(

@@ -37,7 +37,7 @@ const spaceTypes = ["Home", "Small business"];
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" data-ps="src/components/book/BookForm.astro:h60lte">
           {services.map((svc, __psIdx) => (
             <label class="cursor-pointer bg-white border border-[hsl(45_12%_93%)] rounded-full px-5 py-3 text-[15px] font-medium text-[hsl(240_4%_9%)] flex items-center gap-2 hover:border-[hsl(210_100%_29%)] has-[:checked]:bg-[hsl(210_100%_29%)] has-[:checked]:text-white has-[:checked]:border-[hsl(210_100%_29%)] transition-all" data-ps={`src/components/book/BookForm.astro:2fyqlj-${__psIdx}`}>
-              <input type="radio" name="service" value={svc} class="sr-only" />
+              <input type="radio" name="service" value={svc} required={__psIdx === 0} class="sr-only" />
               <span class="text-[14px]" data-ps={`src/components/book/BookForm.astro:7q2rfb-${__psIdx}`}>{svc}</span>
             </label>
           ))}
@@ -55,7 +55,7 @@ const spaceTypes = ["Home", "Small business"];
             <div class="flex flex-wrap gap-2" data-ps="src/components/book/BookForm.astro:h60lta">
               {urgency.map((u, __psIdx) => (
                 <label class="cursor-pointer bg-white border border-[hsl(45_12%_93%)] rounded-full px-4 py-2 text-[14px] font-medium text-[hsl(240_4%_9%)] hover:border-[hsl(210_100%_29%)] has-[:checked]:bg-[hsl(210_100%_29%)] has-[:checked]:text-white has-[:checked]:border-[hsl(210_100%_29%)] transition-all" data-ps={`src/components/book/BookForm.astro:2fyqlh-${__psIdx}`}>
-                  <input type="radio" name="urgency" value={u} class="sr-only" />
+                  <input type="radio" name="urgency" value={u} required={__psIdx === 0} class="sr-only" />
                   {u}
                 </label>
               ))}
@@ -72,7 +72,7 @@ const spaceTypes = ["Home", "Small business"];
               <div class="flex flex-wrap gap-2" data-ps="src/components/book/BookForm.astro:h60lsl">
                 {timeSlots.map((t, __psIdx) => (
                   <label class="cursor-pointer bg-white border border-[hsl(45_12%_93%)] rounded-full px-4 py-2 text-[14px] font-medium text-[hsl(240_4%_9%)] hover:border-[hsl(210_100%_29%)] has-[:checked]:bg-[hsl(210_100%_29%)] has-[:checked]:text-white has-[:checked]:border-[hsl(210_100%_29%)] transition-all" data-ps={`src/components/book/BookForm.astro:2fyqkt-${__psIdx}`}>
-                    <input type="radio" name="time" value={t} class="sr-only" />
+                    <input type="radio" name="time" value={t} required={__psIdx === 0} class="sr-only" />
                     {t}
                   </label>
                 ))}

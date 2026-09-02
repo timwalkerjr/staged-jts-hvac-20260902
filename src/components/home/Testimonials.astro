@@ -1,11 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
+import { SCHEMA } from '@/config/jsonld';
 
 const allReviews = await getCollection('reviews');
 const sortedReviews = [...allReviews].sort(
   (a, b) => b.data.reviewDate.valueOf() - a.data.reviewDate.valueOf(),
 );
-const reviewCount = allReviews.length;
+const reviewCount = SCHEMA.reviewCount;
 const featuredReviews = sortedReviews.slice(0, 6);
 ---
 
