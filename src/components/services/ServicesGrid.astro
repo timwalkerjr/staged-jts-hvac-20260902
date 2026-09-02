@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+
+const services = (await getCollection('services', ({ data }) => data.draft !== true)).sort(
+  (a, b) => (a.data.order ?? 99) - (b.data.order ?? 99)
+);
+---
+
+<section class="bg-[hsl(45_33%_98%)] py-24" data-ps="src/components/services/ServicesGrid.astro:qwljoy">
+  <div class="max-w-[1400px] mx-auto px-4" data-ps="src/components/services/ServicesGrid.astro:z6k2bb">
+    <div class="flex items-end justify-between mb-12 flex-wrap gap-6" data-ps="src/components/services/ServicesGrid.astro:z6k2bc">
+      <div class="max-w-[700px]" data-ps="src/components/services/ServicesGrid.astro:z6k2bd">
+        <h2 class="text-[36px] md:text-[48px] font-semibold tracking-[-1.2px] leading-[1.2] text-[hsl(240_4%_9%)]" data-ps="src/components/services/ServicesGrid.astro:oqy4pg">
+          Home services — <span class="italic text-[hsl(210_100%_29%)]" data-ps="src/components/services/ServicesGrid.astro:9yadga">done right the first time.</span>
+        </h2>
+      </div>
+      <p class="text-[18px] text-[hsl(240_4%_36%)] max-w-[400px] leading-[1.625]" data-ps="src/components/services/ServicesGrid.astro:ogqott">
+        From a furnace that won't start to a leaky water heater — quick diagnosis, honest options, clean work.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-ps="src/components/services/ServicesGrid.astro:z6k2be">
+      {services.map((service) => (
+        <article class="bg-[hsl(45_33%_98%)] border border-[hsl(45_12%_93%)] rounded-[24px] overflow-hidden p-3 flex flex-col justify-between hover:shadow-xl transition-all duration-300" data-ps={`src/components/services/ServicesGrid.astro:eek6zv-${service.id}`}>
+          <div class="relative rounded-[18px] overflow-hidden h-[240px] bg-[hsl(45_18%_96%)]" data-ps={`src/components/services/ServicesGrid.astro:z6k2bf-${service.id}`}>
+            <img
+              src={service.data.image}
+              alt={`${service.data.title} — JT's Heating Cooling & Plumbing service`}
+              class="w-full h-full object-cover"
+              loading="lazy" data-ps={`src/components/services/ServicesGrid.astro:5bb3o0-${service.id}`} />
+            <div class="absolute top-3 inset-x-3 flex items-center justify-between pointer-events-none" data-ps={`src/components/services/ServicesGrid.astro:z6k2bg-${service.id}`}>
+              <span class="bg-white text-[hsl(240_4%_9%)] text-[11px] font-semibold px-3 py-1 rounded-full shadow-sm" data-ps={`src/components/services/ServicesGrid.astro:9yadg9-${service.id}`}>{service.data.audience}</span>
+              <span class="bg-[hsl(210_100%_29%)] text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-sm" data-ps={`src/components/services/ServicesGrid.astro:9yadg8-${service.id}`}>{service.data.ctaLabel}</span>
+            </div>
+          </div>
+          <div class="p-4 pt-6 flex-1 flex flex-col" data-ps={`src/components/services/ServicesGrid.astro:z6k2bh-${service.id}`}>
+            <h3 class="text-[22px] font-semibold text-[hsl(240_4%_9%)] mb-3 leading-[1.3]" data-ps={`src/components/services/ServicesGrid.astro:vlr023-${service.id}`}>
+              {service.data.title}
+            </h3>
+            <p class="text-[14px] text-[hsl(240_4%_36%)] leading-[1.6] flex-1" data-ps={`src/components/services/ServicesGrid.astro:ogqots-${service.id}`}>
+              {service.data.description}
+            </p>
+            <a
+              href={`/services/${service.id}/`}
+              class="text-[14px] font-bold text-[hsl(240_4%_9%)] flex items-center gap-1 mt-6 hover:text-[hsl(210_100%_29%)] transition-colors"
+             data-ps={`src/components/services/ServicesGrid.astro:hcss43-${service.id}`}>
+              View this service
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

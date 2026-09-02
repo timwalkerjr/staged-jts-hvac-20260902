@@ -1,0 +1,1565 @@
+[
+  {
+    "index": 0,
+    "heading": "Site header / navigation (port into Navigation.astro)",
+    "widgetTypes": [
+      "nav"
+    ],
+    "html": "<header id=\"navbar\" class=\"fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background py-3\"><div class=\"w-full px-4 md:px-8 max-w-[1400px] mx-auto flex items-center justify-between\"><a href=\"https://jts-hvac.netlify.app/\" class=\"flex items-center gap-2 group cursor-pointer min-w-0 no-underline\"><img src=\"https://jts-hvac.netlify.app/jt-logo-mark.png\" alt=\"JT's Heating Cooling &amp; Plumbing logo\" width=\"40\" height=\"40\" class=\"w-10 h-10 rounded-full shrink-0 transition-transform duration-200 group-hover:scale-105\"><div class=\"flex flex-col leading-tight min-w-0\"><span id=\"nav-brand-name\" class=\"text-base font-heading font-semibold tracking-tight truncate transition-colors duration-300 text-foreground\">JT's Heating Cooling &amp; Plumbing</span><span id=\"nav-brand-loc\" class=\"text-[10px] uppercase tracking-[0.18em] truncate transition-colors duration-300 text-muted-foreground\">Grand Rapids, MI</span></div></a><nav class=\"hidden lg:flex items-center gap-1\"><a href=\"https://jts-hvac.netlify.app/\" class=\"nav-link relative px-4 py-2 rounded-md text-[14px] font-medium transition-colors cursor-pointer whitespace-nowrap no-underline active text-primary\">Home<span class=\"active-indicator absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[3px] rounded-full bg-primary transition-all duration-300 w-5 opacity-100\"></span></a><a href=\"https://jts-hvac.netlify.app/services/\" class=\"nav-link relative px-4 py-2 rounded-md text-[14px] font-medium transition-colors cursor-pointer whitespace-nowrap no-underline text-foreground/80 hover:text-foreground\">Services<span class=\"active-indicator absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[3px] rounded-full bg-primary transition-all duration-300 w-0 opacity-0\"></span></a><a href=\"https://jts-hvac.netlify.app/pricing/\" class=\"nav-link relative px-4 py-2 rounded-md text-[14px] font-medium transition-colors cursor-pointer whitespace-nowrap no-underline text-foreground/80 hover:text-foreground\">Pricing<span class=\"active-indicator absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[3px] rounded-full bg-primary transition-all duration-300 w-0 opacity-0\"></span></a><a href=\"https://jts-hvac.netlify.app/about/\" class=\"nav-link relative px-4 py-2 rounded-md text-[14px] font-medium transition-colors cursor-pointer whitespace-nowrap no-underline text-foreground/80 hover:text-foreground\">About<span class=\"active-indicator absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[3px] rounded-full bg-primary transition-all duration-300 w-0 opacity-0\"></span></a><a href=\"https://jts-hvac.netlify.app/reviews/\" class=\"nav-link relative px-4 py-2 rounded-md text-[14px] font-medium transition-colors cursor-pointer whitespace-nowrap no-underline text-foreground/80 hover:text-foreground\">Reviews<span class=\"active-indicator absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[3px] rounded-full bg-primary transition-all duration-300 w-0 opacity-0\"></span></a><a href=\"https://jts-hvac.netlify.app/area/\" class=\"nav-link relative px-4 py-2 rounded-md text-[14px] font-medium transition-colors cursor-pointer whitespace-nowrap no-underline text-foreground/80 hover:text-foreground\">Service Area<span class=\"active-indicator absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[3px] rounded-full bg-primary transition-all duration-300 w-0 opacity-0\"></span></a><a href=\"https://jts-hvac.netlify.app/contact/\" class=\"nav-link relative px-4 py-2 rounded-md text-[14px] font-medium transition-colors cursor-pointer whitespace-nowrap no-underline text-foreground/80 hover:text-foreground\">Contact<span class=\"active-indicator absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[3px] rounded-full bg-primary transition-all duration-300 w-0 opacity-0\"></span></a></nav><div class=\"flex items-center gap-3\"><a href=\"tel:+16168403105\" id=\"nav-phone\" class=\"hidden xl:flex items-center gap-2 px-3 py-2 text-[14px] font-medium transition-colors cursor-pointer whitespace-nowrap no-underline hover:text-primary text-foreground/80\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M9.366 10.682a10.556 10.556 0 0 0 3.952 3.952l.884-.884a2.183 2.183 0 0 1 2.314-.523c.769.252 1.723.383 2.484.383.552 0 1 .448 1 1v3.5c0 .552-.448 1-1 1C9.39 22 2 14.61 2 5.5c0-.552.448-1 1-1h3.5c.552 0 1 .448 1 1 0 .761.131 1.715.383 2.484a2.183 2.183 0 0 1-.523 2.314l-.884.884z\"></path></svg>(616) 840-3105</a><a class=\"group hidden sm:flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-hover transition-all duration-200 hover:-translate-y-0.5 cursor-pointer whitespace-nowrap no-underline\" href=\"https://jts-hvac.netlify.app/book/\">Book a Visit<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"></line><polyline points=\"7 7 17 7 17 17\"></polyline></svg></a><button id=\"mobile-menu-button\" type=\"button\" class=\"lg:hidden w-10 h-10 rounded-lg flex items-center justify-center cursor-pointer transition-colors text-foreground hover:bg-surface\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" id=\"menu-icon-open\"><line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\"></line><line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\"></line><line x1=\"3\" y1=\"18\" x2=\"21\" y2=\"18\"></line></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" id=\"menu-icon-close\" class=\"hidden\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"></line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"></line></svg></button></div></div><div id=\"mobile-menu\" class=\"hidden lg:hidden overflow-hidden bg-background border-t border-border mt-5 transition-all duration-300\"><nav class=\"flex flex-col py-6 px-6 gap-2\"><a href=\"https://jts-hvac.netlify.app/\" class=\"px-4 py-3 rounded-xl text-base font-medium no-underline bg-surface text-foreground\">Home</a><a href=\"https://jts-hvac.netlify.app/services/\" class=\"px-4 py-3 rounded-xl text-base font-medium no-underline text-muted-foreground hover:bg-surface hover:text-foreground\">Services</a><a href=\"https://jts-hvac.netlify.app/pricing/\" class=\"px-4 py-3 rounded-xl text-base font-medium no-underline text-muted-foreground hover:bg-surface hover:text-foreground\">Pricing</a><a href=\"https://jts-hvac.netlify.app/about/\" class=\"px-4 py-3 rounded-xl text-base font-medium no-underline text-muted-foreground hover:bg-surface hover:text-foreground\">About</a><a href=\"https://jts-hvac.netlify.app/reviews/\" class=\"px-4 py-3 rounded-xl text-base font-medium no-underline text-muted-foreground hover:bg-surface hover:text-foreground\">Reviews</a><a href=\"https://jts-hvac.netlify.app/area/\" class=\"px-4 py-3 rounded-xl text-base font-medium no-underline text-muted-foreground hover:bg-surface hover:text-foreground\">Service Area</a><a href=\"https://jts-hvac.netlify.app/contact/\" class=\"px-4 py-3 rounded-xl text-base font-medium no-underline text-muted-foreground hover:bg-surface hover:text-foreground\">Contact</a><div class=\"mt-4 grid grid-cols-2 gap-3 px-2\"><a href=\"tel:+16168403105\" class=\"flex items-center justify-center gap-2 px-4 py-3 rounded-full border border-border text-foreground text-sm font-semibold no-underline\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M9.366 10.682a10.556 10.556 0 0 0 3.952 3.952l.884-.884a2.183 2.183 0 0 1 2.314-.523c.769.252 1.723.383 2.484.383.552 0 1 .448 1 1v3.5c0 .552-.448 1-1 1C9.39 22 2 14.61 2 5.5c0-.552.448-1 1-1h3.5c.552 0 1 .448 1 1 0 .761.131 1.715.383 2.484a2.183 2.183 0 0 1-.523 2.314l-.884.884z\"></path></svg>Call</a><a href=\"https://jts-hvac.netlify.app/book/\" class=\"flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-primary text-white text-sm font-semibold no-underline\">Book <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"></line><polyline points=\"7 7 17 7 17 17\"></polyline></svg></a></div></nav></div></header>",
+    "elementStyles": [
+      {
+        "tag": "a",
+        "cls": "flex",
+        "text": "JT's Heating Cooling & Plumbin",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "img",
+        "cls": "w-10",
+        "color": "rgb(22, 22, 24)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "a",
+        "cls": "nav-link",
+        "text": "Home",
+        "color": "rgb(0, 74, 148)",
+        "borderRadius": "6px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "span",
+        "cls": "active-indicator",
+        "color": "rgb(0, 74, 148)",
+        "backgroundColor": "rgb(0, 74, 148)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "lineWidth": 20,
+        "lineHeight": 3
+      },
+      {
+        "tag": "a",
+        "cls": "nav-link",
+        "text": "Services",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+        "borderRadius": "6px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "span",
+        "cls": "active-indicator",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+        "backgroundColor": "rgb(0, 74, 148)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "14px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "nav-link",
+        "text": "Pricing",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+        "borderRadius": "6px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "nav-link",
+        "text": "About",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+        "borderRadius": "6px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "nav-link",
+        "text": "Reviews",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+        "borderRadius": "6px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "nav-link",
+        "text": "Service Area",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+        "borderRadius": "6px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "nav-link",
+        "text": "Contact",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+        "borderRadius": "6px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "hidden",
+        "text": "(616) 840-3105",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "svg",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+        "fill": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+        "width": 16,
+        "height": 16,
+        "viewBox": "0 0 24 24",
+        "fontSize": "14px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "group",
+        "text": "Book a Visit",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(0, 74, 148)",
+        "borderRadius": "3.35544e+07px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(255, 255, 255)",
+        "width": 16,
+        "height": 16,
+        "viewBox": "0 0 24 24",
+        "fontSize": "14px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(22, 22, 24)",
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "a",
+        "cls": "px-4",
+        "text": "Home",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "borderRadius": "12px",
+        "fontSize": "16px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "px-4",
+        "text": "Services",
+        "color": "rgb(88, 88, 95)",
+        "borderRadius": "12px",
+        "fontSize": "16px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "px-4",
+        "text": "Pricing",
+        "color": "rgb(88, 88, 95)",
+        "borderRadius": "12px",
+        "fontSize": "16px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "px-4",
+        "text": "About",
+        "color": "rgb(88, 88, 95)",
+        "borderRadius": "12px",
+        "fontSize": "16px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "px-4",
+        "text": "Reviews",
+        "color": "rgb(88, 88, 95)",
+        "borderRadius": "12px",
+        "fontSize": "16px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "px-4",
+        "text": "Service Area",
+        "color": "rgb(88, 88, 95)",
+        "borderRadius": "12px",
+        "fontSize": "16px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "px-4",
+        "text": "Contact",
+        "color": "rgb(88, 88, 95)",
+        "borderRadius": "12px",
+        "fontSize": "16px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "flex",
+        "text": "Call",
+        "color": "rgb(22, 22, 24)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "flex",
+        "text": "Book",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(0, 74, 148)",
+        "borderRadius": "3.35544e+07px",
+        "fontWeight": "600"
+      }
+    ]
+  },
+  {
+    "index": 1,
+    "heading": "Honest Heating, Cooling &amp; Plumbing for West Michigan Homes &amp; Families.",
+    "html": "<section id=\"hero\" class=\"relative px-4 pt-[62px] md:pt-[74px]\"><div class=\"relative w-full min-h-[72vh] overflow-hidden rounded-[24px]\"><img src=\"https://jts-hvac.netlify.app/images/19072266-a54c-45c1-93fc-083938698d93_compressed_geo-page-heat-pump-repairs-in-portland-mi-geo-page-main-imag-1024.webp\" alt=\"JT, owner of JT's Heating Cooling &amp; Plumbing, standing outdoors in West Michigan\" class=\"absolute inset-0 w-full h-full object-cover object-center\"><div class=\"absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/45 to-secondary/10\"></div><div class=\"absolute inset-0 bg-gradient-to-t from-secondary/55 via-transparent to-transparent\"></div><div class=\"relative z-10 min-h-[72vh] w-full max-w-[1400px] mx-auto px-6 md:px-10 lg:px-12 pt-10 md:pt-12 pb-12 flex flex-col\"><div class=\"flex items-center justify-between gap-4\"><div class=\"inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/25 text-white text-xs\"><span class=\"relative flex h-2.5 w-2.5\"><span class=\"animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75\"></span><span class=\"relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400\"></span></span>Serving Grand Rapids &amp; West MI</div><div class=\"hidden md:flex items-center gap-2 text-white/90 text-xs font-medium\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"currentColor\" class=\"text-amber-400\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg>5.0 · 27 Google reviews</div></div><div class=\"my-auto grid lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-6\"><div class=\"lg:col-span-7\"><h1 class=\"hero-animate font-heading font-semibold text-white text-[32px] md:text-[42px] lg:text-[48px] leading-[1.3] tracking-tight\">Honest Heating, Cooling &amp; Plumbing for <span class=\"hero-hl\">West Michigan</span> <span class=\"italic font-medium text-white/90\">Homes &amp; Families.</span></h1><p class=\"hero-animate hero-animate-delay-1 mt-6 max-w-xl text-lg text-white/90 leading-relaxed\">No pressure, no upsells — just straight talk about what your home actually needs. Licensed and insured, owner-operated right here in Grand Rapids.</p><div class=\"hero-animate hero-animate-delay-2 mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3\"><a class=\"group inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-primary text-white text-base font-semibold hover:bg-primary-hover transition-all hover:-translate-y-0.5 no-underline whitespace-nowrap\" href=\"https://jts-hvac.netlify.app/book/\">Book a Visit<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"></line><polyline points=\"7 7 17 7 17 17\"></polyline></svg></a><a class=\"inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white/10 border border-white/25 text-white text-base font-semibold hover:bg-white/20 transition-all no-underline whitespace-nowrap\" href=\"https://jts-hvac.netlify.app/pricing/\">Request a Quote</a></div></div><div class=\"hero-animate hero-animate-delay-3 lg:col-span-5 flex flex-col gap-3.5\"><a href=\"https://jts-hvac.netlify.app/book/\" class=\"group rounded-2xl p-5 bg-white shadow-lg border border-black/5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl no-underline\"><div class=\"flex items-center gap-3 mb-2.5\"><span class=\"w-10 h-10 shrink-0 flex items-center justify-center rounded-full bg-primary/10 text-primary\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 23a7.5 7.5 0 0 1-5.138-12.963C7.204 9.023 8.354 7.637 9.77 6.098c.905-.985 1.89-2.057 2.23-3.601a.747.747 0 0 1 1.258-.392c.638.618 1.154 1.34 1.543 2.15C16.155 7.02 16.5 9.079 16.5 11c0 3.314-2.686 6-6 6a.5.5 0 0 0 0 1c2.761 0 5 2.239 5 5 0 1.954-1.12 3.648-2.76 4.477.838-.052 1.638-.344 2.308-.857 1.573-1.206 2.452-3.084 2.452-5.12 0-3.328-1.576-6.195-3.655-8.498a.5.5 0 0 1 .71-.703c3.085 3.425 4.945 7.828 4.945 12.503 0 4.142-3.358 7.5-7.5 7.5z\"></path></svg></span><h3 class=\"text-base font-heading font-semibold leading-snug flex-1 text-primary\">No heat? I need furnace repair</h3><span class=\"text-[9px] uppercase tracking-[0.14em] px-2 py-1 rounded-full bg-primary/10 text-primary font-semibold whitespace-nowrap hidden sm:inline\">Call for availability</span></div><p class=\"text-sm text-muted-foreground leading-relaxed\">Furnace won't start, making weird noises, or blowing cold air? Talk me through what's happening and I'll come check it out.</p></a><a href=\"https://jts-hvac.netlify.app/book/\" class=\"group rounded-2xl p-5 bg-white shadow-lg border border-black/5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl no-underline\"><div class=\"flex items-center gap-3 mb-2.5\"><span class=\"w-10 h-10 shrink-0 flex items-center justify-center rounded-full bg-primary/10 text-primary\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M13 12h7v2h-7v7h-2v-7H4v-2h7V5h2v7zm-6.697-9.803l1.414 1.414L2.828 8.498 1.414 7.084 6.303 2.197zM22.586 7.084l-1.414 1.414-4.889-4.887 1.414-1.414 4.889 4.887zM17.697 21.803l-1.414-1.414 4.889-4.887 1.414 1.414-4.889 4.887zM1.414 16.916l1.414-1.414 4.889 4.887-1.414 1.414-4.889-4.887z\"></path></svg></span><h3 class=\"text-base font-heading font-semibold leading-snug flex-1 text-primary\">A/C not cooling? I need service</h3><span class=\"text-[9px] uppercase tracking-[0.14em] px-2 py-1 rounded-full bg-primary/10 text-primary font-semibold whitespace-nowrap hidden sm:inline\">Call for a Quote</span></div><p class=\"text-sm text-muted-foreground leading-relaxed\">Central air blowing warm or barely working? I'll diagnose what's going on and give you straight answers — repair or replace.</p></a><a href=\"https://jts-hvac.netlify.app/book/\" class=\"group rounded-2xl p-5 bg-white shadow-lg border border-black/5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl no-underline\"><div class=\"flex items-center gap-3 mb-2.5\"><span class=\"w-10 h-10 shrink-0 flex items-center justify-center rounded-full bg-primary/10 text-primary\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2zm-2-4v-2h-2v2h2zm-4 0v-2h-2v2h2zm-4 0v-2H7v2h2zm10-4v-2h-2v2h2zm-4 0v-2h-2v2h2zm-4 0v-2H7v2h2zm10-4V7h-2v2h2zm-4 0V7h-2v2h2zm-4 0V7H7v2h2z\"></path></svg></span><h3 class=\"text-base font-heading font-semibold leading-snug flex-1 text-primary\">I need a new system installed</h3><span class=\"text-[9px] uppercase tracking-[0.14em] px-2 py-1 rounded-full bg-primary/10 text-primary font-semibold whitespace-nowrap hidden sm:inline\">Installation estimates</span></div><p class=\"text-sm text-muted-foreground leading-relaxed\">Ready for a new furnace, A/C, heat pump, mini-split, or water heater? Honest sizing, clear pricing, clean install.</p></a></div></div></div></div></section>",
+    "elementStyles": [
+      {
+        "tag": "img",
+        "cls": "absolute",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "div",
+        "cls": "inline-flex",
+        "text": "Serving Grand Rapids & West MI",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.25)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "12px"
+      },
+      {
+        "tag": "span",
+        "cls": "animate-ping",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "oklch(0.765 0.177 163.223)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "12px"
+      },
+      {
+        "tag": "span",
+        "cls": "relative",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "oklch(0.765 0.177 163.223)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "12px"
+      },
+      {
+        "tag": "svg",
+        "color": "oklch(0.828 0.189 84.429)",
+        "fill": "oklch(0.828 0.189 84.429)",
+        "width": 14,
+        "height": 14,
+        "viewBox": "0 0 24 24",
+        "fontSize": "12px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "h1",
+        "cls": "hero-animate",
+        "text": "Honest Heating, Cooling & Plum",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "48px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "span",
+        "cls": "hero-hl",
+        "text": "West Michigan",
+        "color": "rgb(0, 74, 148)",
+        "backgroundColor": "rgba(255, 255, 255, 0.92)",
+        "borderRadius": "5px",
+        "fontSize": "48px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "group",
+        "text": "Book a Visit",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(0, 74, 148)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(255, 255, 255)",
+        "width": 18,
+        "height": 18,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "inline-flex",
+        "text": "Request a Quote",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.25)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "group",
+        "text": "No heat? I need furnace repair",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "border": "1px solid oklab(0 0 0 / 0.05)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "span",
+        "cls": "w-10",
+        "color": "rgb(0, 74, 148)",
+        "backgroundColor": "oklab(0.415806 -0.0353225 -0.132762 / 0.1)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(0, 74, 148)",
+        "fill": "rgb(0, 74, 148)",
+        "width": 18,
+        "height": 18,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-base",
+        "text": "No heat? I need furnace repair",
+        "color": "rgb(0, 74, 148)",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "span",
+        "cls": "text-[9px]",
+        "text": "Call for availability",
+        "color": "rgb(0, 74, 148)",
+        "backgroundColor": "oklab(0.415806 -0.0353225 -0.132762 / 0.1)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "9px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "group",
+        "text": "A/C not cooling? I need servic",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "border": "1px solid oklab(0 0 0 / 0.05)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-base",
+        "text": "A/C not cooling? I need servic",
+        "color": "rgb(0, 74, 148)",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "span",
+        "cls": "text-[9px]",
+        "text": "Call for a Quote",
+        "color": "rgb(0, 74, 148)",
+        "backgroundColor": "oklab(0.415806 -0.0353225 -0.132762 / 0.1)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "9px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "group",
+        "text": "I need a new system installedI",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "border": "1px solid oklab(0 0 0 / 0.05)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-base",
+        "text": "I need a new system installed",
+        "color": "rgb(0, 74, 148)",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "span",
+        "cls": "text-[9px]",
+        "text": "Installation estimates",
+        "color": "rgb(0, 74, 148)",
+        "backgroundColor": "oklab(0.415806 -0.0353225 -0.132762 / 0.1)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "9px",
+        "fontWeight": "600"
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "html": "<section id=\"locations-ticker\" class=\"py-6 md:py-9 bg-[hsl(40_33%_94%)] border-y border-border overflow-hidden\"><div class=\"flex whitespace-nowrap\"><div class=\"flex animate-marquee items-center\"><div class=\"flex items-center\"><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Grand Rapids</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Saranac</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Lowell</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Kentwood</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Wyoming</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Ada</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Walker</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Rockford</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Greenville</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Portland</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Hudsonville</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">West Michigan</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div></div><div class=\"flex items-center\"><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Grand Rapids</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Saranac</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Lowell</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Kentwood</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Wyoming</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Ada</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Walker</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Rockford</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Greenville</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Portland</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Hudsonville</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">West Michigan</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div></div><div class=\"flex items-center\"><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Grand Rapids</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Saranac</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Lowell</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Kentwood</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Wyoming</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Ada</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Walker</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Rockford</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Greenville</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Portland</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">Hudsonville</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div><div class=\"flex items-center gap-4 md:gap-6 mx-4 md:mx-6 text-foreground/85\"><i class=\"ri-map-pin-2-line text-primary text-lg md:text-2xl\"></i><span class=\"font-heading text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight\">West Michigan</span><span class=\"text-border text-2xl md:text-3xl\">·</span></div></div></div></div></section>"
+  },
+  {
+    "index": 3,
+    "heading": "Heating, cooling &amp; plumbing done honest and clean.",
+    "html": "<section id=\"services\" class=\"py-24 bg-background\"><div class=\"mx-auto w-full max-w-[1400px] px-4 md:px-8\"><div class=\"flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16\"><div class=\"max-w-3xl\"><div class=\"inline-flex items-center gap-2 mb-5 px-3 py-1 rounded-full bg-surface border border-border text-[11px] uppercase tracking-[0.18em] text-muted-foreground font-semibold\"><span class=\"w-1.5 h-1.5 rounded-full bg-primary\"></span>What we do</div><h2 class=\"text-h2 font-heading font-semibold text-foreground tracking-tight leading-tight\">Heating, cooling &amp; plumbing<br class=\"hidden md:block\"> done <span class=\"text-primary italic font-medium\">honest and clean.</span></h2><p class=\"mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl\">Furnaces, A/C, heat pumps, mini-splits, and water heaters across Grand Rapids. No confusing jargon, no surprise pricing.</p></div><a href=\"https://jts-hvac.netlify.app/services/\" class=\"inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-transparent border border-border text-foreground font-semibold hover:bg-surface transition-all no-underline\">See all services<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"></line><polyline points=\"7 7 17 7 17 17\"></polyline></svg></a></div><div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\"><div class=\"group relative flex flex-col rounded-3xl overflow-hidden border border-border/70 bg-background shadow-[0_2px_18px_rgba(2,6,23,0.06)] transition-all duration-300 hover:border-primary/50 hover:shadow-[0_18px_44px_rgba(2,6,23,0.13)] hover:-translate-y-1\"><div class=\"relative aspect-[4/3] overflow-hidden\"><img src=\"https://jts-hvac.netlify.app/images/618e6cb8cb07dcae4dd93a4301bd5bf1-1024.webp\" alt=\"No heat / furnace repair\" class=\"w-full h-full object-cover transition-transform duration-500 group-hover:scale-105\"><div class=\"absolute top-4 left-4 flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-white/20 text-[10px] uppercase font-bold tracking-wider text-secondary\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2zm-2-4v-2h-2v2h2zm-4 0v-2h-2v2h2zm-4 0v-2H7v2h2zm10-4v-2h-2v2h2zm-4 0v-2h-2v2h2zm-4 0v-2H7v2h2zm10-4V7h-2v2h2zm-4 0V7h-2v2h2zm-4 0V7H7v2h2z\"></path></svg>Residential</div><div class=\"absolute top-4 right-4 px-3 py-1 rounded-full bg-primary text-white text-[11px] font-bold tracking-wide\">Call for a Quote</div></div><div class=\"flex-1 p-6 md:p-8 flex flex-col\"><h3 class=\"text-xl md:text-2xl font-heading font-semibold text-foreground mb-3 leading-tight group-hover:text-primary transition-colors\">No heat / furnace repair</h3><p class=\"text-[15px] text-muted-foreground leading-relaxed mb-8 flex-1\">Furnace not firing up? Cold spots in the house? I'll talk through your symptoms first, then get it sorted -- repair or replacement, no pressure.</p><div class=\"flex items-center justify-between mt-auto\"><a href=\"https://jts-hvac.netlify.app/book/\" class=\"text-sm font-bold text-foreground no-underline hover:text-primary transition-colors flex items-center gap-1.5\">Book this service<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"transition-transform group-hover:translate-x-0.5\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line><polyline points=\"12 5 19 12 12 19\"></polyline></svg></a><a href=\"https://jts-hvac.netlify.app/services/\" class=\"w-8 h-8 flex items-center justify-center rounded-full bg-surface border border-border text-muted-foreground group-hover:bg-primary group-hover:text-white transition-all\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"></line><polyline points=\"7 7 17 7 17 17\"></polyline></svg></a></div></div></div><div class=\"group relative flex flex-col rounded-3xl overflow-hidden border border-border/70 bg-background shadow-[0_2px_18px_rgba(2,6,23,0.06)] transition-all duration-300 hover:border-primary/50 hover:shadow-[0_18px_44px_rgba(2,6,23,0.13)] hover:-translate-y-1\"><div class=\"relative aspect-[4/3] overflow-hidden\"><img src=\"https://jts-hvac.netlify.app/images/f33b6fa9201fc584fadf20b63ea5ca57-1024.webp\" alt=\"Furnace installation\" class=\"w-full h-full object-cover transition-transform duration-500 group-hover:scale-105\"><div class=\"absolute top-4 left-4 flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-white/20 text-[10px] uppercase font-bold tracking-wider text-secondary\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2zm-2-4v-2h-2v2h2zm-4 0v-2h-2v2h2zm-4 0v-2H7v2h2zm10-4v-2h-2v2h2zm-4 0v-2h-2v2h2zm-4 0v-2H7v2h2zm10-4V7h-2v2h2zm-4 0V7h-2v2h2zm-4 0V7H7v2h2z\"></path></svg>Residential</div><div class=\"absolute top-4 right-4 px-3 py-1 rounded-full bg-primary text-white text-[11px] font-bold tracking-wide\">Call for a Quote</div></div><div class=\"flex-1 p-6 md:p-8 flex flex-col\"><h3 class=\"text-xl md:text-2xl font-heading font-semibold text-foreground mb-3 leading-tight group-hover:text-primary transition-colors\">Furnace installation</h3><p class=\"text-[15px] text-muted-foreground leading-relaxed mb-8 flex-1\">Full furnace replacement with honest sizing and clear upfront pricing. No upselling, just the right unit for your home.</p><div class=\"flex items-center justify-between mt-auto\"><a href=\"https://jts-hvac.netlify.app/book/\" class=\"text-sm font-bold text-foreground no-underline hover:text-primary transition-colors flex items-center gap-1.5\">Book this service<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"transition-transform group-hover:translate-x-0.5\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line><polyline points=\"12 5 19 12 12 19\"></polyline></svg></a><a href=\"https://jts-hvac.netlify.app/services/\" class=\"w-8 h-8 flex items-center justify-center rounded-full bg-surface border border-border text-muted-foreground group-hover:bg-primary group-hover:text-white transition-all\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"></line><polyline points=\"7 7 17 7 17 17\"></polyline></svg></a></div></div></div><div class=\"group relative flex flex-col rounded-3xl overflow-hidden border border-border/70 bg-background shadow-[0_2px_18px_rgba(2,6,23,0.06)] transition-all duration-300 hover:border-primary/50 hover:shadow-[0_18px_44px_rgba(2,6,23,0.13)] hover:-translate-y-1\"><div class=\"relative aspect-[4/3] overflow-hidden\"><img src=\"https://jts-hvac.netlify.app/images/eefa074dc27c46ce94494aa789dd4874-1024.webp\" alt=\"A/C service &amp; repair\" class=\"w-full h-full object-cover transition-transform duration-500 group-hover:scale-105\"><div class=\"absolute top-4 left-4 flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-white/20 text-[10px] uppercase font-bold tracking-wider text-secondary\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2zm-2-4v-2h-2v2h2zm-4 0v-2h-2v2h2zm-4 0v-2H7v2h2zm10-4v-2h-2v2h2zm-4 0v-2h-2v2h2zm-4 0v-2H7v2h2zm10-4V7h-2v2h2zm-4 0V7h-2v2h2zm-4 0V7H7v2h2z\"></path></svg>Residential</div><div class=\"absolute top-4 right-4 px-3 py-1 rounded-full bg-primary text-white text-[11px] font-bold tracking-wide\">Call for a Quote</div></div><div class=\"flex-1 p-6 md:p-8 flex flex-col\"><h3 class=\"text-xl md:text-2xl font-heading font-semibold text-foreground mb-3 leading-tight group-hover:text-primary transition-colors\">A/C service &amp; repair</h3><p class=\"text-[15px] text-muted-foreground leading-relaxed mb-8 flex-1\">Central air not cooling like it should? Strange noises or warm air? I'll diagnose it honestly and give you straight options.</p><div class=\"flex items-center justify-between mt-auto\"><a href=\"https://jts-hvac.netlify.app/book/\" class=\"text-sm font-bold text-foreground no-underline hover:text-primary transition-colors flex items-center gap-1.5\">Book this service<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"transition-transform group-hover:translate-x-0.5\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line><polyline points=\"12 5 19 12 12 19\"></polyline></svg></a><a href=\"https://jts-hvac.netlify.app/services/\" class=\"w-8 h-8 flex items-center justify-center rounded-full bg-surface border border-border text-muted-foreground group-hover:bg-primary group-hover:text-white transition-all\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"></line><polyline points=\"7 7 17 7 17 17\"></polyline></svg></a></div></div></div><div class=\"group relative flex flex-col rounded-3xl overflow-hidden border border-border/70 bg-background shadow-[0_2px_18px_rgba(2,6,23,0.06)] transition-all duration-300 hover:border-primary/50 hover:shadow-[0_18px_44px_rgba(2,6,23,0.13)] hover:-translate-y-1\"><div class=\"relative aspect-[4/3] overflow-hidden\"><img src=\"https://jts-hvac.netlify.app/images/95a7e50288c3e70883e8385bfd0e090b-1024.webp\" alt=\"Heat pump repair &amp; replacement\" class=\"w-full h-full object-cover transition-transform duration-500 group-hover:scale-105\"><div class=\"absolute top-4 left-4 flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-white/20 text-[10px] uppercase font-bold tracking-wider text-secondary\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2zm-2-4v-2h-2v2h2zm-4 0v-2h-2v2h2zm-4 0v-2H7v2h2zm10-4v-2h-2v2h2zm-4 0v-2h-2v2h2zm-4 0v-2H7v2h2zm10-4V7h-2v2h2zm-4 0V7h-2v2h2zm-4 0V7H7v2h2z\"></path></svg>Residential</div><div class=\"absolute top-4 right-4 px-3 py-1 rounded-full bg-primary text-white text-[11px] font-bold tracking-wide\">Call for a Quote</div></div><div class=\"flex-1 p-6 md:p-8 flex flex-col\"><h3 class=\"text-xl md:text-2xl font-heading font-semibold text-foreground mb-3 leading-tight group-hover:text-primary transition-colors\">Heat pump repair &amp; replacement</h3><p class=\"text-[15px] text-muted-foreground leading-relaxed mb-8 flex-1\">Ducted or ductless heat pump acting up? I'll walk you through what's wrong and whether repair or replacement makes more sense.</p><div class=\"flex items-center justify-between mt-auto\"><a href=\"https://jts-hvac.netlify.app/book/\" class=\"text-sm font-bold text-foreground no-underline hover:text-primary transition-colors flex items-center gap-1.5\">Book this service<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"transition-transform group-hover:translate-x-0.5\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line><polyline points=\"12 5 19 12 12 19\"></polyline></svg></a><a href=\"https://jts-hvac.netlify.app/services/\" class=\"w-8 h-8 flex items-center justify-center rounded-full bg-surface border border-border text-muted-foreground group-hover:bg-primary group-hover:text-white transition-all\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"></line><polyline points=\"7 7 17 7 17 17\"></polyline></svg></a></div></div></div><div class=\"group relative flex flex-col rounded-3xl overflow-hidden border border-border/70 bg-background shadow-[0_2px_18px_rgba(2,6,23,0.06)] transition-all duration-300 hover:border-primary/50 hover:shadow-[0_18px_44px_rgba(2,6,23,0.13)] hover:-translate-y-1\"><div class=\"relative aspect-[4/3] overflow-hidden\"><img src=\"https://jts-hvac.netlify.app/images/193174e3bfe254184d683b6c40ea0c02-1024.webp\" alt=\"Ductless mini-split installation\" class=\"w-full h-full object-cover transition-transform duration-500 group-hover:scale-105\"><div class=\"absolute top-4 left-4 flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-white/20 text-[10px] uppercase font-bold tracking-wider text-secondary\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2zm-2-4v-2h-2v2h2zm-4 0v-2h-2v2h2zm-4 0v-2H7v2h2zm10-4v-2h-2v2h2zm-4 0v-2h-2v2h2zm-4 0v-2H7v2h2zm10-4V7h-2v2h2zm-4 0V7h-2v2h2zm-4 0V7H7v2h2z\"></path></svg>Residential</div><div class=\"absolute top-4 right-4 px-3 py-1 rounded-full bg-primary text-white text-[11px] font-bold tracking-wide\">Call for a Quote</div></div><div class=\"flex-1 p-6 md:p-8 flex flex-col\"><h3 class=\"text-xl md:text-2xl font-heading font-semibold text-foreground mb-3 leading-tight group-hover:text-primary transition-colors\">Ductless mini-split installation</h3><p class=\"text-[15px] text-muted-foreground leading-relaxed mb-8 flex-1\">Stay comfortable in every room. Clean wall-mounted or ceiling cassette mini-splits installed with minimal disruption.</p><div class=\"flex items-center justify-between mt-auto\"><a href=\"https://jts-hvac.netlify.app/book/\" class=\"text-sm font-bold text-foreground no-underline hover:text-primary transition-colors flex items-center gap-1.5\">Book this service<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"transition-transform group-hover:translate-x-0.5\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line><polyline points=\"12 5 19 12 12 19\"></polyline></svg></a><a href=\"https://jts-hvac.netlify.app/services/\" class=\"w-8 h-8 flex items-center justify-center rounded-full bg-surface border border-border text-muted-foreground group-hover:bg-primary group-hover:text-white transition-all\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"></line><polyline points=\"7 7 17 7 17 17\"></polyline></svg></a></div></div></div><div class=\"group relative flex flex-col rounded-3xl overflow-hidden border border-border/70 bg-background shadow-[0_2px_18px_rgba(2,6,23,0.06)] transition-all duration-300 hover:border-primary/50 hover:shadow-[0_18px_44px_rgba(2,6,23,0.13)] hover:-translate-y-1\"><div class=\"relative aspect-[4/3] overflow-hidden\"><img src=\"https://jts-hvac.netlify.app/images/f9cfca79f916636594d0b200337a7ab6-1024.webp\" alt=\"Water heater replacement\" class=\"w-full h-full object-cover transition-transform duration-500 group-hover:scale-105\"><div class=\"absolute top-4 left-4 flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-white/20 text-[10px] uppercase font-bold tracking-wider text-secondary\"> <!-- truncated -->",
+    "elementStyles": [
+      {
+        "tag": "div",
+        "cls": "inline-flex",
+        "text": "What we do",
+        "color": "rgb(88, 88, 95)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "11px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "span",
+        "cls": "w-1.5",
+        "color": "rgb(88, 88, 95)",
+        "backgroundColor": "rgb(0, 74, 148)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "11px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "h2",
+        "cls": "text-h2",
+        "text": "Heating, cooling & plumbing do",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "48px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "inline-flex",
+        "text": "See all services",
+        "color": "rgb(22, 22, 24)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(22, 22, 24)",
+        "width": 20,
+        "height": 20,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "ResidentialCall for a QuoteNo ",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(252, 251, 248)",
+        "border": "1px solid oklab(0.949045 -0.0000615716 0.00416207 / 0.7)",
+        "borderRadius": "24px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "img",
+        "cls": "w-full",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "div",
+        "cls": "absolute",
+        "text": "Residential",
+        "color": "rgb(14, 14, 42)",
+        "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.9)",
+        "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.2)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "10px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(14, 14, 42)",
+        "fill": "rgb(14, 14, 42)",
+        "width": 12,
+        "height": 12,
+        "viewBox": "0 0 24 24",
+        "fontSize": "10px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "div",
+        "cls": "absolute",
+        "text": "Call for a Quote",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(0, 74, 148)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "11px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-xl",
+        "text": "No heat / furnace repair",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "24px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "text-sm",
+        "text": "Book this service",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "14px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "a",
+        "cls": "w-8",
+        "color": "rgb(88, 88, 95)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(88, 88, 95)",
+        "width": 16,
+        "height": 16,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "ResidentialCall for a QuoteFur",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(252, 251, 248)",
+        "border": "1px solid oklab(0.949045 -0.0000615716 0.00416207 / 0.7)",
+        "borderRadius": "24px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-xl",
+        "text": "Furnace installation",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "24px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "ResidentialCall for a QuoteA/C",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(252, 251, 248)",
+        "border": "1px solid oklab(0.949045 -0.0000615716 0.00416207 / 0.7)",
+        "borderRadius": "24px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-xl",
+        "text": "A/C service & repair",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "24px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "ResidentialCall for a QuoteHea",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(252, 251, 248)",
+        "border": "1px solid oklab(0.949045 -0.0000615716 0.00416207 / 0.7)",
+        "borderRadius": "24px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-xl",
+        "text": "Heat pump repair & replacement",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "24px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "ResidentialCall for a QuoteDuc",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(252, 251, 248)",
+        "border": "1px solid oklab(0.949045 -0.0000615716 0.00416207 / 0.7)",
+        "borderRadius": "24px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-xl",
+        "text": "Ductless mini-split installati",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "24px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "ResidentialCall for a QuoteWat",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(252, 251, 248)",
+        "border": "1px solid oklab(0.949045 -0.0000615716 0.00416207 / 0.7)",
+        "borderRadius": "24px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-xl",
+        "text": "Water heater replacement",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "24px",
+        "fontWeight": "600"
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "heading": "One local technician who listens before he quotes.",
+    "html": "<section id=\"owner-spotlight\" class=\"py-24 bg-[hsl(40_33%_94%)] border-t border-border overflow-hidden\"><div class=\"mx-auto w-full max-w-[1400px] px-4 md:px-8\"><div class=\"grid grid-cols-1 lg:grid-cols-2 gap-16 lg:items-center\"><div class=\"reveal active\"><div class=\"inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full bg-surface border border-border text-[11px] uppercase tracking-[0.18em] text-muted-foreground font-semibold\">Owner-Operated · Licensed · Insured</div><h2 class=\"text-h2 font-heading font-semibold text-foreground tracking-tight leading-tight mb-6\">One local technician<br class=\"hidden md:block\"> <span class=\"text-primary italic\">who listens before he quotes.</span></h2><p class=\"text-lg text-muted-foreground leading-relaxed max-w-xl mb-12\">No call centres, no commissioned salespeople, no surprise fees. Just honest heating, cooling and plumbing by someone who lives and works right here in West Michigan.</p><div class=\"grid grid-cols-2 md:grid-cols-3 gap-8 mb-12\"><div><div class=\"text-4xl md:text-5xl font-heading font-semibold text-primary mb-2 tracking-tight\">Local</div><div class=\"text-[13px] text-muted-foreground font-medium uppercase tracking-wider\">West Michigan service</div></div><div><div class=\"text-4xl md:text-5xl font-heading font-semibold text-primary mb-2 tracking-tight\">Direct</div><div class=\"text-[13px] text-muted-foreground font-medium uppercase tracking-wider\">Talk with JT</div></div><div><div class=\"text-4xl md:text-5xl font-heading font-semibold text-primary mb-2 tracking-tight\">Clear</div><div class=\"text-[13px] text-muted-foreground font-medium uppercase tracking-wider\">Options before work</div></div></div><div class=\"flex flex-wrap gap-3\"><div class=\"inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface border border-border text-sm font-medium text-foreground\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"text-emerald-500\"><polyline points=\"20 6 9 17 4 12\"></polyline></svg>Fully licensed</div><div class=\"inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface border border-border text-sm font-medium text-foreground\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"text-emerald-500\"><polyline points=\"20 6 9 17 4 12\"></polyline></svg>Fully insured</div><div class=\"inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface border border-border text-sm font-medium text-foreground\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"text-emerald-500\"><polyline points=\"20 6 9 17 4 12\"></polyline></svg>Owner-operated</div><div class=\"inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface border border-border text-sm font-medium text-foreground\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"text-emerald-500\"><polyline points=\"20 6 9 17 4 12\"></polyline></svg>No-pressure pricing</div><div class=\"inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface border border-border text-sm font-medium text-foreground\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"text-emerald-500\"><polyline points=\"20 6 9 17 4 12\"></polyline></svg>Clean workmanship</div></div></div><div class=\"relative reveal-right active\"><div class=\"relative rounded-[32px] overflow-hidden aspect-[4/3]\"><img src=\"https://jts-hvac.netlify.app/images/jt-owner.webp\" alt=\"Portrait of JT, owner of JT's Heating Cooling &amp; Plumbing\" class=\"w-full h-full object-cover\"><div class=\"absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-xl\"><div class=\"flex items-center justify-between\"><div><div class=\"text-lg font-heading font-bold leading-tight mb-0.5\">Jordan Miller “JT”</div><div class=\"text-xs text-white/80 font-medium\">Owner · Grand Rapids, MI</div></div><a href=\"https://jts-hvac.netlify.app/about/\" class=\"w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-primary-hover transition-all\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"></line><polyline points=\"7 7 17 7 17 17\"></polyline></svg></a></div></div></div><div class=\"absolute -z-10 -top-6 -right-6 w-full h-full border-2 border-border rounded-[32px]\"></div></div></div></div></section>",
+    "elementStyles": [
+      {
+        "tag": "div",
+        "cls": "inline-flex",
+        "text": "Owner-Operated · Licensed · In",
+        "color": "rgb(88, 88, 95)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "11px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "h2",
+        "cls": "text-h2",
+        "text": "One local technician who liste",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "48px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "inline-flex",
+        "text": "Fully licensed",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "14px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "svg",
+        "color": "oklch(0.696 0.17 162.48)",
+        "width": 16,
+        "height": 16,
+        "viewBox": "0 0 24 24",
+        "fontSize": "14px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "div",
+        "cls": "inline-flex",
+        "text": "Fully insured",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "14px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "div",
+        "cls": "inline-flex",
+        "text": "Owner-operated",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "14px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "div",
+        "cls": "inline-flex",
+        "text": "No-pressure pricing",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "14px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "div",
+        "cls": "inline-flex",
+        "text": "Clean workmanship",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "14px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "img",
+        "cls": "w-full",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "div",
+        "cls": "absolute",
+        "text": "Jordan Miller “JT”Owner · Gran",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.2)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "a",
+        "cls": "w-10",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(0, 74, 148)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(255, 255, 255)",
+        "width": 20,
+        "height": 20,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "div",
+        "cls": "absolute",
+        "color": "rgb(22, 22, 24)",
+        "border": "2px solid rgb(239, 238, 235)",
+        "borderRadius": "32px",
+        "fontSize": "16px"
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "heading": "Three simple steps to get it sorted.",
+    "html": "<section id=\"how-it-works\" class=\"py-24 bg-background border-t border-border\"><div class=\"mx-auto w-full max-w-[1400px] px-4 md:px-8\"><div class=\"max-w-3xl mb-16\"><div class=\"inline-flex items-center gap-2 mb-5 px-3 py-1 rounded-full bg-surface border border-border text-[11px] uppercase tracking-[0.18em] text-muted-foreground font-semibold\">How it works</div><h2 class=\"text-h2 font-heading font-semibold text-foreground tracking-tight leading-tight\">Three simple steps<br class=\"hidden md:block\"> <span class=\"text-primary italic\">to get it sorted.</span></h2><p class=\"mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl\">Getting your heat back or your A/C running shouldn't feel like a sales pitch. Here's what happens after you reach out.</p></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-8\"><div class=\"group p-8 md:p-10 rounded-[32px] bg-surface border border-border transition-all duration-300 hover:border-primary hover:-translate-y-1\"><div class=\"flex items-center justify-between mb-8\"><div class=\"text-5xl font-heading font-bold text-primary tracking-tighter\">01</div><div class=\"w-10 h-10 flex items-center justify-center rounded-full bg-background border border-border text-foreground group-hover:bg-primary group-hover:text-white transition-all\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"></path></svg></div></div><h3 class=\"text-2xl font-heading font-semibold text-foreground mb-4 leading-tight\">Tell me what's going on</h3><p class=\"text-muted-foreground leading-relaxed\">Call, text, or book online. Walk me through the symptoms -- I'll ask a few questions to get a sense of what's happening before I even show up.</p></div><div class=\"group p-8 md:p-10 rounded-[32px] bg-surface border border-border transition-all duration-300 hover:border-primary hover:-translate-y-1\"><div class=\"flex items-center justify-between mb-8\"><div class=\"text-5xl font-heading font-bold text-primary tracking-tighter\">02</div><div class=\"w-10 h-10 flex items-center justify-center rounded-full bg-background border border-border text-foreground group-hover:bg-primary group-hover:text-white transition-all\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path></svg></div></div><h3 class=\"text-2xl font-heading font-semibold text-foreground mb-4 leading-tight\">I'll come check it out</h3><p class=\"text-muted-foreground leading-relaxed\">I'll schedule the earliest visit that fits, diagnose the issue, talk through your options honestly, and give you a clear price before any work starts.</p></div><div class=\"group p-8 md:p-10 rounded-[32px] bg-surface border border-border transition-all duration-300 hover:border-primary hover:-translate-y-1\"><div class=\"flex items-center justify-between mb-8\"><div class=\"text-5xl font-heading font-bold text-primary tracking-tighter\">03</div><div class=\"w-10 h-10 flex items-center justify-center rounded-full bg-background border border-border text-foreground group-hover:bg-primary group-hover:text-white transition-all\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"></polyline></svg></div></div><h3 class=\"text-2xl font-heading font-semibold text-foreground mb-4 leading-tight\">Fixed right, no drama</h3><p class=\"text-muted-foreground leading-relaxed\">Repair or replacement -- whichever actually makes sense for your home. Clean work, tidy cleanup, and you're back to comfortable.</p></div></div></div></section>",
+    "elementStyles": [
+      {
+        "tag": "div",
+        "cls": "inline-flex",
+        "text": "How it works",
+        "color": "rgb(88, 88, 95)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "11px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "h2",
+        "cls": "text-h2",
+        "text": "Three simple steps to get it s",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "48px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "01Tell me what's going onCall,",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "32px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "div",
+        "cls": "w-10",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(252, 251, 248)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(22, 22, 24)",
+        "width": 20,
+        "height": 20,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-2xl",
+        "text": "Tell me what's going on",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "24px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "02I'll come check it outI'll s",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "32px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-2xl",
+        "text": "I'll come check it out",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "24px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "03Fixed right, no dramaRepair ",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "32px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-2xl",
+        "text": "Fixed right, no drama",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "24px",
+        "fontWeight": "600"
+      }
+    ]
+  },
+  {
+    "index": 6,
+    "heading": "Honest pricing, clearly written.",
+    "html": "<section id=\"pricing\" class=\"py-24 bg-[hsl(40_33%_94%)] border-t border-border\"><div class=\"mx-auto w-full max-w-[1400px] px-4 md:px-8\"><div class=\"grid grid-cols-1 lg:grid-cols-12 gap-16 lg:items-start\"><div class=\"lg:col-span-5 reveal active\"><div class=\"inline-flex items-center gap-2 mb-5 px-3 py-1 rounded-full bg-surface border border-border text-[11px] uppercase tracking-[0.18em] text-muted-foreground font-semibold\">Clear quotes</div><h2 class=\"text-h2 font-heading font-semibold text-foreground tracking-tight leading-tight mb-6\">Honest pricing,<br class=\"hidden md:block\"> <span class=\"text-primary italic\">clearly written.</span></h2><p class=\"text-lg text-muted-foreground leading-relaxed mb-10 max-w-xl\">Every home and system is different. JT will look at what is happening, explain the practical options, and give you a clear quote before any work begins.</p><div class=\"flex flex-col sm:flex-row items-stretch sm:items-center gap-4\"><a class=\"group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-secondary text-white text-base font-semibold hover:bg-secondary-hover transition-all hover:-translate-y-0.5 cursor-pointer whitespace-nowrap no-underline\" href=\"https://jts-hvac.netlify.app/book/\">Check Availability<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"transition-transform group-hover:translate-x-0.5\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line><polyline points=\"12 5 19 12 12 19\"></polyline></svg></a><a class=\"inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-transparent border border-border text-foreground text-base font-semibold hover:bg-surface transition-all cursor-pointer whitespace-nowrap no-underline\" href=\"https://jts-hvac.netlify.app/pricing/\">Quote details<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line><polyline points=\"12 5 19 12 12 19\"></polyline></svg></a></div></div><div class=\"lg:col-span-7 reveal-right active\"><div class=\"w-full\"><div class=\"flex items-center justify-between py-4 border-b border-border text-[11px] uppercase tracking-[0.18em] text-muted-foreground font-bold px-4\"><span>Service</span><span>Pricing</span></div><div class=\"divide-y divide-border\"><div class=\"group flex items-center justify-between py-6 px-4 transition-colors hover:bg-surface/50 rounded-2xl\"><div class=\"flex items-start gap-4 pr-8\"><div class=\"w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-surface border border-border text-primary group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 23a7.5 7.5 0 0 1-5.138-12.963C7.204 9.023 8.354 7.637 9.77 6.098c.905-.985 1.89-2.057 2.23-3.601a.747.747 0 0 1 1.258-.392c.638.618 1.154 1.34 1.543 2.15C16.155 7.02 16.5 9.079 16.5 11c0 3.314-2.686 6-6 6a.5.5 0 0 0 0 1c2.761 0 5 2.239 5 5 0 1.954-1.12 3.648-2.76 4.477.838-.052 1.638-.344 2.308-.857 1.573-1.206 2.452-3.084 2.452-5.12 0-3.328-1.576-6.195-3.655-8.498a.5.5 0 0 1 .71-.703c3.085 3.425 4.945 7.828 4.945 12.503 0 4.142-3.358 7.5-7.5 7.5z\"></path></svg></div><div><h4 class=\"text-lg font-heading font-semibold text-foreground mb-1\">Furnace diagnostic</h4><p class=\"text-sm text-muted-foreground leading-relaxed\">Thorough inspection and honest diagnosis of any furnace issue.</p></div></div><div class=\"shrink-0 whitespace-nowrap text-sm md:text-base font-semibold text-primary\">Call for a Quote</div></div><div class=\"group flex items-center justify-between py-6 px-4 transition-colors hover:bg-surface/50 rounded-2xl\"><div class=\"flex items-start gap-4 pr-8\"><div class=\"w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-surface border border-border text-primary group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M13 12h7v2h-7v7h-2v-7H4v-2h7V5h2v7zm-6.697-9.803l1.414 1.414L2.828 8.498 1.414 7.084 6.303 2.197zM22.586 7.084l-1.414 1.414-4.889-4.887 1.414-1.414 4.889 4.887zM17.697 21.803l-1.414-1.414 4.889-4.887 1.414 1.414-4.889 4.887zM1.414 16.916l1.414-1.414 4.889 4.887-1.414 1.414-4.889-4.887z\"></path></svg></div><div><h4 class=\"text-lg font-heading font-semibold text-foreground mb-1\">A/C diagnostic</h4><p class=\"text-sm text-muted-foreground leading-relaxed\">Full system check to find out why your A/C isn't cooling properly.</p></div></div><div class=\"shrink-0 whitespace-nowrap text-sm md:text-base font-semibold text-primary\">Call for a Quote</div></div><div class=\"group flex items-center justify-between py-6 px-4 transition-colors hover:bg-surface/50 rounded-2xl\"><div class=\"flex items-start gap-4 pr-8\"><div class=\"w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-surface border border-border text-primary group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2zm-2-4v-2h-2v2h2zm-4 0v-2h-2v2h2zm-4 0v-2H7v2h2zm10-4v-2h-2v2h2zm-4 0v-2h-2v2h2zm-4 0v-2H7v2h2zm10-4V7h-2v2h2zm-4 0V7h-2v2h2zm-4 0V7H7v2h2z\"></path></svg></div><div><h4 class=\"text-lg font-heading font-semibold text-foreground mb-1\">Furnace installation</h4><p class=\"text-sm text-muted-foreground leading-relaxed\">Full replacement with proper sizing -- no overselling, just the right unit.</p></div></div><div class=\"shrink-0 whitespace-nowrap text-sm md:text-base font-semibold text-primary\">Call for a Quote</div></div><div class=\"group flex items-center justify-between py-6 px-4 transition-colors hover:bg-surface/50 rounded-2xl\"><div class=\"flex items-start gap-4 pr-8\"><div class=\"w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-surface border border-border text-primary group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 14.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-16.5a.75.75 0 0 1 .75.75v1.25a.75.75 0 0 1-1.5 0V2.25A.75.75 0 0 1 12 1.75zM12 19.75a.75.75 0 0 1 .75.75v1.25a.75.75 0 0 1-1.5 0v-1.25a.75.75 0 0 1 .75-.75zM22.25 12a.75.75 0 0 1-.75.75h-1.25a.75.75 0 0 1 0-1.5h1.25a.75.75 0 0 1 .75.75zM4.25 12a.75.75 0 0 1-.75.75H2.25a.75.75 0 0 1 0-1.5h1.25a.75.75 0 0 1 .75.75zM19.465 4.535a.75.75 0 0 1 0 1.06l-.884.885a.75.75 0 1 1-1.06-1.06l.883-.885a.75.75 0 0 1 1.06 0zm-14.85 14.85a.75.75 0 0 1 0 1.06l-.884.885a.75.75 0 0 1-1.06-1.06l.884-.885a.75.75 0 0 1 1.06 0zM19.465 19.465a.75.75 0 0 1-1.06 0l-.885-.884a.75.75 0 1 1 1.06-1.06l.885.884a.75.75 0 0 1 0 1.06zm-14.85-14.85a.75.75 0 0 1-1.06 0l-.885-.884a.75.75 0 0 1 1.06-1.06l.885.884a.75.75 0 0 1 0 1.06z\"></path></svg></div><div><h4 class=\"text-lg font-heading font-semibold text-foreground mb-1\">A/C service &amp; tune-up</h4><p class=\"text-sm text-muted-foreground leading-relaxed\">Clean coils, check refrigerant, test performance -- keeps your system running right.</p></div></div><div class=\"shrink-0 whitespace-nowrap text-sm md:text-base font-semibold text-primary\">Call for a Quote</div></div><div class=\"group flex items-center justify-between py-6 px-4 transition-colors hover:bg-surface/50 rounded-2xl\"><div class=\"flex items-start gap-4 pr-8\"><div class=\"w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-surface border border-border text-primary group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 22C7.03 22 3 17.97 3 13c0-3.5 1.5-6.5 4-8.5l.5-.4C9.5 2.5 12 2 12 2s2.5.5 4.5 2.1l.5.4c2.5 2 4 5 4 8.5 0 4.97-4.03 9-9 9zm0-2a7 7 0 0 0 7-7c0-2.8-1.2-5.2-3.2-6.8l-.3-.2C14 4.8 12 4.3 12 4.3s-2 .5-3.5 1.7l-.3.2C6.2 7.8 5 10.2 5 13a7 7 0 0 0 7 7z\"></path></svg></div><div><h4 class=\"text-lg font-heading font-semibold text-foreground mb-1\">Water heater replacement</h4><p class=\"text-sm text-muted-foreground leading-relaxed\">Gas, electric or tankless -- I'll help you choose what works best for your home.</p></div></div><div class=\"shrink-0 whitespace-nowrap text-sm md:text-base font-semibold text-primary\">Call for a Quote</div></div></div><div class=\"mt-8 px-4 py-4 rounded-2xl bg-surface/30 border border-border/50 text-xs text-muted-foreground flex items-center gap-3\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"text-primary\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><line x1=\"12\" y1=\"16\" x2=\"12\" y2=\"12\"></line><line x1=\"12\" y1=\"8\" x2=\"12.01\" y2=\"8\"></line></svg>Final cost depends on the equipment and scope. You'll always receive a quote before the job starts.</div></div></div></div></div></section>",
+    "elementStyles": [
+      {
+        "tag": "div",
+        "cls": "inline-flex",
+        "text": "Clear quotes",
+        "color": "rgb(88, 88, 95)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "11px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "h2",
+        "cls": "text-h2",
+        "text": "Honest pricing, clearly writte",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "48px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "group",
+        "text": "Check Availability",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(14, 14, 42)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(255, 255, 255)",
+        "width": 20,
+        "height": 20,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "inline-flex",
+        "text": "Quote details",
+        "color": "rgb(22, 22, 24)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(22, 22, 24)",
+        "width": 20,
+        "height": 20,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "flex",
+        "text": "ServicePricing",
+        "color": "rgb(88, 88, 95)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "fontSize": "11px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "Furnace diagnosticThorough ins",
+        "color": "rgb(22, 22, 24)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "div",
+        "cls": "w-10",
+        "color": "rgb(0, 74, 148)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "12px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(0, 74, 148)",
+        "fill": "rgb(0, 74, 148)",
+        "width": 20,
+        "height": 20,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h4",
+        "cls": "text-lg",
+        "text": "Furnace diagnostic",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "18px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "A/C diagnosticFull system chec",
+        "color": "rgb(22, 22, 24)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h4",
+        "cls": "text-lg",
+        "text": "A/C diagnostic",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "18px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "Furnace installationFull repla",
+        "color": "rgb(22, 22, 24)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h4",
+        "cls": "text-lg",
+        "text": "Furnace installation",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "18px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "A/C service & tune-upClean coi",
+        "color": "rgb(22, 22, 24)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h4",
+        "cls": "text-lg",
+        "text": "A/C service & tune-up",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "18px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "h4",
+        "cls": "text-lg",
+        "text": "Water heater replacement",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "18px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "mt-8",
+        "text": "Final cost depends on the equi",
+        "color": "rgb(88, 88, 95)",
+        "backgroundColor": "oklab(0.973071 -0.0000594854 0.00413698 / 0.3)",
+        "border": "1px solid oklab(0.949045 -0.0000615716 0.00416207 / 0.5)",
+        "borderRadius": "16px",
+        "fontSize": "12px"
+      }
+    ]
+  },
+  {
+    "index": 7,
+    "html": "<section id=\"testimonials\" class=\"py-24 bg-background border-t border-border overflow-hidden\"><div class=\"mx-auto w-full max-w-[1400px] px-4 md:px-8\"><div class=\"grid grid-cols-1 lg:grid-cols-2 gap-16 lg:items-center\"><div class=\"reveal active\"><div class=\"flex items-center justify-between mb-8\"><div class=\"text-primary opacity-20\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"64\" height=\"64\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M14.017 21L14.017 18C14.017 15.2386 16.2556 13 19.017 13H21V21H14.017ZM3.01703 21L3.01703 18C3.01703 15.2386 5.2556 13 8.01703 13H10V21H3.01703ZM19.017 11C15.151 11 12.017 14.134 12.017 18V21C12.017 22.1046 12.9124 23 14.017 23H21C22.1046 23 23 22.1046 23 21V13C23 11.8954 22.1046 11 21 11H19.017ZM8.01703 11C4.15103 11 1.01703 14.134 1.01703 18V21C1.01703 22.1046 1.91246 23 3.01703 23H10C11.1046 23 12 22.1046 12 21V18C12 14.134 8.88303 11 8.01703 11H8.01703Z\"></path></svg></div><div class=\"inline-flex items-center gap-2 text-xs font-bold text-muted-foreground uppercase tracking-wider\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"currentColor\" class=\"text-amber-400\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg>5.0 · 27 Google reviews</div></div><div class=\"relative min-h-[280px] md:min-h-[300px]\"><figure class=\"absolute inset-0 transition-opacity duration-500 opacity-0 pointer-events-none\"><blockquote class=\"text-xl md:text-2xl lg:text-[30px] font-heading font-semibold text-foreground leading-[1.25] tracking-tight\">“Jordan was fantastic. He came out quickly, explained everything along the way, and we had A/C again during the heat wave! Use JT’s!!!!!”</blockquote><figcaption class=\"mt-8 flex items-center justify-between gap-4\"><div><div class=\"text-base font-heading font-bold text-foreground\">Jim</div><div class=\"text-sm text-muted-foreground\">Verified Google review · Aug 2026</div></div><div class=\"flex items-center gap-0.5 text-amber-400 shrink-0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg></div></figcaption></figure><figure class=\"absolute inset-0 transition-opacity duration-500 opacity-0 pointer-events-none\"><blockquote class=\"text-xl md:text-2xl lg:text-[30px] font-heading font-semibold text-foreground leading-[1.25] tracking-tight\">“Jordan was very knowledgeable and professional. He was able to give us some energy saving tips. I highly recommend him!”</blockquote><figcaption class=\"mt-8 flex items-center justify-between gap-4\"><div><div class=\"text-base font-heading font-bold text-foreground\">Charissa Hunter</div><div class=\"text-sm text-muted-foreground\">Verified Google review · Jul 2026</div></div><div class=\"flex items-center gap-0.5 text-amber-400 shrink-0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg></div></figcaption></figure><figure class=\"absolute inset-0 transition-opacity duration-500 opacity-100\"><blockquote class=\"text-xl md:text-2xl lg:text-[30px] font-heading font-semibold text-foreground leading-[1.25] tracking-tight\">“Great experience with JT’s Heating Cooling and Plumbing. Quick response, fair pricing, and our AC was fixed the same day. Honest, professional service with excellent communication throughout the process. The issue was diagnosed quickly, repaired on the spot, and everything is working great. Highly recommend!”</blockquote><figcaption class=\"mt-8 flex items-center justify-between gap-4\"><div><div class=\"text-base font-heading font-bold text-foreground\">Roxy C</div><div class=\"text-sm text-muted-foreground\">Verified Google review · Jul 2026</div></div><div class=\"flex items-center gap-0.5 text-amber-400 shrink-0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg></div></figcaption></figure><figure class=\"absolute inset-0 transition-opacity duration-500 opacity-0 pointer-events-none\"><blockquote class=\"text-xl md:text-2xl lg:text-[30px] font-heading font-semibold text-foreground leading-[1.25] tracking-tight\">“Excellent service and great guy! I reached out to him at 7am and he was at my house at 10am and was quick to fix my AC issue. Even provided tips to keep it working and charge was very reasonable. He is now my go-to for heating &amp; cooling!”</blockquote><figcaption class=\"mt-8 flex items-center justify-between gap-4\"><div><div class=\"text-base font-heading font-bold text-foreground\">Mary McCarty</div><div class=\"text-sm text-muted-foreground\">Verified Google review · Jul 2026</div></div><div class=\"flex items-center gap-0.5 text-amber-400 shrink-0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg></div></figcaption></figure><figure class=\"absolute inset-0 transition-opacity duration-500 opacity-0 pointer-events-none\"><blockquote class=\"text-xl md:text-2xl lg:text-[30px] font-heading font-semibold text-foreground leading-[1.25] tracking-tight\">“Had Jordan out for a quote and he was great! Very kind and helpful, got to the house quickly and communicated well! From my interaction so far, it’s been great!”</blockquote><figcaption class=\"mt-8 flex items-center justify-between gap-4\"><div><div class=\"text-base font-heading font-bold text-foreground\">Lacey T</div><div class=\"text-sm text-muted-foreground\">Verified Google review · Jul 2026</div></div><div class=\"flex items-center gap-0.5 text-amber-400 shrink-0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg></div></figcaption></figure><figure class=\"absolute inset-0 transition-opacity duration-500 opacity-0 pointer-events-none\"><blockquote class=\"text-xl md:text-2xl lg:text-[30px] font-heading font-semibold text-foreground leading-[1.25] tracking-tight\">“Jordan did a fantastic job doing our yearly AC inspection and tune-up. I have already committed to having him back out in the Fall for our furnace maintenance. He is friendly, knowledgeable, thorough, and his prices are excellent. Highly recommend!”</blockquote><figcaption class=\"mt-8 flex items-center justify-between gap-4\"><div><div class=\"text-base font-heading font-bold text-foreground\">Jenn Love-Kippen</div><div class=\"text-sm text-muted-foreground\">Verified Google review · Jul 2026</div></div><div class=\"flex items-center gap-0.5 text-amber-400 shrink-0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"></path></svg></div></figcaption></figure></div><div class=\"mt-10 flex items-center gap-4\"><div class=\"flex gap-2\"><button type=\"button\" class=\"h-1.5 rounded-full transition-all w-1.5 bg-border\"></button><button type=\"button\" class=\"h-1.5 rounded-full transition-all hover:bg-primary/40 w-1.5 bg-border\"></button><button type=\"button\" class=\"h-1.5 rounded-full transition-all hover:bg-primary/40 w-8 bg-primary\"></button><button type=\"button\" class=\"h-1.5 rounded-full transition-all w-1.5 bg-border hover:bg-primary/40\"></button><button type=\"button\" class=\"h-1.5 rounded-full transition-all w-1.5 bg-border hover:bg-primary/40\"></button><button type=\"button\" class=\"h-1.5 rounded-full transition-all w-1.5 bg-border hover:bg-primary/40\"></button></div><div class=\"ml-auto flex gap-2\"><button type=\"button\" class=\"w-10 h-10 flex items-center justify-center rounded-full border border-border text-foreground hover:border-primary hover:text-primary transition-colors\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"15 18 9 12 15 6\"></polyline></svg></button><button type=\"button\" class=\"w-10 h-10 flex items-center justify-center rounded-full border border-border text-foreground hover:border-primary hover:text-primary transition-colors\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></button></div></div><a href=\"https://jts-hvac.netlify.app/reviews/\" class=\"mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-hover no-underline\">Read all 27 reviews<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line><polyline points=\"12 5 19 12 12 19\"></polyline></svg></a></div><div class=\"reveal-right active\"><div class=\"rounded-[32px] overflow-hidden aspect-[4/5] md:aspect-square lg:aspect-[4/5]\"><img src=\"https://jts-hvac.netlify.app/images/5f0852eec03568e5bd7c5ddb0aca2662-1024.webp\" alt=\"Satisfied JT's Heating Cooling &amp; Plumbing customers in their Grand Rapids home\" class=\"w-full h-full object-cover\"></div></div></div></div></section>",
+    "elementStyles": [
+      {
+        "tag": "svg",
+        "color": "rgb(0, 74, 148)",
+        "fill": "rgb(0, 74, 148)",
+        "width": 64,
+        "height": 64,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "svg",
+        "color": "oklch(0.828 0.189 84.429)",
+        "fill": "oklch(0.828 0.189 84.429)",
+        "width": 15,
+        "height": 15,
+        "viewBox": "0 0 24 24",
+        "fontSize": "12px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "button",
+        "cls": "h-1.5",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "button",
+        "cls": "h-1.5",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(0, 74, 148)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "button",
+        "cls": "w-10",
+        "color": "rgb(22, 22, 24)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(22, 22, 24)",
+        "width": 18,
+        "height": 18,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "a",
+        "cls": "mt-8",
+        "text": "Read all 27 reviews",
+        "color": "rgb(0, 74, 148)",
+        "fontSize": "14px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "img",
+        "cls": "w-full",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "16px"
+      }
+    ]
+  },
+  {
+    "index": 8,
+    "heading": "Serving Grand Rapids and West Michigan homes &amp; businesses.",
+    "html": "<section id=\"service-areas\" class=\"py-24 bg-[hsl(40_33%_94%)] border-t border-border\"><div class=\"mx-auto w-full max-w-[1400px] px-4 md:px-8\"><div class=\"flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16\"><div class=\"max-w-3xl\"><div class=\"inline-flex items-center gap-2 mb-5 px-3 py-1 rounded-full bg-surface border border-border text-[11px] uppercase tracking-[0.18em] text-muted-foreground font-semibold\">Where we work</div><h2 class=\"text-h2 font-heading font-semibold text-foreground tracking-tight leading-tight\">Serving <span class=\"text-primary italic\">Grand Rapids</span> and<br class=\"hidden md:block\"> West Michigan homes &amp; businesses.</h2></div><a href=\"https://jts-hvac.netlify.app/area/\" class=\"inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-transparent border border-border text-foreground font-semibold hover:bg-surface transition-all no-underline\">See service area<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"transition-transform group-hover:translate-x-0.5\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line><polyline points=\"12 5 19 12 12 19\"></polyline></svg></a></div><div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6\"><div class=\"group relative flex flex-col rounded-[32px] overflow-hidden border border-border bg-background transition-all duration-300 hover:border-primary hover:-translate-y-1\"><div class=\"relative aspect-square overflow-hidden\"><img src=\"https://jts-hvac.netlify.app/images/1430bc1d1a6368af376e246c66a87060-1024.webp\" alt=\"Grand Rapids\" class=\"w-full h-full object-cover transition-transform duration-500 group-hover:scale-105\"></div><div class=\"p-6 md:p-8\"><div class=\"flex items-center justify-between mb-2\"><h3 class=\"text-2xl font-heading font-semibold text-foreground leading-tight group-hover:text-primary transition-colors\">Grand Rapids</h3><span class=\"text-[10px] font-bold text-muted-foreground tabular-nums opacity-60 tracking-wider\">49503 · 49505</span></div><p class=\"text-sm text-muted-foreground leading-relaxed\">Home base -- call for current availability.</p></div></div><div class=\"group relative flex flex-col rounded-[32px] overflow-hidden border border-border bg-background transition-all duration-300 hover:border-primary hover:-translate-y-1\"><div class=\"relative aspect-square overflow-hidden\"><img src=\"https://jts-hvac.netlify.app/images/1b40c8d9493c040849576be631d10da0-1024.webp\" alt=\"Kentwood\" class=\"w-full h-full object-cover transition-transform duration-500 group-hover:scale-105\"></div><div class=\"p-6 md:p-8\"><div class=\"flex items-center justify-between mb-2\"><h3 class=\"text-2xl font-heading font-semibold text-foreground leading-tight group-hover:text-primary transition-colors\">Kentwood</h3><span class=\"text-[10px] font-bold text-muted-foreground tabular-nums opacity-60 tracking-wider\">49508 · 49512</span></div><p class=\"text-sm text-muted-foreground leading-relaxed\">Family neighborhoods and suburban homes.</p></div></div><div class=\"group relative flex flex-col rounded-[32px] overflow-hidden border border-border bg-background transition-all duration-300 hover:border-primary hover:-translate-y-1\"><div class=\"relative aspect-square overflow-hidden\"><img src=\"https://jts-hvac.netlify.app/images/8f9ee504c8755e8d94ca6fb1ead68ad9-1024.webp\" alt=\"Wyoming\" class=\"w-full h-full object-cover transition-transform duration-500 group-hover:scale-105\"></div><div class=\"p-6 md:p-8\"><div class=\"flex items-center justify-between mb-2\"><h3 class=\"text-2xl font-heading font-semibold text-foreground leading-tight group-hover:text-primary transition-colors\">Wyoming</h3><span class=\"text-[10px] font-bold text-muted-foreground tabular-nums opacity-60 tracking-wider\">49509 · 49519</span></div><p class=\"text-sm text-muted-foreground leading-relaxed\">Heating, cooling, and water heater help.</p></div></div><div class=\"group relative flex flex-col rounded-[32px] overflow-hidden border border-border bg-background transition-all duration-300 hover:border-primary hover:-translate-y-1\"><div class=\"relative aspect-square overflow-hidden\"><img src=\"https://jts-hvac.netlify.app/images/86bc8bb2bf53e3942070afba8978acb0-1024.webp\" alt=\"Rockford &amp; North\" class=\"w-full h-full object-cover transition-transform duration-500 group-hover:scale-105\"></div><div class=\"p-6 md:p-8\"><div class=\"flex items-center justify-between mb-2\"><h3 class=\"text-2xl font-heading font-semibold text-foreground leading-tight group-hover:text-primary transition-colors\">Rockford &amp; North</h3><span class=\"text-[10px] font-bold text-muted-foreground tabular-nums opacity-60 tracking-wider\">49341 · 49321</span></div><p class=\"text-sm text-muted-foreground leading-relaxed\">Homes, cabins and lakeside properties up north.</p></div></div></div></div></section>",
+    "elementStyles": [
+      {
+        "tag": "div",
+        "cls": "inline-flex",
+        "text": "Where we work",
+        "color": "rgb(88, 88, 95)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "11px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "h2",
+        "cls": "text-h2",
+        "text": "Serving Grand Rapids and West ",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "48px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "inline-flex",
+        "text": "See service area",
+        "color": "rgb(22, 22, 24)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(22, 22, 24)",
+        "width": 20,
+        "height": 20,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "Grand Rapids49503 · 49505Home ",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(252, 251, 248)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "32px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "img",
+        "cls": "w-full",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-2xl",
+        "text": "Grand Rapids",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "24px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "Kentwood49508 · 49512Family ne",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(252, 251, 248)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "32px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-2xl",
+        "text": "Kentwood",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "24px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "Wyoming49509 · 49519Heating, c",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(252, 251, 248)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "32px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-2xl",
+        "text": "Wyoming",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "24px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "group",
+        "text": "Rockford & North49341 · 49321H",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "rgb(252, 251, 248)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "32px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-2xl",
+        "text": "Rockford & North",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "24px",
+        "fontWeight": "600"
+      }
+    ]
+  },
+  {
+    "index": 9,
+    "heading": "Quick answers, no sales pitch.",
+    "html": "<section id=\"faq\" class=\"py-24 bg-background border-t border-border\"><div class=\"mx-auto w-full max-w-[1400px] px-4 md:px-8\"><div class=\"grid grid-cols-1 lg:grid-cols-12 gap-16\"><div class=\"lg:col-span-5 reveal active\"><div class=\"inline-flex items-center gap-2 mb-5 px-3 py-1 rounded-full bg-surface border border-border text-[11px] uppercase tracking-[0.18em] text-muted-foreground font-semibold\">FAQ</div><h2 class=\"text-h2 font-heading font-semibold text-foreground tracking-tight leading-tight mb-6\">Quick answers,<br class=\"hidden md:block\"> <span class=\"text-primary italic\">no sales pitch.</span></h2><p class=\"text-lg text-muted-foreground leading-relaxed max-w-xl\">Something not covered here? Call or send a message -- I'll get back to you as soon as I can.</p></div><div class=\"lg:col-span-7 reveal-right active\"><div class=\"flex flex-col gap-4\"><details class=\"group border border-border bg-surface/50 rounded-2xl overflow-hidden transition-all duration-300 open:bg-surface open:border-primary\"><summary class=\"flex items-center justify-between p-6 cursor-pointer list-none list-outside marker:hidden [&::-webkit-details-marker]:hidden\"><h3 class=\"text-base font-bold text-foreground transition-colors group-open:text-primary leading-tight pr-8\">Do you handle emergency calls?</h3><div class=\"w-6 h-6 flex items-center justify-center rounded-full bg-background border border-border text-muted-foreground transition-transform duration-300 group-open:rotate-45 group-open:bg-primary group-open:text-white group-open:border-primary\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line></svg></div></summary><div class=\"px-6 pb-8\"><p class=\"text-[15px] text-muted-foreground leading-relaxed max-w-2xl\">Yes, when the schedule allows. If your furnace dies on a freezing night or your A/C quits during a heat wave, call me -- I'll fit you in as soon as I possibly can. For gas leaks or safety issues, call 911 and your utility company first.</p></div></details><details class=\"group border border-border bg-surface/50 rounded-2xl overflow-hidden transition-all duration-300 open:bg-surface open:border-primary\"><summary class=\"flex items-center justify-between p-6 cursor-pointer list-none list-outside marker:hidden [&::-webkit-details-marker]:hidden\"><h3 class=\"text-base font-bold text-foreground transition-colors group-open:text-primary leading-tight pr-8\">Are you licensed and insured?</h3><div class=\"w-6 h-6 flex items-center justify-center rounded-full bg-background border border-border text-muted-foreground transition-transform duration-300 group-open:rotate-45 group-open:bg-primary group-open:text-white group-open:border-primary\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line></svg></div></summary><div class=\"px-6 pb-8\"><p class=\"text-[15px] text-muted-foreground leading-relaxed max-w-2xl\">Yes -- fully licensed and insured in the state of Michigan. I'm an owner-operated business, so the person you talk to on the phone is the same person who shows up at your door. Happy to share paperwork before any job.</p></div></details><details class=\"group border border-border bg-surface/50 rounded-2xl overflow-hidden transition-all duration-300 open:bg-surface open:border-primary\"><summary class=\"flex items-center justify-between p-6 cursor-pointer list-none list-outside marker:hidden [&::-webkit-details-marker]:hidden\"><h3 class=\"text-base font-bold text-foreground transition-colors group-open:text-primary leading-tight pr-8\">How does pricing work?</h3><div class=\"w-6 h-6 flex items-center justify-center rounded-full bg-background border border-border text-muted-foreground transition-transform duration-300 group-open:rotate-45 group-open:bg-primary group-open:text-white group-open:border-primary\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line></svg></div></summary><div class=\"px-6 pb-8\"><p class=\"text-[15px] text-muted-foreground leading-relaxed max-w-2xl\">Once I've seen your system and diagnosed the issue, I'll give you a clear quote before starting any work. Repair vs. replacement -- I'll walk you through both options honestly, with no pressure either way.</p></div></details><details class=\"group border border-border bg-surface/50 rounded-2xl overflow-hidden transition-all duration-300 open:bg-surface open:border-primary\"><summary class=\"flex items-center justify-between p-6 cursor-pointer list-none list-outside marker:hidden [&::-webkit-details-marker]:hidden\"><h3 class=\"text-base font-bold text-foreground transition-colors group-open:text-primary leading-tight pr-8\">What brands of equipment do you work on?</h3><div class=\"w-6 h-6 flex items-center justify-center rounded-full bg-background border border-border text-muted-foreground transition-transform duration-300 group-open:rotate-45 group-open:bg-primary group-open:text-white group-open:border-primary\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"></line><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line></svg></div></summary><div class=\"px-6 pb-8\"><p class=\"text-[15px] text-muted-foreground leading-relaxed max-w-2xl\">I work on all major brands -- Carrier, Trane, Lennox, Rheem, Goodman, American Standard, Bryant, and more. If you've got a furnace, A/C, heat pump, or water heater that needs attention, I can help.</p></div></details></div></div></div></div></section>",
+    "elementStyles": [
+      {
+        "tag": "div",
+        "cls": "inline-flex",
+        "text": "FAQ",
+        "color": "rgb(88, 88, 95)",
+        "backgroundColor": "rgb(247, 246, 243)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "11px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "h2",
+        "cls": "text-h2",
+        "text": "Quick answers, no sales pitch.",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "48px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "details",
+        "cls": "group",
+        "text": "Do you handle emergency calls?",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "oklab(0.973071 -0.0000594854 0.00413698 / 0.5)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-base",
+        "text": "Do you handle emergency calls?",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "16px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "div",
+        "cls": "w-6",
+        "color": "rgb(88, 88, 95)",
+        "backgroundColor": "rgb(252, 251, 248)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(88, 88, 95)",
+        "width": 16,
+        "height": 16,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "details",
+        "cls": "group",
+        "text": "Are you licensed and insured?Y",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "oklab(0.973071 -0.0000594854 0.00413698 / 0.5)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-base",
+        "text": "Are you licensed and insured?",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "16px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "details",
+        "cls": "group",
+        "text": "How does pricing work?Once I'v",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "oklab(0.973071 -0.0000594854 0.00413698 / 0.5)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-base",
+        "text": "How does pricing work?",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "16px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "details",
+        "cls": "group",
+        "text": "What brands of equipment do yo",
+        "color": "rgb(22, 22, 24)",
+        "backgroundColor": "oklab(0.973071 -0.0000594854 0.00413698 / 0.5)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "cls": "text-base",
+        "text": "What brands of equipment do yo",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "16px",
+        "fontWeight": "700"
+      }
+    ]
+  },
+  {
+    "index": 10,
+    "heading": "Local heating &amp; cooling, just around the corner.",
+    "html": "<section id=\"final-cta\" class=\"py-24 bg-[hsl(210_100%_95%)] border-t border-border text-center\"><div class=\"mx-auto w-full max-w-[1400px] px-4 md:px-8\"><div class=\"flex flex-col items-center\"><div class=\"inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full bg-white border border-border text-[11px] uppercase tracking-[0.18em] text-muted-foreground font-semibold\"><span class=\"w-1.5 h-1.5 rounded-full bg-primary\"></span>Ready when you are</div><h2 class=\"text-h2 font-heading font-semibold text-foreground tracking-tight leading-tight mb-6 max-w-3xl\">Local heating &amp; cooling,<br class=\"hidden md:block\"> <span class=\"text-primary italic\">just around the corner.</span></h2><p class=\"text-lg text-muted-foreground leading-relaxed mb-12 max-w-xl\">Send a request in under a minute, or call JT for current availability.</p><div class=\"flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto\"><a class=\"group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-secondary text-white text-base font-semibold hover:bg-secondary-hover transition-all hover:-translate-y-0.5 cursor-pointer whitespace-nowrap no-underline\" href=\"https://jts-hvac.netlify.app/book/\">Book Appointment<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"></line><polyline points=\"7 7 17 7 17 17\"></polyline></svg></a><a class=\"inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-transparent border border-border text-foreground text-base font-semibold hover:bg-surface transition-all cursor-pointer whitespace-nowrap no-underline\" href=\"https://jts-hvac.netlify.app/pricing/\">Request a Quote<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line><polyline points=\"12 5 19 12 12 19\"></polyline></svg></a></div></div></div></section>",
+    "elementStyles": [
+      {
+        "tag": "div",
+        "cls": "inline-flex",
+        "text": "Ready when you are",
+        "color": "rgb(88, 88, 95)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "11px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "span",
+        "cls": "w-1.5",
+        "color": "rgb(88, 88, 95)",
+        "backgroundColor": "rgb(0, 74, 148)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "11px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "h2",
+        "cls": "text-h2",
+        "text": "Local heating & cooling, just ",
+        "color": "rgb(22, 22, 24)",
+        "fontSize": "48px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "group",
+        "text": "Book Appointment",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(14, 14, 42)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(255, 255, 255)",
+        "width": 20,
+        "height": 20,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "inline-flex",
+        "text": "Request a Quote",
+        "color": "rgb(22, 22, 24)",
+        "border": "1px solid rgb(239, 238, 235)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(22, 22, 24)",
+        "width": 20,
+        "height": 20,
+        "viewBox": "0 0 24 24",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      }
+    ]
+  },
+  {
+    "index": 11,
+    "heading": "Site footer (port into Footer.astro)",
+    "widgetTypes": [
+      "footer"
+    ],
+    "html": "<footer class=\"px-3 md:px-4 pb-3 md:pb-4 pt-6 md:pt-10 bg-background relative z-10\"><div class=\"rounded-2xl bg-secondary text-dark-foreground overflow-hidden\"><div class=\"max-w-[1400px] mx-auto px-5 sm:px-6 md:px-12 pt-10 sm:pt-12 md:pt-16 pb-8 md:pb-12 grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 md:gap-8\"><div class=\"md:col-span-4\"><div class=\"flex items-center gap-2.5 mb-6\"><img src=\"https://jts-hvac.netlify.app/jt-logo-mark.png\" alt=\"JT's Heating Cooling &amp; Plumbing logo\" width=\"40\" height=\"40\" class=\"w-10 h-10 rounded-full shrink-0\"><div class=\"flex flex-col leading-tight\"><span class=\"text-lg font-heading font-semibold text-white\">JT's Heating Cooling &amp; Plumbing</span><span class=\"text-[10px] uppercase tracking-[0.18em] text-dark-muted-foreground\">Grand Rapids, MI</span></div></div><p class=\"text-sm text-dark-muted-foreground leading-relaxed max-w-xs\">Honest, no-pressure heating, cooling, and plumbing for homes across Grand Rapids and West Michigan. Licensed and insured, owner-operated.</p><div class=\"mt-6 flex items-center gap-3\"><span class=\"relative w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-dot\"></span><span class=\"text-sm text-white\">Call for current availability</span></div></div><div class=\"md:col-span-2\"><h4 class=\"text-xs uppercase tracking-[0.18em] text-dark-muted-foreground mb-4\">Explore</h4><ul class=\"list-none p-0 m-0 space-y-2.5 text-sm\"><li><a href=\"tel:+16168403105\" class=\"flex items-center gap-2 text-white/80 hover:text-primary transition-colors no-underline\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M6.62 10.79a15.5 15.5 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z\"></path></svg> (616) 840-3105</a></li><li class=\"flex items-center gap-2 text-dark-muted-foreground\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2c4.418 0 8 3.582 8 8 0 5.25-8 12-8 12s-8-6.75-8-12c0-4.418 3.582-8 8-8zm0 2c-3.314 0-6 2.686-6 6 0 3.07 3.324 7.606 6 10.648C14.676 17.606 18 13.07 18 10c0-3.314-2.686-6-6-6zm0 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z\"></path></svg> Grand Rapids, MI</li></ul></div><div class=\"md:col-span-3\"><h4 class=\"text-xs uppercase tracking-[0.18em] text-dark-muted-foreground mb-4\">Book a visit</h4><p class=\"text-sm text-dark-muted-foreground mb-4\">Need a service call? Book online in about a minute, or call us directly.</p><a class=\"group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-hover transition-all cursor-pointer whitespace-nowrap no-underline\" href=\"https://jts-hvac.netlify.app/book/\">Book a Visit<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5\"><line x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\"></line><polyline points=\"7 7 17 7 17 17\"></polyline></svg></a><div class=\"mt-6 flex flex-wrap items-center gap-3 text-[11px] text-dark-muted-foreground uppercase tracking-wider\"><span class=\"inline-flex items-center gap-1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M20 12.004v8h-16v-8h16zm-8-9c3.314 0 6 2.686 6 6v1h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1h2v-1c0-3.314 2.686-6 6-6zm0 2c-2.209 0-4 1.791-4 4v1h8v-1c0-2.209-1.791-4-4-4z\"></path></svg> Licensed</span><span class=\"inline-flex items-center gap-1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z\"></path></svg> Insured</span><span class=\"inline-flex items-center gap-1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 7c4.418 0 8 2.686 8 6v1H4v-1c0-3.314 3.582-6 8-6zm0 2c-2.903 0-5.32 1.157-5.917 2.723L6 18h12c-.114-.424-.59-2.277-6-3z\"></path></svg> Owner-operated</span></div></div></div><div class=\"relative border-t border-white/10\"><div class=\"hidden md:block absolute inset-x-0 -bottom-2 select-none pointer-events-none overflow-hidden opacity-[0.06]\"><div class=\"text-[10vw] leading-none font-heading font-bold text-white whitespace-nowrap tracking-tight\">JT’S HEATING COOLING &amp; PLUMBING</div></div><div class=\"relative max-w-[1400px] mx-auto px-5 sm:px-6 md:px-12 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-dark-muted-foreground text-center sm:text-left\"><p>© 2026 JT’S HOME SERVICES LLC · Grand Rapids, MI</p><div class=\"flex items-center gap-5\"><a href=\"https://jts-hvac.netlify.app/#\" class=\"text-dark-muted-foreground hover:text-primary no-underline transition-colors\">Privacy</a><a href=\"https://jts-hvac.netlify.app/#\" class=\"text-dark-muted-foreground hover:text-primary no-underline transition-colors\">Terms</a><a href=\"https://jts-hvac.netlify.app/#\" class=\"text-dark-muted-foreground hover:text-primary no-underline transition-colors\">Insurance</a></div><a href=\"https://twalkerco.com/\" class=\"inline-flex items-center gap-2 text-xs opacity-70 hover:opacity-100 transition-opacity no-underline text-dark-muted-foreground hover:text-white\"><svg width=\"18\" height=\"18\" viewBox=\"10.5 13 463.773 374\" aria-hidden=\"true\" class=\"shrink-0\"><path d=\"M 10.5 13 L 185.339 387 L 253.738 262.342 L 235.916 262.342 L 167.622 119.279 C 136.362 53.785 76.06 13 10.5 13 L 10.5 13 Z\" fill=\"#E3AF5B\"></path><path d=\"M 190.957 13 L 365.797 387 L 434.196 262.342 L 416.378 262.342 L 348.083 119.279 C 316.819 53.785 256.518 13 190.957 13 L 190.957 13 Z\" fill=\"#E3AF5B\"></path><path d=\"M 368.553 13.832 L 474.273 13.832 L 419.603 129.925 L 368.553 13.832 Z\" fill=\"#E3AF5B\"></path></svg><span>Web Design and SEO by twalkerco</span></a></div></div></div></footer>",
+    "elementStyles": [
+      {
+        "tag": "div",
+        "cls": "rounded-2xl",
+        "text": "JT's Heating Cooling & Plumbin",
+        "color": "rgb(252, 251, 248)",
+        "backgroundColor": "rgb(14, 14, 42)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "img",
+        "cls": "w-10",
+        "color": "rgb(252, 251, 248)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "span",
+        "cls": "relative",
+        "color": "rgb(252, 251, 248)",
+        "backgroundColor": "oklch(0.765 0.177 163.223)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h4",
+        "cls": "text-xs",
+        "text": "Explore",
+        "color": "rgb(230, 228, 224)",
+        "fontSize": "12px"
+      },
+      {
+        "tag": "a",
+        "cls": "flex",
+        "text": "(616) 840-3105",
+        "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+        "fontSize": "14px"
+      },
+      {
+        "tag": "svg",
+        "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+        "fill": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+        "width": 16,
+        "height": 16,
+        "viewBox": "0 0 24 24",
+        "fontSize": "14px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(230, 228, 224)",
+        "fill": "rgb(230, 228, 224)",
+        "width": 16,
+        "height": 16,
+        "viewBox": "0 0 24 24",
+        "fontSize": "14px"
+      },
+      {
+        "tag": "h4",
+        "cls": "text-xs",
+        "text": "Book a visit",
+        "color": "rgb(230, 228, 224)",
+        "fontSize": "12px"
+      },
+      {
+        "tag": "a",
+        "cls": "group",
+        "text": "Book a Visit",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(0, 74, 148)",
+        "borderRadius": "3.35544e+07px",
+        "fontSize": "14px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(255, 255, 255)",
+        "width": 16,
+        "height": 16,
+        "viewBox": "0 0 24 24",
+        "fontSize": "14px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "relative",
+        "text": "JT’S HEATING COOLING & PLUMBIN",
+        "color": "rgb(252, 251, 248)",
+        "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "a",
+        "cls": "text-dark-muted-foreground",
+        "text": "Privacy",
+        "color": "rgb(230, 228, 224)",
+        "fontSize": "11px"
+      },
+      {
+        "tag": "a",
+        "cls": "text-dark-muted-foreground",
+        "text": "Terms",
+        "color": "rgb(230, 228, 224)",
+        "fontSize": "11px"
+      },
+      {
+        "tag": "a",
+        "cls": "text-dark-muted-foreground",
+        "text": "Insurance",
+        "color": "rgb(230, 228, 224)",
+        "fontSize": "11px"
+      },
+      {
+        "tag": "a",
+        "cls": "inline-flex",
+        "text": "Web Design and SEO by twalkerc",
+        "color": "rgb(230, 228, 224)",
+        "fontSize": "12px"
+      }
+    ]
+  }
+]

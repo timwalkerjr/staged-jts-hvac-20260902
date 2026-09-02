@@ -1,0 +1,109 @@
+---
+import { SITE } from '@/config/site';
+---
+
+<footer class="bg-[hsl(240_50%_11%)] text-white w-full p-8 sm:p-12 md:p-16 relative overflow-hidden" data-ps="src/components/Footer.astro:7iejvw">
+  <div class="max-w-[1320px] mx-auto relative z-10" data-ps="src/components/Footer.astro:256hmz">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 mb-12" data-ps="src/components/Footer.astro:256hmy">
+      <!-- Column 1: Brand Info -->
+      <div class="md:col-span-5" data-ps="src/components/Footer.astro:p4vf82">
+        <div class="flex items-center gap-3 mb-4" data-ps="src/components/Footer.astro:p4vf83">
+          <img
+            src="https://pagesmith-cdn.com/381bbb8d/images/jt-logo-mark-320.webp"
+            alt="JT's Heating Cooling & Plumbing logo"
+            class="w-11 h-11 rounded-full object-cover flex-shrink-0"
+            width="44"
+            height="44" data-ps="src/components/Footer.astro:4nflyh" />
+          <div class="flex flex-col" data-ps="src/components/Footer.astro:p4vf84">
+            <span class="text-[17px] font-bold text-white leading-tight" data-ps="src/components/Footer.astro:abywyw">
+              JT's Heating Cooling & Plumbing
+            </span>
+            <span class="text-[10px] font-medium tracking-wider text-white/60 uppercase" data-ps="src/components/Footer.astro:abywyx">
+              GRAND RAPIDS, MI
+            </span>
+          </div>
+        </div>
+
+        <p class="text-[14px] text-white/70 leading-relaxed max-w-[380px]" data-ps="src/components/Footer.astro:csfak">
+          Honest, no-pressure heating, cooling, and plumbing for homes across Grand Rapids and West Michigan. Licensed and insured, owner-operated.
+        </p>
+
+        <div class="mt-6 inline-flex items-center gap-2 bg-white/10 border border-white/15 px-3 py-1.5 rounded-full text-[12px] text-white/90" data-ps="src/components/Footer.astro:p4vf85">
+          <span class="w-2 h-2 rounded-full bg-emerald-400" data-ps="src/components/Footer.astro:abywyy"></span>
+          <span data-ps="src/components/Footer.astro:abywyz">Call for current availability</span>
+        </div>
+      </div>
+
+      <!-- Column 2: Explore -->
+      <div class="md:col-span-3" data-ps="src/components/Footer.astro:p4vf86">
+        <h2 class="uppercase tracking-[2.16px] text-white/60 font-semibold mb-4 text-[rgb(230,228,224)] text-[12px]" data-ps="src/components/Footer.astro:w7klop">
+          EXPLORE
+        </h2>
+        <ul class="list-none p-0 m-0 space-y-3">
+          <li data-ps="src/components/Footer.astro:wyji5n">
+            <a
+              href={`tel:${SITE.phoneTel}`}
+              class="text-[14px] text-white/80 hover:text-white transition-colors flex items-center gap-2 no-underline"
+             data-ps="src/components/Footer.astro:7gqbyt">
+              <svg class="w-4 h-4 text-[hsl(210_100%_29%)] flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 3.99c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.61c0-.55-.45-1-1-1z"/>
+              </svg>
+              <span class="font-semibold" data-ps="src/components/Footer.astro:abywz0">{SITE.phone}</span>
+            </a>
+          </li>
+          <li class="text-[14px] text-white/80 flex items-center gap-2" data-ps="src/components/Footer.astro:wyji5o">
+            <svg class="w-4 h-4 text-[hsl(210_100%_29%)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span data-ps="src/components/Footer.astro:abywz1">Grand Rapids, MI</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Book a Visit -->
+      <div class="md:col-span-4" data-ps="src/components/Footer.astro:p4vf87">
+        <h2 class="uppercase tracking-[2.16px] text-white/60 font-semibold mb-4 text-[rgb(230,228,224)] text-[12px]" data-ps="src/components/Footer.astro:w7kloq">
+          BOOK A VISIT
+        </h2>
+        <p class="text-[14px] text-white/70 mb-5 leading-relaxed" data-ps="src/components/Footer.astro:csfal">
+          Need a service call? Book online in about a minute, or call us directly.
+        </p>
+        <a
+          href="/book/"
+          class="bg-primary hover:bg-primary-hover text-white rounded-full px-6 py-3 text-[14px] font-semibold inline-flex items-center gap-1.5 no-underline transition-colors shadow-sm"
+         data-ps="src/components/Footer.astro:7gqbyu">
+          <span data-ps="src/components/Footer.astro:abywz2">Book a Visit</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" />
+          </svg>
+        </a>
+
+        <div class="flex items-center gap-2 mt-5 text-[11px] uppercase tracking-wider text-white/60" data-ps="src/components/Footer.astro:p4vf88">
+          <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <span data-ps="src/components/Footer.astro:abywz3">LICENSED · INSURED · OWNER-OPERATED</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Watermark text -->
+    <div class="text-[52px] sm:text-[80px] md:text-[100px] lg:text-[112px] font-bold text-white/[0.04] select-none pointer-events-none text-center whitespace-nowrap overflow-hidden leading-none my-6" data-ps="src/components/Footer.astro:p4vf89">
+      JT'S HEATING COOLING & PLUMBING
+    </div>
+
+    <!-- Bottom Legal Row -->
+    <div class="border-t border-white/10 pt-8 mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-white/60" data-ps="src/components/Footer.astro:p4vf8a">
+      <p class="m-0" data-ps="src/components/Footer.astro:csfam">© 2026 JT'S HOME SERVICES LLC · Grand Rapids, MI</p>
+      <div class="flex items-center gap-6" data-ps="src/components/Footer.astro:p4vf8b">
+        <a href="/#" class="text-white/60 hover:text-white no-underline transition-colors" data-ps="src/components/Footer.astro:7gqbyv">Privacy</a>
+        <a href="/#" class="text-white/60 hover:text-white no-underline transition-colors" data-ps="src/components/Footer.astro:7gqbyw">Terms</a>
+        <a href="/#" class="text-white/60 hover:text-white no-underline transition-colors" data-ps="src/components/Footer.astro:7gqbzi">Insurance</a>
+      </div>
+      <a href="https://twalkerco.com/" target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-white no-underline transition-colors flex items-center gap-1" data-ps="src/components/Footer.astro:7gqbzj">
+        <span data-ps="src/components/Footer.astro:abywzp">Web Design and SEO by twalkerco</span>
+      </a>
+    </div>
+  </div>
+</footer>

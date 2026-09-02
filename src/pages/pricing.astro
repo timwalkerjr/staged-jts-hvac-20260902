@@ -1,0 +1,18 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PricingHero from '@/components/pricing/PricingHero.astro';
+import PricingReviews from '@/components/pricing/PricingReviews.astro';
+import PricingHow from '@/components/pricing/PricingHow.astro';
+import PricingTable from '@/components/pricing/PricingTable.astro';
+import FinalCTA from '@/components/home/FinalCTA.astro';
+---
+<BaseLayout
+  title="HVAC & Plumbing Quotes | Grand Rapids, MI"
+  description="Call for a clear quote on furnace repair, A/C service, heat pumps, mini-splits, and water heater replacement in Grand Rapids and West Michigan."
+>
+  <PricingHero />
+  <PricingReviews />
+  <PricingHow />
+  <PricingTable />
+  <FinalCTA />
+</BaseLayout>

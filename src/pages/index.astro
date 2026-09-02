@@ -1,0 +1,52 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/home/Hero.astro';
+import ServiceTicker from '@/components/home/ServiceTicker.astro';
+import ServicesGrid from '@/components/home/ServicesGrid.astro';
+import AboutOwner from '@/components/home/AboutOwner.astro';
+import HowItWorks from '@/components/home/HowItWorks.astro';
+import PricingTable from '@/components/home/PricingTable.astro';
+import Testimonials from '@/components/home/Testimonials.astro';
+import ServiceAreaGrid from '@/components/home/ServiceAreaGrid.astro';
+import FAQ from '@/components/home/FAQ.astro';
+import FinalCTA from '@/components/home/FinalCTA.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HVACBusiness',
+  name: "JT's Heating Cooling & Plumbing",
+  description: SITE.description,
+  url: SITE.url,
+  telephone: SITE.phone,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Grand Rapids',
+    addressRegion: 'MI',
+    addressCountry: 'US'
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 42.9634,
+    longitude: -85.6681
+  },
+  priceRange: '$$'
+};
+---
+
+<BaseLayout
+  title={SITE.title}
+  description={SITE.description}
+  jsonLd={jsonLd}
+>
+  <Hero />
+  <ServiceTicker />
+  <ServicesGrid />
+  <AboutOwner />
+  <HowItWorks />
+  <PricingTable />
+  <Testimonials />
+  <ServiceAreaGrid />
+  <FAQ />
+  <FinalCTA />
+</BaseLayout>

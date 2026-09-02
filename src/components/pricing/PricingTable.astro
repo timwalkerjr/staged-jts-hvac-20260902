@@ -1,0 +1,70 @@
+---
+const services = [
+  { title: "Furnace diagnostic", desc: "Thorough inspection and honest diagnosis of any furnace issue." },
+  { title: "A/C diagnostic", desc: "Full system check to find out why your A/C isn't cooling properly." },
+  { title: "Furnace installation", desc: "Full replacement with proper sizing — no overselling, just the right unit." },
+  { title: "A/C service & tune-up", desc: "Clean coils, check refrigerant, test performance — keeps your system running right." },
+  { title: "Water heater replacement", desc: "Gas, electric or tankless — I'll help you choose what works best for your home." },
+  { title: "Heat pump service", desc: "Repair or maintenance for ducted and ductless heat pump systems." },
+  { title: "Mini-split installation", desc: "Single-zone or multi-zone ductless systems, cleanly installed." }
+];
+---
+<section class="bg-[hsl(45_18%_96%)]">
+  <div class="max-w-[1400px] mx-auto px-4 py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+      <div class="lg:col-span-5">
+        <span class="inline-flex items-center gap-2 bg-white border border-[hsl(45_12%_93%)] rounded-full px-3 py-1 text-[11px] font-semibold text-[hsl(240_4%_36%)] uppercase tracking-wider mb-4">
+          Service
+        </span>
+        <h2 class="text-[36px] md:text-[48px] font-semibold tracking-tight">
+          Honest pricing, <span class="italic text-[hsl(210_100%_29%)] block">clearly written.</span>
+        </h2>
+        <p class="text-[18px] text-[hsl(240_4%_36%)] mt-6">
+          Every home and system is different. JT will look at what is happening, explain the practical options, and give you a clear quote before any work begins.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mt-8">
+          <a href="/book/" class="bg-[hsl(240_50%_11%)] hover:bg-[hsl(240_48%_6%)] text-white rounded-full px-8 py-4 text-[16px] font-semibold flex items-center justify-center gap-2">
+            Check Availability
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M16.003 9.414l-7.56 7.56-1.414-1.414L13.172 9.414H4v-2h14.172l-6.144-6.144 1.414-1.414 8.558 8.558z"/></svg>
+          </a>
+          <a href="/services/" class="border border-[hsl(45_12%_93%)] bg-transparent text-[hsl(240_4%_9%)] rounded-full px-8 py-4 text-[16px] font-semibold flex items-center justify-center gap-2 hover:border-[hsl(210_100%_29%)]">
+            Quote details
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M16.003 9.414l-7.56 7.56-1.414-1.414L13.172 9.414H4v-2h14.172l-6.144-6.144 1.414-1.414 8.558 8.558z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="bg-white border border-[hsl(45_12%_93%)] rounded-[24px] p-6 md:p-8">
+          <div class="flex items-center justify-between pb-3 border-b border-[hsl(45_12%_93%)] mb-2">
+            <span class="text-[11px] font-bold text-[hsl(240_4%_36%)] tracking-wider uppercase">Service</span>
+            <span class="text-[11px] font-bold text-[hsl(240_4%_36%)] tracking-wider uppercase">Quote</span>
+          </div>
+          <ul class="space-y-0">
+            {services.map((s) => (
+              <li class="border-b border-[hsl(45_12%_93%)] py-5 flex items-start justify-between gap-4">
+                <div>
+                  <h4 class="text-[18px] font-semibold text-[hsl(240_4%_9%)]">{s.title}</h4>
+                  <p class="text-[14px] text-[hsl(240_4%_36%)] mt-1">{s.desc}</p>
+                </div>
+                <span class="text-[14px] font-semibold text-[hsl(210_100%_29%)] whitespace-nowrap mt-1">Call for a Quote</span>
+              </li>
+            ))}
+          </ul>
+          <div class="flex items-start gap-2 mt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="hsl(240 4% 36%)" class="shrink-0 mt-0.5"><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+            <p class="text-[12px] text-[hsl(240_4%_36%)]">
+              Final cost depends on the equipment and scope. You'll always receive a quote before the job begins.
+            </p>
+          </div>
+          <div class="mt-6">
+            <a href="/book/" class="bg-[hsl(210_100%_29%)] hover:bg-[hsl(210_100%_22%)] text-white rounded-full px-7 py-3.5 text-[16px] font-semibold flex items-center justify-center gap-2 inline-flex">
+              Check Availability
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M16.003 9.414l-7.56 7.56-1.414-1.414L13.172 9.414H4v-2h14.172l-6.144-6.144 1.414-1.414 8.558 8.558z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

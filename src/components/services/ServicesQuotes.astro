@@ -1,0 +1,46 @@
+---
+const quotes = [
+  { quote: "Jordan was fantastic. He came out quickly, explained everything along the way, and we had A/C again during the heat wave! Use JT's!!!!!", author: 'Jim' },
+  { quote: "Jordan was very knowledgeable and professional. He was able to give us some energy saving tips. I highly recommend him!", author: 'Charissa Hunter' },
+  { quote: "Had Jordan out for a quote and he was great! Very kind and helpful, got to the house quickly and communicated well! From my interaction so far, it's been great!", author: 'Lacey T' },
+  { quote: "JT diagnosed our AC issue in just minutes. He has the diagnostic tools and even shows you the report. A stand up, honest guy. Call JT.", author: 'Ian Barrie' },
+];
+---
+
+<section class="bg-[hsl(45_18%_96%)] py-16">
+  <div class="max-w-[1400px] mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {quotes.map((q) => (
+        <div class="bg-white border border-[hsl(45_12%_93%)] rounded-2xl p-6">
+          <svg class="w-6 h-6 text-[hsl(210_100%_29%)] mb-3" viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+          <p class="text-[14px] text-[hsl(240_4%_9%)] leading-[1.6] mb-4">"{q.quote}"</p>
+          <div class="text-[12px] font-semibold text-[hsl(240_4%_36%)]">— {q.author}, verified Google review</div>
+        </div>
+      ))}
+    </div>
+    <!-- Trust Badges Row -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[900px] mx-auto mt-12">
+      <div class="bg-white border border-[hsl(45_12%_93%)] rounded-2xl p-5 flex items-center gap-3">
+        <svg class="w-10 h-10 text-[hsl(210_100%_29%)] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div>
+          <div class="text-[14px] font-semibold text-[hsl(240_4%_9%)]">Licensed & insured</div>
+          <div class="text-[12px] text-[hsl(240_4%_36%)]">Michigan contractor</div>
+        </div>
+      </div>
+      <div class="bg-white border border-[hsl(45_12%_93%)] rounded-2xl p-5 flex items-center gap-3">
+        <svg class="w-10 h-10 text-[hsl(210_100%_29%)] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div>
+          <div class="text-[14px] font-semibold text-[hsl(240_4%_9%)]">Call for availability</div>
+          <div class="text-[12px] text-[hsl(240_4%_36%)]">(616) 840-3105</div>
+        </div>
+      </div>
+      <div class="bg-white border border-[hsl(45_12%_93%)] rounded-2xl p-5 flex items-center gap-3">
+        <svg class="w-10 h-10 text-[hsl(210_100%_29%)] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <div>
+          <div class="text-[14px] font-semibold text-[hsl(240_4%_9%)]">5.0 · 27 reviews</div>
+          <div class="text-[12px] text-[hsl(240_4%_36%)]">Local & owner-operated</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

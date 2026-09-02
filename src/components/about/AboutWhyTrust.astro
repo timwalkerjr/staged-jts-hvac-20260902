@@ -1,0 +1,46 @@
+---
+const stats = [
+  { label: "Local", sub: "Serving West Michigan" },
+  { label: "Owner", sub: "Operated by JT" },
+  { label: "Direct", sub: "Talk with JT" }
+];
+
+const badges = [
+  "Licensed & insured",
+  "Local & owner-operated",
+  "Clear, honest pricing",
+  "Clean workmanship",
+  "No-pressure approach",
+  "West Michigan service"
+];
+---
+<section class="bg-[hsl(45_18%_96%)]">
+  <div class="max-w-[1400px] mx-auto px-4 py-24">
+    <div class="text-center mb-12">
+      <span class="inline-flex items-center gap-2 bg-white border border-[hsl(45_12%_93%)] rounded-full px-3 py-1 text-[11px] font-semibold text-[hsl(240_4%_36%)] uppercase tracking-wider">
+        Why locals trust JT
+      </span>
+      <h2 class="text-[36px] md:text-[48px] font-semibold tracking-tight mt-4">
+        Small details <span class="italic text-[hsl(210_100%_29%)]">matter here.</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      {stats.map((stat) => (
+        <div class="bg-[hsl(45_33%_98%)] border border-[hsl(45_12%_93%)] rounded-[24px] p-8 text-center">
+          <p class="text-[24px] font-semibold text-[hsl(210_100%_29%)]">{stat.label}</p>
+          <p class="text-[14px] text-[hsl(240_4%_36%)] uppercase tracking-wider mt-2">{stat.sub}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      {badges.map((badge) => (
+        <span class="inline-flex items-center gap-2 bg-white border border-[hsl(45_12%_93%)] rounded-full px-4 py-2 text-[12px] font-semibold text-[hsl(240_4%_9%)]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="hsl(150 60% 40%)"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          {badge}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>

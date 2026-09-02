@@ -1,0 +1,131 @@
+---
+import { SITE } from '@/config/site';
+---
+
+<section id="services-hero" class="w-full relative overflow-hidden bg-[hsl(240_50%_11%)]" data-ps="src/components/services/ServicesHero.astro:sec1">
+  <div class="relative min-h-[600px] lg:min-h-[640px] flex items-center w-full" data-ps="src/components/services/ServicesHero.astro:wrap1">
+    <!-- Background Image -->
+    <img
+      src="https://pagesmith-cdn.com/381bbb8d/images/618e6cb8cb07dcae4dd93a4301bd5bf1-1536-1536.webp"
+      alt="JT's Heating Cooling & Plumbing technician working on furnace equipment"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+      loading="eager"
+      fetchpriority="high"
+      data-ps="src/components/services/ServicesHero.astro:bgimg"
+    />
+
+    <!-- Gradient Overlay matching design spec -->
+    <div
+      class="absolute inset-0 pointer-events-none"
+      style="background: linear-gradient(to right, rgba(14, 14, 42, 0.94) 0%, rgba(14, 14, 42, 0.75) 55%, rgba(14, 14, 42, 0.35) 100%);"
+      data-ps="src/components/services/ServicesHero.astro:overlay"
+    ></div>
+
+    <!-- Main Content Container -->
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18 lg:py-24 w-full z-10 relative" data-ps="src/components/services/ServicesHero.astro:cont1">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center w-full" data-ps="src/components/services/ServicesHero.astro:grid1">
+        <!-- Left Column -->
+        <div class="lg:col-span-7 flex flex-col items-start text-left" data-ps="src/components/services/ServicesHero.astro:left1">
+          <!-- Tag / Badge -->
+          <div class="inline-flex items-center gap-2 bg-white/10 border border-white/25 text-white text-[11px] font-bold px-3.5 py-1.5 rounded-full mb-6 uppercase tracking-[0.1em] backdrop-blur-sm" data-ps="src/components/services/ServicesHero.astro:badge1">
+            WHAT WE DO
+          </div>
+
+          <!-- H1 Headline -->
+          <h1 class="text-[36px] sm:text-[46px] md:text-[50px] font-semibold tracking-[-1.2px] leading-[1.32] text-white m-0 mb-5" data-ps="src/components/services/ServicesHero.astro:h1">
+            Heating, cooling & plumbing,<br class="hidden sm:inline" /> done <span class="inline-block bg-white text-primary px-2.5 py-0 rounded-lg italic font-semibold align-baseline" data-ps="src/components/services/ServicesHero.astro:hl">honest and clean.</span>
+          </h1>
+
+          <!-- Subtitle / Description -->
+          <p class="text-[17px] sm:text-[18px] text-white/85 leading-[1.625] max-w-[580px] mb-8 font-normal" data-ps="src/components/services/ServicesHero.astro:desc">
+            Furnaces, A/C, heat pumps, mini-splits, and water heaters for homeowners across Grand Rapids and West Michigan — no confusing jargon, no surprise pricing.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap items-center gap-4 mb-10" data-ps="src/components/services/ServicesHero.astro:cta">
+            <a
+              href="/book/"
+              class="bg-primary hover:bg-primary-hover text-white rounded-full px-7 py-3.5 text-[15px] sm:text-[16px] font-semibold flex items-center gap-2 shadow-lg transition-all no-underline"
+              data-ps="src/components/services/ServicesHero.astro:btn1"
+            >
+              <span data-ps="src/components/services/ServicesHero.astro:dy64h">Book a service</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
+
+            <a
+              href="/pricing/"
+              class="bg-white/10 hover:bg-white/20 border border-white/25 text-white rounded-full px-7 py-3.5 text-[15px] sm:text-[16px] font-semibold transition-colors no-underline backdrop-blur-sm"
+              data-ps="src/components/services/ServicesHero.astro:btn2"
+            >
+              <span data-ps="src/components/services/ServicesHero.astro:dy653">Request a quote</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Row -->
+          <div class="flex flex-wrap items-center gap-y-3 gap-x-5 sm:gap-x-6 text-white/90 text-[13px] sm:text-[14px]" data-ps="src/components/services/ServicesHero.astro:trust">
+            <div class="flex items-center gap-2" data-ps="src/components/services/ServicesHero.astro:ob3myl">
+              <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <span data-ps="src/components/services/ServicesHero.astro:dy654">Licensed & insured</span>
+            </div>
+
+            <div class="flex items-center gap-2" data-ps="src/components/services/ServicesHero.astro:ob3myk">
+              <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span data-ps="src/components/services/ServicesHero.astro:dy655">Call for availability</span>
+            </div>
+
+            <div class="flex items-center gap-1.5" data-ps="src/components/services/ServicesHero.astro:ob3myj">
+              <span class="text-amber-400 text-[15px]" data-ps="src/components/services/ServicesHero.astro:dy656">★</span>
+              <span data-ps="src/components/services/ServicesHero.astro:dy657">5.0 · 27 reviews</span>
+            </div>
+
+            <div class="flex items-center gap-2" data-ps="src/components/services/ServicesHero.astro:ob3myi">
+              <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <span data-ps="src/components/services/ServicesHero.astro:dy658">Local & owner-operated</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Glass Review Card -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end w-full" data-ps="src/components/services/ServicesHero.astro:right1">
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-[24px] p-6 sm:p-7 text-white max-w-[420px] shadow-2xl relative w-full" data-ps="src/components/services/ServicesHero.astro:card1">
+            <!-- Top Google Review Header -->
+            <div class="flex items-center gap-2 text-[12px] font-semibold text-white/90 tracking-wider uppercase mb-3" data-ps="src/components/services/ServicesHero.astro:rating">
+              <span class="text-amber-400 text-[14px]" data-ps="src/components/services/ServicesHero.astro:dy659">★</span>
+              <span data-ps="src/components/services/ServicesHero.astro:dy65a">5.0 · 27 GOOGLE REVIEWS</span>
+            </div>
+
+            <!-- 5 Stars -->
+            <div class="flex items-center gap-1 text-amber-400 text-[15px] mb-4" data-ps="src/components/services/ServicesHero.astro:stars">
+              <span data-ps="src/components/services/ServicesHero.astro:dy65b">★</span><span data-ps="src/components/services/ServicesHero.astro:dy65c">★</span><span data-ps="src/components/services/ServicesHero.astro:dqh3o8">★</span><span data-ps="src/components/services/ServicesHero.astro:dqh3o7">★</span><span data-ps="src/components/services/ServicesHero.astro:dqh3o6">★</span>
+            </div>
+
+            <!-- Review Quote -->
+            <blockquote class="text-[14px] sm:text-[15px] text-white/95 leading-[1.6] m-0 mb-4 font-normal" data-ps="src/components/services/ServicesHero.astro:quote">
+              "Jordan was fantastic. He came out quickly, explained everything along the way, and we had A/C again during the heat wave! Use JT's!!!!!"
+            </blockquote>
+
+            <!-- Author -->
+            <div class="text-[13px] text-white/70 font-medium mb-5" data-ps="src/components/services/ServicesHero.astro:author">
+              — Jim, verified Google review
+            </div>
+
+            <!-- Dots -->
+            <div class="flex items-center gap-2" data-ps="src/components/services/ServicesHero.astro:dots">
+              <div class="w-6 h-1.5 bg-white rounded-full" data-ps="src/components/services/ServicesHero.astro:ob3myh"></div>
+              <div class="w-1.5 h-1.5 bg-white/40 rounded-full" data-ps="src/components/services/ServicesHero.astro:ob3myg"></div>
+              <div class="w-1.5 h-1.5 bg-white/40 rounded-full" data-ps="src/components/services/ServicesHero.astro:ob3myf"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

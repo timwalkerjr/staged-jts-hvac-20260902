@@ -1,0 +1,35 @@
+---
+const features = [
+  { title: "Clear quote first", desc: "You'll know the price before any work begins." },
+  { title: "Local service", desc: "Serving Grand Rapids and surrounding West Michigan communities." },
+  { title: "Options explained", desc: "Repair, replacement, and equipment choices discussed upfront." },
+  { title: "No-pressure approach", desc: "Repair vs. replacement — I'll walk through both honestly." }
+];
+---
+<section class="bg-[hsl(45_33%_98%)]">
+  <div class="max-w-[1400px] mx-auto px-4 py-24">
+    <div class="text-center mb-16">
+      <span class="inline-flex items-center gap-2 bg-[hsl(45_18%_96%)] border border-[hsl(45_12%_93%)] rounded-full px-3 py-1 text-[11px] font-semibold text-[hsl(240_4%_36%)] uppercase tracking-wider mb-4">
+        How pricing works
+      </span>
+      <h2 class="text-[36px] md:text-[48px] font-semibold tracking-tight max-w-[700px] mx-auto">
+        Straight-forward <span class="italic text-[hsl(210_100%_29%)]">clear quotes.</span>
+      </h2>
+      <p class="text-[18px] text-[hsl(240_4%_36%)] max-w-[640px] mx-auto mt-4">
+        Final pricing depends on your home, the equipment needed, and the scope of work. I'll always share the price before starting — no hidden fees.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {features.map((f) => (
+        <div class="bg-[hsl(45_18%_96%)] border border-[hsl(45_12%_93%)] rounded-[24px] p-8">
+          <div class="w-12 h-12 rounded-full bg-[hsl(210_100%_29%/0.1)] text-[hsl(210_100%_29%)] flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          </div>
+          <h3 class="text-[20px] font-semibold text-[hsl(240_4%_9%)]">{f.title}</h3>
+          <p class="text-[15px] text-[hsl(240_4%_36%)] mt-2 leading-[1.5]">{f.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+---
+const items = [
+  { title: "Single-family homes", desc: "Full HVAC and plumbing service" },
+  { title: "Heating problems", desc: "Repair and replacement options" },
+  { title: "Cooling problems", desc: "A/C service and seasonal checks" },
+  { title: "Heat pumps", desc: "Year-round comfort help" },
+  { title: "Additions & garages", desc: "Ductless comfort options" },
+  { title: "Water heaters", desc: "Replacement and installation help" }
+];
+---
+<section class="bg-[hsl(45_33%_98%)]">
+  <div class="max-w-[1400px] mx-auto px-4 py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5">
+        <span class="inline-flex items-center gap-2 bg-[hsl(45_18%_96%)] border border-[hsl(45_12%_93%)] rounded-full px-3 py-1 text-[11px] font-semibold text-[hsl(240_4%_36%)] uppercase tracking-wider mb-4">
+          What we cover
+        </span>
+        <h2 class="text-[36px] md:text-[48px] font-semibold tracking-tight">
+          Home comfort, <span class="italic text-[hsl(210_100%_29%)] block">room by room.</span>
+        </h2>
+        <p class="text-[18px] text-[hsl(240_4%_36%)] mt-6 max-w-[500px]">
+          From no-heat calls and cooling problems to replacements and hard-to-condition rooms, JT helps homeowners find the practical next step.
+        </p>
+        <a href="/book/" class="mt-8 bg-[hsl(240_50%_11%)] hover:bg-[hsl(240_48%_6%)] text-white rounded-full px-7 py-3.5 text-[16px] font-semibold flex items-center gap-2 inline-flex">
+          Book a local visit
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M16.003 9.414l-7.56 7.56-1.414-1.414L13.172 9.414H4v-2h14.172l-6.144-6.144 1.414-1.414 8.558 8.558z"/></svg>
+        </a>
+      </div>
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {items.map((item) => (
+          <div class="bg-[hsl(45_18%_96%)] border border-[hsl(45_12%_93%)] rounded-[24px] p-6">
+            <h3 class="text-[18px] font-semibold text-[hsl(240_4%_9%)]">{item.title}</h3>
+            <p class="text-[14px] text-[hsl(240_4%_36%)] mt-2">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

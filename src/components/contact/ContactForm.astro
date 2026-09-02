@@ -1,0 +1,133 @@
+---
+const contactMethods = ["Phone call", "Email", "Text me"];
+---
+<section id="contact-form" class="bg-[hsl(45_18%_96%)]" data-ps="src/components/contact/ContactForm.astro:7ubtfr">
+  <div class="max-w-[1000px] mx-auto px-4 py-24" data-ps="src/components/contact/ContactForm.astro:2us3u6">
+    <div class="text-center mb-12" data-ps="src/components/contact/ContactForm.astro:2us3u5">
+      <span class="inline-flex items-center gap-2 bg-white border border-[hsl(45_12%_93%)] rounded-full px-3 py-1 text-[11px] font-semibold text-[hsl(240_4%_36%)] uppercase tracking-wider mb-4" data-ps="src/components/contact/ContactForm.astro:xs26k6">
+        Send a message
+      </span>
+      <h2 class="text-[36px] md:text-[48px] font-semibold tracking-tight" data-ps="src/components/contact/ContactForm.astro:fgq5p4">
+        Tell me how to <span class="italic text-[hsl(210_100%_29%)] block" data-ps="src/components/contact/ContactForm.astro:xs26k5">reach you back.</span>
+      </h2>
+      <p class="text-[18px] text-[hsl(240_4%_36%)] mt-4 max-w-[600px] mx-auto" data-ps="src/components/contact/ContactForm.astro:unwoxh">
+        A few short details help me get back to you quickly.
+      </p>
+    </div>
+
+    <div id="contact-status" class="hidden mb-6 px-4 py-3 rounded-2xl text-[15px]" data-ps="src/components/contact/ContactForm.astro:2us3u4"></div>
+
+    <form id="contact-form-el" action="https://formspree.io/f/mzepdwee" method="POST" enctype="multipart/form-data" class="bg-white border border-[hsl(45_12%_93%)] rounded-[32px] p-8 md:p-12 space-y-6">
+      <input type="hidden" name="_subject" value="New contact message — JT's Heating Cooling & Plumbing" />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-ps="src/components/contact/ContactForm.astro:w6526k">
+        <div data-ps="src/components/contact/ContactForm.astro:w6526j">
+          <label for="contact-name" class="block text-[14px] font-semibold text-[hsl(240_4%_9%)] mb-2" data-ps="src/components/contact/ContactForm.astro:wi8b9z">Name</label>
+          <input id="contact-name" type="text" name="name" required class="w-full bg-[hsl(45_33%_98%)] border border-[hsl(45_12%_93%)] rounded-2xl px-4 py-3 text-[15px] focus:border-[hsl(210_100%_29%)] focus:outline-none" />
+        </div>
+        <div data-ps="src/components/contact/ContactForm.astro:w6526i">
+          <label for="contact-phone" class="block text-[14px] font-semibold text-[hsl(240_4%_9%)] mb-2" data-ps="src/components/contact/ContactForm.astro:wi8ba0">Phone</label>
+          <input id="contact-phone" type="tel" name="phone" class="w-full bg-[hsl(45_33%_98%)] border border-[hsl(45_12%_93%)] rounded-2xl px-4 py-3 text-[15px] focus:border-[hsl(210_100%_29%)] focus:outline-none" />
+        </div>
+        <div data-ps="src/components/contact/ContactForm.astro:w6526h">
+          <label for="contact-email" class="block text-[14px] font-semibold text-[hsl(240_4%_9%)] mb-2" data-ps="src/components/contact/ContactForm.astro:wi8ba1">Email</label>
+          <input id="contact-email" type="email" name="email" required class="w-full bg-[hsl(45_33%_98%)] border border-[hsl(45_12%_93%)] rounded-2xl px-4 py-3 text-[15px] focus:border-[hsl(210_100%_29%)] focus:outline-none" />
+        </div>
+        <div data-ps="src/components/contact/ContactForm.astro:w6526g">
+          <label for="contact-zip" class="block text-[14px] font-semibold text-[hsl(240_4%_9%)] mb-2" data-ps="src/components/contact/ContactForm.astro:wi8ba2">ZIP code</label>
+          <input id="contact-zip" type="text" name="zip" class="w-full bg-[hsl(45_33%_98%)] border border-[hsl(45_12%_93%)] rounded-2xl px-4 py-3 text-[15px] focus:border-[hsl(210_100%_29%)] focus:outline-none" />
+        </div>
+      </div>
+
+      <div data-ps="src/components/contact/ContactForm.astro:w6526f">
+        <label class="block text-[14px] font-semibold text-[hsl(240_4%_9%)] mb-3" data-ps="src/components/contact/ContactForm.astro:wi8ba3">Preferred contact method</label>
+        <div class="flex flex-wrap gap-2" data-ps="src/components/contact/ContactForm.astro:w6526e">
+          {contactMethods.map((m, __psIdx) => (
+            <label class="cursor-pointer bg-[hsl(45_33%_98%)] border border-[hsl(45_12%_93%)] rounded-full px-5 py-2.5 text-[14px] font-medium text-[hsl(240_4%_9%)] hover:border-[hsl(210_100%_29%)] has-[:checked]:bg-[hsl(210_100%_29%)] has-[:checked]:text-white has-[:checked]:border-[hsl(210_100%_29%)] transition-all" data-ps={`src/components/contact/ContactForm.astro:wi8ba4-${__psIdx}`}>
+              <input type="radio" name="contact_method" value={m} class="sr-only" />
+            {m}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div data-ps="src/components/contact/ContactForm.astro:w6526d">
+        <label for="contact-message" class="block text-[14px] font-semibold text-[hsl(240_4%_9%)] mb-2" data-ps="src/components/contact/ContactForm.astro:wi8baq">Message — Up to 500 characters</label>
+        <textarea id="contact-message" name="message" maxlength="500" required class="w-full bg-[hsl(45_33%_98%)] border border-[hsl(45_12%_93%)] rounded-2xl px-4 py-3 text-[15px] focus:border-[hsl(210_100%_29%)] focus:outline-none" rows="5"></textarea>
+      </div>
+
+      <div data-ps="src/components/contact/ContactForm.astro:w6526c">
+        <label for="contact-photo" class="block text-[14px] font-semibold text-[hsl(240_4%_9%)] mb-2" data-ps="src/components/contact/ContactForm.astro:wi8bar">Upload photo (optional)</label>
+        <label class="block border-2 border-dashed border-[hsl(45_12%_93%)] rounded-2xl bg-[hsl(45_33%_98%)] p-8 text-center cursor-pointer hover:border-[hsl(210_100%_29%)] transition-all" data-ps="src/components/contact/ContactForm.astro:wi8bas">
+          <input id="contact-photo" type="file" name="photo" accept="image/*" class="sr-only" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="hsl(240 4% 36%)" class="mx-auto"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+          <p class="text-[15px] font-semibold text-[hsl(240_4%_9%)] mt-3" data-ps="src/components/contact/ContactForm.astro:unwoxg">Tap to add a photo</p>
+          <p id="contact-photo-name" class="text-[12px] text-[hsl(240_4%_36%)] mt-1" data-ps="src/components/contact/ContactForm.astro:unwoxf"></p>
+        </label>
+      </div>
+
+      <label class="flex items-start gap-3 cursor-pointer" data-ps="src/components/contact/ContactForm.astro:wi8bat">
+        <input type="checkbox" name="privacy" required class="mt-1 w-5 h-5 rounded border-[hsl(45_12%_93%)] text-[hsl(210_100%_29%)] focus:ring-[hsl(210_100%_29%)]" />
+        <span class="text-[14px] text-[hsl(240_4%_36%)]" data-ps="src/components/contact/ContactForm.astro:xs26k4">Your details won't be used for marketing.</span>
+      </label>
+
+      <button type="submit" id="contact-submit" class="w-full bg-[hsl(210_100%_29%)] hover:bg-[hsl(210_100%_22%)] text-white rounded-full px-8 py-4 text-[18px] font-semibold flex items-center justify-center gap-2" data-ps="src/components/contact/ContactForm.astro:yttyx4">
+        Send Message
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.003 9.414l-7.56 7.56-1.414-1.414L13.172 9.414H4v-2h14.172l-6.144-6.144 1.414-1.414 8.558 8.558z"/></svg>
+      </button>
+    </form>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8" data-ps="src/components/contact/ContactForm.astro:w6526b">
+      <a href="tel:+16168403105" class="bg-white border border-[hsl(45_12%_93%)] rounded-[24px] p-6 flex flex-col items-start hover:border-[hsl(210_100%_29%)] transition-all" data-ps="src/components/contact/ContactForm.astro:njys8f">
+        <span class="text-[11px] font-semibold uppercase tracking-wider text-[hsl(240_4%_36%)]" data-ps="src/components/contact/ContactForm.astro:xs26k3">Call</span>
+        <span class="text-[20px] font-semibold text-[hsl(240_4%_9%)] mt-1" data-ps="src/components/contact/ContactForm.astro:xs26jh">(616) 840-3105</span>
+      </a>
+      <a href="/book/" class="bg-white border border-[hsl(45_12%_93%)] rounded-[24px] p-6 flex flex-col items-start hover:border-[hsl(210_100%_29%)] transition-all">
+        <span class="text-[11px] font-semibold uppercase tracking-wider text-[hsl(240_4%_36%)]" data-ps="src/components/contact/ContactForm.astro:xs26jg">Online</span>
+        <span class="text-[20px] font-semibold text-[hsl(240_4%_9%)] mt-1">Book a Visit</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contact-form-el') as HTMLFormElement | null;
+  const status = document.getElementById('contact-status') as HTMLDivElement | null;
+  const submitBtn = document.getElementById('contact-submit') as HTMLButtonElement | null;
+  const photoInput = document.getElementById('contact-photo') as HTMLInputElement | null;
+  const photoName = document.getElementById('contact-photo-name');
+
+  photoInput?.addEventListener('change', () => {
+    if (photoName) photoName.textContent = photoInput.files?.[0]?.name ?? '';
+  });
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!submitBtn || !status) return;
+    submitBtn.disabled = true;
+    const original = submitBtn.innerHTML;
+    submitBtn.textContent = 'Sending...';
+
+    try {
+      const response = await fetch('https://formspree.io/f/mzepdwee', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (response.ok) {
+        status.className = 'mb-6 px-4 py-3 rounded-2xl text-[15px] bg-green-50 border border-green-200 text-green-800';
+        status.textContent = 'Thanks — your message is on its way. JT will get back to you soon.';
+        form.reset();
+        if (photoName) photoName.textContent = '';
+      } else {
+        throw new Error('Failed to send');
+      }
+    } catch {
+      status.className = 'mb-6 px-4 py-3 rounded-2xl text-[15px] bg-red-50 border border-red-200 text-red-800';
+      status.textContent = 'Something went wrong. Please call (616) 840-3105 or try again.';
+    } finally {
+      status.classList.remove('hidden');
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = original;
+    }
+  });
+</script>

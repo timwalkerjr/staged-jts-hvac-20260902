@@ -1,0 +1,122 @@
+{
+  "success": true,
+  "url": "https://jts-hvac.netlify.app/",
+  "structured": {
+    "title": "JT's Heating Cooling & Plumbing | Grand Rapids, MI",
+    "description": "JT's Heating Cooling & Plumbing provides honest, no-pressure furnace repair, A/C service, heat pump work, mini-split installation, and water heater replacement across Grand Rapids and West Michigan.",
+    "url": "https://jts-hvac.netlify.app/",
+    "imageCount": 55,
+    "branding": {
+      "colors": {
+        "primary": "#004A94",
+        "secondary": "#0E0E2A",
+        "accent": "#004A94",
+        "background": "#FCFBF8",
+        "textPrimary": "#0E0E2A",
+        "link": "#E6F2FF"
+      },
+      "typography": {
+        "fontFamilies": {
+          "primary": "Inter",
+          "heading": "Bricolage Grotesque"
+        },
+        "fontStacks": {
+          "heading": [
+            "Bricolage Grotesque",
+            "ui-sans-serif",
+            "system-ui",
+            "sans-serif"
+          ],
+          "body": [
+            "Inter",
+            "ui-sans-serif",
+            "system-ui",
+            "-apple-system",
+            "sans-serif"
+          ],
+          "paragraph": [
+            "Inter",
+            "ui-sans-serif",
+            "system-ui",
+            "-apple-system",
+            "sans-serif"
+          ]
+        },
+        "fontSizes": {
+          "h1": "48px",
+          "h2": "48px",
+          "body": "18px"
+        }
+      },
+      "spacing": {
+        "baseUnit": 4,
+        "borderRadius": "12px"
+      },
+      "logo": "https://jts-hvac.netlify.app/jt-logo-mark.png",
+      "favicon": "https://jts-hvac.netlify.app/favicon.ico"
+    },
+    "pages": [
+      {
+        "slug": "index",
+        "path": "/",
+        "title": "JT's Heating Cooling & Plumbing | Grand Rapids, MI",
+        "file": "data/pages/index.md"
+      }
+    ],
+    "availablePages": [
+      {
+        "path": "/about/",
+        "label": "About",
+        "slug": "about",
+        "scraped": false
+      },
+      {
+        "path": "/area/",
+        "label": "Area",
+        "slug": "area",
+        "scraped": false
+      },
+      {
+        "path": "/book/",
+        "label": "Book",
+        "slug": "book",
+        "scraped": false
+      },
+      {
+        "path": "/contact/",
+        "label": "Contact",
+        "slug": "contact",
+        "scraped": false
+      },
+      {
+        "path": "/pricing/",
+        "label": "Pricing",
+        "slug": "pricing",
+        "scraped": false
+      },
+      {
+        "path": "/reviews/",
+        "label": "Reviews",
+        "slug": "reviews",
+        "scraped": false
+      },
+      {
+        "path": "/services/",
+        "label": "Services",
+        "slug": "services",
+        "scraped": false
+      }
+    ]
+  },
+  "metadata": {
+    "scraper": "firecrawl-crawl-endpoint",
+    "timestamp": "2026-08-29T02:37:59.893Z",
+    "homepageContentLength": 10714,
+    "imageCount": 55,
+    "hasBranding": true,
+    "hasElementorEnrichment": false,
+    "hasVisibleIr": false,
+    "pagesDiscovered": 7,
+    "pagesScraped": 1
+  }
+}

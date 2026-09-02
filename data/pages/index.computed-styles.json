@@ -1,0 +1,2345 @@
+{
+  "viewportWidth": 1920,
+  "pageBackground": {
+    "type": "color",
+    "value": "rgb(252, 251, 248)"
+  },
+  "isElementor": false,
+  "sectionThemes": [
+    {
+      "background": "rgb(252, 251, 248)",
+      "isBackgroundPhoto": true,
+      "overlay": "linear-gradient(to top, oklab(0.183183 0.00908686 -0.054748 / 0.55) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%)",
+      "textColor": "rgb(255, 255, 255)",
+      "headings": [
+        {
+          "tag": "h1",
+          "fontSize": "48px",
+          "fontWeight": "600",
+          "color": "rgb(255, 255, 255)",
+          "text": "Honest Heating, Cooling & Plumbing for West Michigan Homes & Families.",
+          "letterSpacing": "-1.2px",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "color": "rgb(0, 74, 148)",
+          "text": "No heat? I need furnace repair",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "color": "rgb(0, 74, 148)",
+          "text": "A/C not cooling? I need service",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "color": "rgb(0, 74, 148)",
+          "text": "I need a new system installed",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h2",
+          "fontSize": "48px",
+          "fontWeight": "600",
+          "color": "rgb(22, 22, 24)",
+          "text": "Heating, cooling & plumbing done honest and clean.",
+          "letterSpacing": "-1.2px",
+          "textAlign": "start"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "18px",
+        "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.9)",
+        "lineHeight": "29.25px",
+        "textAlign": "start"
+      },
+      "buttons": [
+        {
+          "backgroundColor": "rgb(0, 74, 148)",
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "14px 28px 14px 28px",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "text": "Book a Visit"
+        },
+        {
+          "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3.35544e+07px",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.25)",
+          "padding": "14px 28px 14px 28px",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "text": "Request a Quote"
+        },
+        {
+          "color": "rgb(22, 22, 24)",
+          "borderRadius": "3.35544e+07px",
+          "border": "1px solid rgb(239, 238, 235)",
+          "padding": "14px 24px 14px 24px",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "text": "See all services"
+        }
+      ],
+      "links": [
+        {
+          "text": "Book this service",
+          "color": "rgb(22, 22, 24)",
+          "fontWeight": "700"
+        }
+      ],
+      "images": [
+        {
+          "displayWidth": 40,
+          "displayHeight": 40,
+          "borderRadius": "3.35544e+07px"
+        },
+        {
+          "displayWidth": 1888,
+          "displayHeight": 1080,
+          "objectFit": "cover"
+        },
+        {
+          "displayWidth": 427,
+          "displayHeight": 320,
+          "objectFit": "cover"
+        },
+        {
+          "displayWidth": 427,
+          "displayHeight": 320,
+          "objectFit": "cover"
+        },
+        {
+          "displayWidth": 427,
+          "displayHeight": 321,
+          "objectFit": "cover"
+        },
+        {
+          "displayWidth": 427,
+          "displayHeight": 320,
+          "objectFit": "cover"
+        },
+        {
+          "displayWidth": 427,
+          "displayHeight": 320,
+          "objectFit": "cover"
+        },
+        {
+          "displayWidth": 427,
+          "displayHeight": 321,
+          "objectFit": "cover"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1400px",
+        "display": "flex",
+        "flexDirection": "column",
+        "childCount": 2
+      },
+      "interactionType": "carousel"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "gradient": "linear-gradient(to right, oklab(0.183183 0.00908686 -0.054748 / 0.9) 0%, oklab(0.183183 0.00908686 -0.054748 / 0.45) 50%, oklab(0.183183 0.00908686 -0.054748 / 0.1) 100%)",
+      "textColor": null,
+      "headings": [],
+      "bodyStyle": null,
+      "buttons": [],
+      "layout": {}
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "gradient": "linear-gradient(to top, oklab(0.183183 0.00908686 -0.054748 / 0.55) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%)",
+      "textColor": null,
+      "headings": [],
+      "bodyStyle": null,
+      "buttons": [],
+      "layout": {}
+    },
+    {
+      "background": "rgb(245, 241, 235)",
+      "textColor": null,
+      "headings": [],
+      "bodyStyle": null,
+      "buttons": [],
+      "layout": {
+        "paddingBlock": "36px 36px",
+        "display": "flex",
+        "flexDirection": "row",
+        "alignItems": "center",
+        "childCount": 3
+      },
+      "pseudoElements": [
+        {
+          "host": "ri-map-pin-2-line text-primary text-lg md:text-2xl",
+          "type": "::before",
+          "width": "auto",
+          "height": "auto",
+          "content": ""
+        },
+        {
+          "host": "ri-map-pin-2-line text-primary text-lg md:text-2xl",
+          "type": "::before",
+          "width": "auto",
+          "height": "auto",
+          "content": ""
+        },
+        {
+          "host": "ri-map-pin-2-line text-primary text-lg md:text-2xl",
+          "type": "::before",
+          "width": "auto",
+          "height": "auto",
+          "content": ""
+        },
+        {
+          "host": "ri-map-pin-2-line text-primary text-lg md:text-2xl",
+          "type": "::before",
+          "width": "auto",
+          "height": "auto",
+          "content": ""
+        },
+        {
+          "host": "ri-map-pin-2-line text-primary text-lg md:text-2xl",
+          "type": "::before",
+          "width": "auto",
+          "height": "auto",
+          "content": ""
+        },
+        {
+          "host": "ri-map-pin-2-line text-primary text-lg md:text-2xl",
+          "type": "::before",
+          "width": "auto",
+          "height": "auto",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "background": "rgb(245, 241, 235)",
+      "textColor": "rgb(22, 22, 24)",
+      "headings": [
+        {
+          "tag": "h2",
+          "fontSize": "48px",
+          "fontWeight": "600",
+          "color": "rgb(22, 22, 24)",
+          "text": "One local technician who listens before he quotes.",
+          "letterSpacing": "-1.2px",
+          "textAlign": "start"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "18px",
+        "color": "rgb(88, 88, 95)",
+        "lineHeight": "29.25px",
+        "textAlign": "start"
+      },
+      "buttons": [],
+      "images": [
+        {
+          "displayWidth": 636,
+          "displayHeight": 477,
+          "objectFit": "cover"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1400px",
+        "paddingBlock": "96px 96px",
+        "display": "grid",
+        "gridTemplateColumns": "636px 636px",
+        "gap": "64px",
+        "childCount": 2
+      }
+    },
+    {
+      "background": "rgb(245, 241, 235)",
+      "textColor": "rgb(22, 22, 24)",
+      "headings": [
+        {
+          "tag": "h2",
+          "fontSize": "48px",
+          "fontWeight": "600",
+          "color": "rgb(22, 22, 24)",
+          "text": "Honest pricing, clearly written.",
+          "letterSpacing": "-1.2px",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h4",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "color": "rgb(22, 22, 24)",
+          "text": "Furnace diagnostic",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h4",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "color": "rgb(22, 22, 24)",
+          "text": "A/C diagnostic",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h4",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "color": "rgb(22, 22, 24)",
+          "text": "Furnace installation",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h4",
+          "fontSize": "18px",
+          "fontWeight": "600",
+          "color": "rgb(22, 22, 24)",
+          "text": "A/C service & tune-up",
+          "textAlign": "start"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "18px",
+        "color": "rgb(88, 88, 95)",
+        "lineHeight": "29.25px",
+        "textAlign": "start"
+      },
+      "buttons": [
+        {
+          "backgroundColor": "rgb(14, 14, 42)",
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "16px 32px 16px 32px",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "text": "Check Availability"
+        },
+        {
+          "color": "rgb(22, 22, 24)",
+          "borderRadius": "3.35544e+07px",
+          "border": "1px solid rgb(239, 238, 235)",
+          "padding": "16px 32px 16px 32px",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "text": "Quote details"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1400px",
+        "paddingBlock": "96px 96px",
+        "display": "grid",
+        "gridTemplateColumns": "52.6562px 52.6562px 52.6562px 52.6562px 52.6562px 52.6562px 52.6562px 52.6562px 52.6562px 52.6562px 52.6562px 52.6562px",
+        "gap": "64px",
+        "childCount": 2
+      }
+    },
+    {
+      "background": "rgb(245, 241, 235)",
+      "textColor": "rgb(22, 22, 24)",
+      "headings": [
+        {
+          "tag": "h2",
+          "fontSize": "48px",
+          "fontWeight": "600",
+          "color": "rgb(22, 22, 24)",
+          "text": "Serving Grand Rapids and West Michigan homes & businesses.",
+          "letterSpacing": "-1.2px",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "24px",
+          "fontWeight": "600",
+          "color": "rgb(22, 22, 24)",
+          "text": "Grand Rapids",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "24px",
+          "fontWeight": "600",
+          "color": "rgb(22, 22, 24)",
+          "text": "Kentwood",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "24px",
+          "fontWeight": "600",
+          "color": "rgb(22, 22, 24)",
+          "text": "Wyoming",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "24px",
+          "fontWeight": "600",
+          "color": "rgb(22, 22, 24)",
+          "text": "Rockford & North",
+          "textAlign": "start"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "14px",
+        "color": "rgb(88, 88, 95)",
+        "lineHeight": "22.75px",
+        "textAlign": "start"
+      },
+      "buttons": [
+        {
+          "color": "rgb(22, 22, 24)",
+          "borderRadius": "3.35544e+07px",
+          "border": "1px solid rgb(239, 238, 235)",
+          "padding": "14px 24px 14px 24px",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "text": "See service area"
+        }
+      ],
+      "images": [
+        {
+          "displayWidth": 314,
+          "displayHeight": 314,
+          "objectFit": "cover"
+        },
+        {
+          "displayWidth": 314,
+          "displayHeight": 314,
+          "objectFit": "cover"
+        },
+        {
+          "displayWidth": 314,
+          "displayHeight": 314,
+          "objectFit": "cover"
+        },
+        {
+          "displayWidth": 314,
+          "displayHeight": 314,
+          "objectFit": "cover"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1400px",
+        "paddingBlock": "96px 96px",
+        "display": "flex",
+        "flexDirection": "row",
+        "alignItems": "flex-end",
+        "justifyContent": "space-between",
+        "gap": "24px",
+        "childCount": 2
+      }
+    },
+    {
+      "background": "rgb(230, 242, 255)",
+      "textColor": "rgb(22, 22, 24)",
+      "headings": [
+        {
+          "tag": "h2",
+          "fontSize": "48px",
+          "fontWeight": "600",
+          "color": "rgb(22, 22, 24)",
+          "text": "Local heating & cooling, just around the corner.",
+          "letterSpacing": "-1.2px",
+          "textAlign": "center"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "18px",
+        "color": "rgb(88, 88, 95)",
+        "lineHeight": "29.25px",
+        "textAlign": "center"
+      },
+      "buttons": [
+        {
+          "backgroundColor": "rgb(14, 14, 42)",
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "16px 32px 16px 32px",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "text": "Book Appointment"
+        },
+        {
+          "color": "rgb(22, 22, 24)",
+          "borderRadius": "3.35544e+07px",
+          "border": "1px solid rgb(239, 238, 235)",
+          "padding": "16px 32px 16px 32px",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "text": "Request a Quote"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1400px",
+        "paddingBlock": "96px 96px",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "childCount": 4
+      }
+    },
+    {
+      "background": "rgb(14, 14, 42)",
+      "textColor": "rgb(230, 228, 224)",
+      "headings": [
+        {
+          "tag": "h4",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "color": "rgb(230, 228, 224)",
+          "text": "Explore",
+          "textTransform": "uppercase",
+          "letterSpacing": "2.16px",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h4",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "color": "rgb(230, 228, 224)",
+          "text": "Book a visit",
+          "textTransform": "uppercase",
+          "letterSpacing": "2.16px",
+          "textAlign": "start"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "14px",
+        "color": "rgb(230, 228, 224)",
+        "lineHeight": "22.75px",
+        "textAlign": "start"
+      },
+      "buttons": [
+        {
+          "backgroundColor": "rgb(0, 74, 148)",
+          "color": "rgb(255, 255, 255)",
+          "borderRadius": "3.35544e+07px",
+          "padding": "14px 24px 14px 24px",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "text": "Book a Visit"
+        }
+      ],
+      "links": [
+        {
+          "text": "(616) 840-3105",
+          "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+          "fontWeight": "400"
+        },
+        {
+          "text": "Privacy",
+          "color": "rgb(230, 228, 224)",
+          "fontWeight": "400"
+        }
+      ],
+      "images": [
+        {
+          "displayWidth": 40,
+          "displayHeight": 40,
+          "borderRadius": "3.35544e+07px"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1400px",
+        "paddingBlock": "64px 48px",
+        "display": "flex",
+        "flexDirection": "row",
+        "alignItems": "center",
+        "gap": "10px",
+        "childCount": 2
+      }
+    }
+  ],
+  "globalTypography": {
+    "headingFont": "Bricolage Grotesque",
+    "bodyFont": "Inter",
+    "scale": {
+      "h1": {
+        "fontSize": "48px",
+        "fontWeight": "600",
+        "lineHeight": "62.4px"
+      },
+      "h3": {
+        "fontSize": "24px",
+        "fontWeight": "600",
+        "lineHeight": "30px"
+      },
+      "h2": {
+        "fontSize": "48px",
+        "fontWeight": "600",
+        "lineHeight": "60px"
+      },
+      "h4": {
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "lineHeight": "28px"
+      },
+      "body": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "lineHeight": "29.25px"
+      }
+    }
+  },
+  "navigation": {
+    "isFullWidth": true,
+    "width": "1920px",
+    "backgroundColor": "rgb(252, 251, 248)",
+    "position": "fixed",
+    "padding": "12px 0px 12px 0px",
+    "logo": {
+      "width": "40px",
+      "height": "40px",
+      "position": "inside-nav",
+      "hasBadge": false,
+      "src": "https://jts-hvac.netlify.app/jt-logo-mark.png"
+    },
+    "hasLogo": true,
+    "links": [
+      {
+        "text": "JT's Heating Cooling & Plumbin",
+        "fontSize": "16px",
+        "fontFamily": "Inter",
+        "fontWeight": "400",
+        "color": "rgb(22, 22, 24)",
+        "hasIcon": true
+      },
+      {
+        "text": "Home",
+        "fontSize": "14px",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "color": "rgb(0, 74, 148)"
+      },
+      {
+        "text": "Services",
+        "fontSize": "14px",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)"
+      },
+      {
+        "text": "Pricing",
+        "fontSize": "14px",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)"
+      },
+      {
+        "text": "About",
+        "fontSize": "14px",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)"
+      },
+      {
+        "text": "Reviews",
+        "fontSize": "14px",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)"
+      },
+      {
+        "text": "Service Area",
+        "fontSize": "14px",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)"
+      },
+      {
+        "text": "Contact",
+        "fontSize": "14px",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)"
+      },
+      {
+        "text": "(616) 840-3105",
+        "fontSize": "14px",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+        "hasIcon": true
+      },
+      {
+        "text": "Book a Visit",
+        "fontSize": "14px",
+        "fontFamily": "Inter",
+        "fontWeight": "600",
+        "color": "rgb(255, 255, 255)",
+        "hasIcon": true,
+        "isButton": true,
+        "buttonStyle": {
+          "backgroundColor": "rgb(0, 74, 148)",
+          "borderRadius": "3.35544e+07px"
+        }
+      }
+    ],
+    "linkLayout": {
+      "paddingX": "16px 16px",
+      "pitchPx": 105,
+      "distribution": "center"
+    }
+  },
+  "sliders": [],
+  "buttons": [
+    {
+      "backgroundColor": "rgb(0, 74, 148)",
+      "color": "rgb(255, 255, 255)",
+      "borderRadius": "3.35544e+07px",
+      "padding": "14px 28px 14px 28px",
+      "fontSize": "16px",
+      "fontWeight": "600",
+      "text": "Book a Visit"
+    },
+    {
+      "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+      "color": "rgb(255, 255, 255)",
+      "borderRadius": "3.35544e+07px",
+      "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.25)",
+      "padding": "14px 28px 14px 28px",
+      "fontSize": "16px",
+      "fontWeight": "600",
+      "text": "Request a Quote"
+    },
+    {
+      "color": "rgb(22, 22, 24)",
+      "borderRadius": "3.35544e+07px",
+      "border": "1px solid rgb(239, 238, 235)",
+      "padding": "14px 24px 14px 24px",
+      "fontSize": "16px",
+      "fontWeight": "600",
+      "text": "See all services"
+    },
+    {
+      "backgroundColor": "rgb(14, 14, 42)",
+      "color": "rgb(255, 255, 255)",
+      "borderRadius": "3.35544e+07px",
+      "padding": "16px 32px 16px 32px",
+      "fontSize": "16px",
+      "fontWeight": "600",
+      "text": "Check Availability"
+    }
+  ],
+  "videos": [],
+  "footer": {
+    "background": "rgb(252, 251, 248)",
+    "textColor": "rgb(22, 22, 24)",
+    "columns": 12,
+    "textAlign": "start"
+  },
+  "socialLinks": null,
+  "hoverStyles": {
+    ".hover-lift": {
+      "transform": "translateY(-4px)",
+      "boxShadow": "rgba(0, 0, 0, 0.15) 0px 10px 30px"
+    },
+    ".hover-scale": {
+      "transform": "scale(1.05)"
+    },
+    ".hover-glow": {
+      "boxShadow": "0 0 20px color-mix(in srgb, var(--color-primary) 40%, transparent)"
+    }
+  },
+  "cssVariables": {
+    "--font-sans": "\"Inter\", ui-sans-serif, system-ui, -apple-system, sans-serif",
+    "--font-heading": "\"Bricolage Grotesque\", ui-sans-serif, system-ui, sans-serif",
+    "--color-background": "#fcfbf8",
+    "--color-foreground": "#161618",
+    "--color-muted-foreground": "#58585f",
+    "--color-border": "#efeeeb",
+    "--color-surface": "#f7f6f3",
+    "--color-primary": "#004a94",
+    "--color-primary-foreground": "#fcfbf8",
+    "--color-primary-hover": "#003870",
+    "--color-secondary": "#0e0e2a",
+    "--color-secondary-foreground": "#fcfbf8",
+    "--color-secondary-hover": "#080817",
+    "--color-accent": "#004a94",
+    "--color-dark-background": "#1a1a37",
+    "--color-dark-foreground": "#fcfbf8",
+    "--color-dark-muted-foreground": "#e6e4e0",
+    "--color-dark-border": "#fcfbf81a",
+    "--color-success": "#16a249",
+    "--color-error": "#dc2828",
+    "--color-warning": "#f59f0a"
+  },
+  "externalFonts": [
+    "font-face: Inter",
+    "font-face: Inter",
+    "font-face: Inter",
+    "font-face: Inter",
+    "font-face: Bricolage Grotesque",
+    "font-face: Bricolage Grotesque",
+    "font-face: remixicon"
+  ],
+  "portSectionStyles": [
+    {
+      "index": 0,
+      "heading": "Site header / navigation (port into Navigation.astro)",
+      "elements": [
+        {
+          "tag": "a",
+          "cls": "flex",
+          "text": "JT's Heating Cooling & Plumbin",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "img",
+          "cls": "w-10",
+          "color": "rgb(22, 22, 24)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "nav-link",
+          "text": "Home",
+          "color": "rgb(0, 74, 148)",
+          "borderRadius": "6px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "span",
+          "cls": "active-indicator",
+          "color": "rgb(0, 74, 148)",
+          "backgroundColor": "rgb(0, 74, 148)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "lineWidth": 20,
+          "lineHeight": 3
+        },
+        {
+          "tag": "a",
+          "cls": "nav-link",
+          "text": "Services",
+          "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+          "borderRadius": "6px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "span",
+          "cls": "active-indicator",
+          "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+          "backgroundColor": "rgb(0, 74, 148)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "nav-link",
+          "text": "Pricing",
+          "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+          "borderRadius": "6px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "nav-link",
+          "text": "About",
+          "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+          "borderRadius": "6px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "nav-link",
+          "text": "Reviews",
+          "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+          "borderRadius": "6px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "nav-link",
+          "text": "Service Area",
+          "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+          "borderRadius": "6px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "nav-link",
+          "text": "Contact",
+          "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+          "borderRadius": "6px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "hidden",
+          "text": "(616) 840-3105",
+          "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "svg",
+          "color": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+          "fill": "oklab(0.201052 0.00109904 -0.00378704 / 0.8)",
+          "width": 16,
+          "height": 16,
+          "viewBox": "0 0 24 24",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "group",
+          "text": "Book a Visit",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(0, 74, 148)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(255, 255, 255)",
+          "width": 16,
+          "height": 16,
+          "viewBox": "0 0 24 24",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(22, 22, 24)",
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "px-4",
+          "text": "Home",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "borderRadius": "12px",
+          "fontSize": "16px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "px-4",
+          "text": "Services",
+          "color": "rgb(88, 88, 95)",
+          "borderRadius": "12px",
+          "fontSize": "16px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "px-4",
+          "text": "Pricing",
+          "color": "rgb(88, 88, 95)",
+          "borderRadius": "12px",
+          "fontSize": "16px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "px-4",
+          "text": "About",
+          "color": "rgb(88, 88, 95)",
+          "borderRadius": "12px",
+          "fontSize": "16px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "px-4",
+          "text": "Reviews",
+          "color": "rgb(88, 88, 95)",
+          "borderRadius": "12px",
+          "fontSize": "16px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "px-4",
+          "text": "Service Area",
+          "color": "rgb(88, 88, 95)",
+          "borderRadius": "12px",
+          "fontSize": "16px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "px-4",
+          "text": "Contact",
+          "color": "rgb(88, 88, 95)",
+          "borderRadius": "12px",
+          "fontSize": "16px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "flex",
+          "text": "Call",
+          "color": "rgb(22, 22, 24)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "flex",
+          "text": "Book",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(0, 74, 148)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "heading": "Honest Heating, Cooling & Plumbing for West Michigan Homes & Families.",
+      "elements": [
+        {
+          "tag": "img",
+          "cls": "absolute",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "div",
+          "cls": "inline-flex",
+          "text": "Serving Grand Rapids & West MI",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.25)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "12px"
+        },
+        {
+          "tag": "span",
+          "cls": "animate-ping",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "oklch(0.765 0.177 163.223)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "12px"
+        },
+        {
+          "tag": "span",
+          "cls": "relative",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "oklch(0.765 0.177 163.223)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "12px"
+        },
+        {
+          "tag": "svg",
+          "color": "oklch(0.828 0.189 84.429)",
+          "fill": "oklch(0.828 0.189 84.429)",
+          "width": 14,
+          "height": 14,
+          "viewBox": "0 0 24 24",
+          "fontSize": "12px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "h1",
+          "cls": "hero-animate",
+          "text": "Honest Heating, Cooling & Plum",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "48px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "span",
+          "cls": "hero-hl",
+          "text": "West Michigan",
+          "color": "rgb(0, 74, 148)",
+          "backgroundColor": "rgba(255, 255, 255, 0.92)",
+          "borderRadius": "5px",
+          "fontSize": "48px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "group",
+          "text": "Book a Visit",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(0, 74, 148)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(255, 255, 255)",
+          "width": 18,
+          "height": 18,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "inline-flex",
+          "text": "Request a Quote",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.25)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "group",
+          "text": "No heat? I need furnace repair",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid oklab(0 0 0 / 0.05)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "span",
+          "cls": "w-10",
+          "color": "rgb(0, 74, 148)",
+          "backgroundColor": "oklab(0.415806 -0.0353225 -0.132762 / 0.1)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(0, 74, 148)",
+          "fill": "rgb(0, 74, 148)",
+          "width": 18,
+          "height": 18,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-base",
+          "text": "No heat? I need furnace repair",
+          "color": "rgb(0, 74, 148)",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[9px]",
+          "text": "Call for availability",
+          "color": "rgb(0, 74, 148)",
+          "backgroundColor": "oklab(0.415806 -0.0353225 -0.132762 / 0.1)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "9px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "group",
+          "text": "A/C not cooling? I need servic",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid oklab(0 0 0 / 0.05)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-base",
+          "text": "A/C not cooling? I need servic",
+          "color": "rgb(0, 74, 148)",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[9px]",
+          "text": "Call for a Quote",
+          "color": "rgb(0, 74, 148)",
+          "backgroundColor": "oklab(0.415806 -0.0353225 -0.132762 / 0.1)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "9px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "group",
+          "text": "I need a new system installedI",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid oklab(0 0 0 / 0.05)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-base",
+          "text": "I need a new system installed",
+          "color": "rgb(0, 74, 148)",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "span",
+          "cls": "text-[9px]",
+          "text": "Installation estimates",
+          "color": "rgb(0, 74, 148)",
+          "backgroundColor": "oklab(0.415806 -0.0353225 -0.132762 / 0.1)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "9px",
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "heading": "Heating, cooling & plumbing done honest and clean.",
+      "elements": [
+        {
+          "tag": "div",
+          "cls": "inline-flex",
+          "text": "What we do",
+          "color": "rgb(88, 88, 95)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "11px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "span",
+          "cls": "w-1.5",
+          "color": "rgb(88, 88, 95)",
+          "backgroundColor": "rgb(0, 74, 148)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "11px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "h2",
+          "cls": "text-h2",
+          "text": "Heating, cooling & plumbing do",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "48px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "inline-flex",
+          "text": "See all services",
+          "color": "rgb(22, 22, 24)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(22, 22, 24)",
+          "width": 20,
+          "height": 20,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "ResidentialCall for a QuoteNo ",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(252, 251, 248)",
+          "border": "1px solid oklab(0.949045 -0.0000615716 0.00416207 / 0.7)",
+          "borderRadius": "24px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "img",
+          "cls": "w-full",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "div",
+          "cls": "absolute",
+          "text": "Residential",
+          "color": "rgb(14, 14, 42)",
+          "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.9)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.2)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "10px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(14, 14, 42)",
+          "fill": "rgb(14, 14, 42)",
+          "width": 12,
+          "height": 12,
+          "viewBox": "0 0 24 24",
+          "fontSize": "10px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "div",
+          "cls": "absolute",
+          "text": "Call for a Quote",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(0, 74, 148)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "11px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-xl",
+          "text": "No heat / furnace repair",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "24px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "text-sm",
+          "text": "Book this service",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "14px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "a",
+          "cls": "w-8",
+          "color": "rgb(88, 88, 95)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(88, 88, 95)",
+          "width": 16,
+          "height": 16,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "ResidentialCall for a QuoteFur",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(252, 251, 248)",
+          "border": "1px solid oklab(0.949045 -0.0000615716 0.00416207 / 0.7)",
+          "borderRadius": "24px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-xl",
+          "text": "Furnace installation",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "24px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "ResidentialCall for a QuoteA/C",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(252, 251, 248)",
+          "border": "1px solid oklab(0.949045 -0.0000615716 0.00416207 / 0.7)",
+          "borderRadius": "24px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-xl",
+          "text": "A/C service & repair",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "24px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "ResidentialCall for a QuoteHea",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(252, 251, 248)",
+          "border": "1px solid oklab(0.949045 -0.0000615716 0.00416207 / 0.7)",
+          "borderRadius": "24px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-xl",
+          "text": "Heat pump repair & replacement",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "24px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "ResidentialCall for a QuoteDuc",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(252, 251, 248)",
+          "border": "1px solid oklab(0.949045 -0.0000615716 0.00416207 / 0.7)",
+          "borderRadius": "24px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-xl",
+          "text": "Ductless mini-split installati",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "24px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "ResidentialCall for a QuoteWat",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(252, 251, 248)",
+          "border": "1px solid oklab(0.949045 -0.0000615716 0.00416207 / 0.7)",
+          "borderRadius": "24px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-xl",
+          "text": "Water heater replacement",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "24px",
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "heading": "One local technician who listens before he quotes.",
+      "elements": [
+        {
+          "tag": "div",
+          "cls": "inline-flex",
+          "text": "Owner-Operated · Licensed · In",
+          "color": "rgb(88, 88, 95)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "11px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "h2",
+          "cls": "text-h2",
+          "text": "One local technician who liste",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "48px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "inline-flex",
+          "text": "Fully licensed",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "svg",
+          "color": "oklch(0.696 0.17 162.48)",
+          "width": 16,
+          "height": 16,
+          "viewBox": "0 0 24 24",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "div",
+          "cls": "inline-flex",
+          "text": "Fully insured",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "div",
+          "cls": "inline-flex",
+          "text": "Owner-operated",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "div",
+          "cls": "inline-flex",
+          "text": "No-pressure pricing",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "div",
+          "cls": "inline-flex",
+          "text": "Clean workmanship",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "14px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "img",
+          "cls": "w-full",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "div",
+          "cls": "absolute",
+          "text": "Jordan Miller “JT”Owner · Gran",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.2)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "w-10",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(0, 74, 148)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(255, 255, 255)",
+          "width": 20,
+          "height": 20,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "div",
+          "cls": "absolute",
+          "color": "rgb(22, 22, 24)",
+          "border": "2px solid rgb(239, 238, 235)",
+          "borderRadius": "32px",
+          "fontSize": "16px"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "heading": "Three simple steps to get it sorted.",
+      "elements": [
+        {
+          "tag": "div",
+          "cls": "inline-flex",
+          "text": "How it works",
+          "color": "rgb(88, 88, 95)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "11px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "h2",
+          "cls": "text-h2",
+          "text": "Three simple steps to get it s",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "48px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "01Tell me what's going onCall,",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "32px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "div",
+          "cls": "w-10",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(252, 251, 248)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(22, 22, 24)",
+          "width": 20,
+          "height": 20,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-2xl",
+          "text": "Tell me what's going on",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "24px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "02I'll come check it outI'll s",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "32px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-2xl",
+          "text": "I'll come check it out",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "24px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "03Fixed right, no dramaRepair ",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "32px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-2xl",
+          "text": "Fixed right, no drama",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "24px",
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "heading": "Honest pricing, clearly written.",
+      "elements": [
+        {
+          "tag": "div",
+          "cls": "inline-flex",
+          "text": "Clear quotes",
+          "color": "rgb(88, 88, 95)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "11px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "h2",
+          "cls": "text-h2",
+          "text": "Honest pricing, clearly writte",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "48px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "group",
+          "text": "Check Availability",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(14, 14, 42)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(255, 255, 255)",
+          "width": 20,
+          "height": 20,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "inline-flex",
+          "text": "Quote details",
+          "color": "rgb(22, 22, 24)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(22, 22, 24)",
+          "width": 20,
+          "height": 20,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "flex",
+          "text": "ServicePricing",
+          "color": "rgb(88, 88, 95)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "fontSize": "11px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "Furnace diagnosticThorough ins",
+          "color": "rgb(22, 22, 24)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "div",
+          "cls": "w-10",
+          "color": "rgb(0, 74, 148)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "12px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(0, 74, 148)",
+          "fill": "rgb(0, 74, 148)",
+          "width": 20,
+          "height": 20,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h4",
+          "cls": "text-lg",
+          "text": "Furnace diagnostic",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "18px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "A/C diagnosticFull system chec",
+          "color": "rgb(22, 22, 24)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h4",
+          "cls": "text-lg",
+          "text": "A/C diagnostic",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "18px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "Furnace installationFull repla",
+          "color": "rgb(22, 22, 24)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h4",
+          "cls": "text-lg",
+          "text": "Furnace installation",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "18px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "A/C service & tune-upClean coi",
+          "color": "rgb(22, 22, 24)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h4",
+          "cls": "text-lg",
+          "text": "A/C service & tune-up",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "18px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "h4",
+          "cls": "text-lg",
+          "text": "Water heater replacement",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "18px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "mt-8",
+          "text": "Final cost depends on the equi",
+          "color": "rgb(88, 88, 95)",
+          "backgroundColor": "oklab(0.973071 -0.0000594854 0.00413698 / 0.3)",
+          "border": "1px solid oklab(0.949045 -0.0000615716 0.00416207 / 0.5)",
+          "borderRadius": "16px",
+          "fontSize": "12px"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "elements": [
+        {
+          "tag": "svg",
+          "color": "rgb(0, 74, 148)",
+          "fill": "rgb(0, 74, 148)",
+          "width": 64,
+          "height": 64,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "oklch(0.828 0.189 84.429)",
+          "fill": "oklch(0.828 0.189 84.429)",
+          "width": 15,
+          "height": 15,
+          "viewBox": "0 0 24 24",
+          "fontSize": "12px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "button",
+          "cls": "h-1.5",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "button",
+          "cls": "h-1.5",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(0, 74, 148)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "button",
+          "cls": "w-10",
+          "color": "rgb(22, 22, 24)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(22, 22, 24)",
+          "width": 18,
+          "height": 18,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "mt-8",
+          "text": "Read all 27 reviews",
+          "color": "rgb(0, 74, 148)",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "img",
+          "cls": "w-full",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "16px"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "heading": "Serving Grand Rapids and West Michigan homes & businesses.",
+      "elements": [
+        {
+          "tag": "div",
+          "cls": "inline-flex",
+          "text": "Where we work",
+          "color": "rgb(88, 88, 95)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "11px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "h2",
+          "cls": "text-h2",
+          "text": "Serving Grand Rapids and West ",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "48px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "inline-flex",
+          "text": "See service area",
+          "color": "rgb(22, 22, 24)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(22, 22, 24)",
+          "width": 20,
+          "height": 20,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "Grand Rapids49503 · 49505Home ",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(252, 251, 248)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "32px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "img",
+          "cls": "w-full",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-2xl",
+          "text": "Grand Rapids",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "24px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "Kentwood49508 · 49512Family ne",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(252, 251, 248)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "32px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-2xl",
+          "text": "Kentwood",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "24px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "Wyoming49509 · 49519Heating, c",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(252, 251, 248)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "32px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-2xl",
+          "text": "Wyoming",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "24px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "group",
+          "text": "Rockford & North49341 · 49321H",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "rgb(252, 251, 248)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "32px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-2xl",
+          "text": "Rockford & North",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "24px",
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "heading": "Quick answers, no sales pitch.",
+      "elements": [
+        {
+          "tag": "div",
+          "cls": "inline-flex",
+          "text": "FAQ",
+          "color": "rgb(88, 88, 95)",
+          "backgroundColor": "rgb(247, 246, 243)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "11px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "h2",
+          "cls": "text-h2",
+          "text": "Quick answers, no sales pitch.",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "48px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "details",
+          "cls": "group",
+          "text": "Do you handle emergency calls?",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "oklab(0.973071 -0.0000594854 0.00413698 / 0.5)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-base",
+          "text": "Do you handle emergency calls?",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "16px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "div",
+          "cls": "w-6",
+          "color": "rgb(88, 88, 95)",
+          "backgroundColor": "rgb(252, 251, 248)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(88, 88, 95)",
+          "width": 16,
+          "height": 16,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "details",
+          "cls": "group",
+          "text": "Are you licensed and insured?Y",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "oklab(0.973071 -0.0000594854 0.00413698 / 0.5)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-base",
+          "text": "Are you licensed and insured?",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "16px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "details",
+          "cls": "group",
+          "text": "How does pricing work?Once I'v",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "oklab(0.973071 -0.0000594854 0.00413698 / 0.5)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-base",
+          "text": "How does pricing work?",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "16px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "details",
+          "cls": "group",
+          "text": "What brands of equipment do yo",
+          "color": "rgb(22, 22, 24)",
+          "backgroundColor": "oklab(0.973071 -0.0000594854 0.00413698 / 0.5)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "cls": "text-base",
+          "text": "What brands of equipment do yo",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "16px",
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "heading": "Local heating & cooling, just around the corner.",
+      "elements": [
+        {
+          "tag": "div",
+          "cls": "inline-flex",
+          "text": "Ready when you are",
+          "color": "rgb(88, 88, 95)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "11px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "span",
+          "cls": "w-1.5",
+          "color": "rgb(88, 88, 95)",
+          "backgroundColor": "rgb(0, 74, 148)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "11px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "h2",
+          "cls": "text-h2",
+          "text": "Local heating & cooling, just ",
+          "color": "rgb(22, 22, 24)",
+          "fontSize": "48px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "group",
+          "text": "Book Appointment",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(14, 14, 42)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(255, 255, 255)",
+          "width": 20,
+          "height": 20,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "inline-flex",
+          "text": "Request a Quote",
+          "color": "rgb(22, 22, 24)",
+          "border": "1px solid rgb(239, 238, 235)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(22, 22, 24)",
+          "width": 20,
+          "height": 20,
+          "viewBox": "0 0 24 24",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "heading": "Site footer (port into Footer.astro)",
+      "elements": [
+        {
+          "tag": "div",
+          "cls": "rounded-2xl",
+          "text": "JT's Heating Cooling & Plumbin",
+          "color": "rgb(252, 251, 248)",
+          "backgroundColor": "rgb(14, 14, 42)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "img",
+          "cls": "w-10",
+          "color": "rgb(252, 251, 248)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "span",
+          "cls": "relative",
+          "color": "rgb(252, 251, 248)",
+          "backgroundColor": "oklch(0.765 0.177 163.223)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h4",
+          "cls": "text-xs",
+          "text": "Explore",
+          "color": "rgb(230, 228, 224)",
+          "fontSize": "12px"
+        },
+        {
+          "tag": "a",
+          "cls": "flex",
+          "text": "(616) 840-3105",
+          "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+          "fontSize": "14px"
+        },
+        {
+          "tag": "svg",
+          "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+          "fill": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+          "width": 16,
+          "height": 16,
+          "viewBox": "0 0 24 24",
+          "fontSize": "14px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(230, 228, 224)",
+          "fill": "rgb(230, 228, 224)",
+          "width": 16,
+          "height": 16,
+          "viewBox": "0 0 24 24",
+          "fontSize": "14px"
+        },
+        {
+          "tag": "h4",
+          "cls": "text-xs",
+          "text": "Book a visit",
+          "color": "rgb(230, 228, 224)",
+          "fontSize": "12px"
+        },
+        {
+          "tag": "a",
+          "cls": "group",
+          "text": "Book a Visit",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(0, 74, 148)",
+          "borderRadius": "3.35544e+07px",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(255, 255, 255)",
+          "width": 16,
+          "height": 16,
+          "viewBox": "0 0 24 24",
+          "fontSize": "14px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "relative",
+          "text": "JT’S HEATING COOLING & PLUMBIN",
+          "color": "rgb(252, 251, 248)",
+          "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "text-dark-muted-foreground",
+          "text": "Privacy",
+          "color": "rgb(230, 228, 224)",
+          "fontSize": "11px"
+        },
+        {
+          "tag": "a",
+          "cls": "text-dark-muted-foreground",
+          "text": "Terms",
+          "color": "rgb(230, 228, 224)",
+          "fontSize": "11px"
+        },
+        {
+          "tag": "a",
+          "cls": "text-dark-muted-foreground",
+          "text": "Insurance",
+          "color": "rgb(230, 228, 224)",
+          "fontSize": "11px"
+        },
+        {
+          "tag": "a",
+          "cls": "inline-flex",
+          "text": "Web Design and SEO by twalkerc",
+          "color": "rgb(230, 228, 224)",
+          "fontSize": "12px"
+        }
+      ]
+    }
+  ],
+  "imageTreatments": [],
+  "floatingOverlays": [],
+  "positionedOverlays": [],
+  "captureViewport": 1920,
+  "hiddenImages": []
+}

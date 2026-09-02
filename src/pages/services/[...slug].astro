@@ -1,0 +1,205 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FinalCTA from '@/components/home/FinalCTA.astro';
+import { SITE } from '@/config/site';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('services', ({ data }) => data.draft !== true);
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+const { title, description, image, audience, heroTitle, heroSubtext, seoTitle, seoDescription } = entry.data;
+const pageUrl = new URL(`/services/${entry.id}/`, SITE.url).toString();
+const mdxFilePath = `src/content/services/${entry.id}.mdx`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: title,
+  description: description,
+  url: pageUrl,
+  image,
+  areaServed: {
+    '@type': 'City',
+    name: 'Grand Rapids, MI',
+  },
+  provider: {
+    '@type': 'HVACBusiness',
+    name: SITE.name,
+    telephone: SITE.phone,
+    url: SITE.url,
+  },
+};
+
+const tocHeadings = headings ? headings.filter((h) => h.depth >= 2 && h.depth <= 3) : [];
+---
+
+<BaseLayout title={seoTitle || `${title} | ${SITE.name}`} description={seoDescription || description} image={image} jsonLd={jsonLd}>
+  <!-- Hero Section (Full Bleed) -->
+  <section class="w-full relative overflow-hidden bg-secondary" data-ps="src/pages/services/[...slug].astro:hero">
+    <div class="relative min-h-[420px] md:min-h-[480px] flex items-center w-full" data-ps="src/pages/services/[...slug].astro:heroInner">
+      <img
+        src={image}
+        alt={title}
+        class="absolute inset-0 w-full h-full object-cover object-center"
+        loading="eager"
+        fetchpriority="high"
+        data-ps="src/pages/services/[...slug].astro:heroImg"
+      />
+      <div
+        class="absolute inset-0 pointer-events-none"
+        style="background: linear-gradient(to right, rgba(14, 14, 42, 0.95) 0%, rgba(14, 14, 42, 0.85) 55%, rgba(14, 14, 42, 0.5) 100%);"
+        data-ps="src/pages/services/[...slug].astro:heroOverlay"
+      ></div>
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24 w-full z-10 relative" data-ps="src/pages/services/[...slug].astro:heroContent">
+        <div class="max-w-[820px]" data-ps="src/pages/services/[...slug].astro:cmxclf">
+          <h1 class="text-[34px] sm:text-[44px] md:text-[50px] font-semibold leading-[1.2] tracking-[-1.2px] text-white m-0 mb-4" data-ps="src/pages/services/[...slug].astro:h1">
+            {heroTitle || title}
+          </h1>
+          <p class="text-[16px] sm:text-[18px] text-white/90 leading-[1.6] max-w-[640px] mb-8" data-ps="src/pages/services/[...slug].astro:lede">
+            {heroSubtext || description}
+          </p>
+          <div class="flex flex-wrap items-center gap-4" data-ps="src/pages/services/[...slug].astro:actions">
+            <a href="/book/" class="bg-primary hover:bg-primary-hover text-white rounded-full px-7 py-3.5 text-[15px] sm:text-[16px] font-semibold flex items-center gap-2 shadow-lg transition-all no-underline" data-ps="src/pages/services/[...slug].astro:book">
+              Book this service
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" /></svg>
+            </a>
+            <a href={`tel:${SITE.phoneTel}`} class="bg-white/10 hover:bg-white/20 border border-white/25 text-white rounded-full px-7 py-3.5 text-[15px] sm:text-[16px] font-semibold transition-colors no-underline backdrop-blur-sm" data-ps="src/pages/services/[...slug].astro:call">
+              Call {SITE.phone}
+            </a>
+          </div>
+          {audience && (
+            <div class="mt-6 inline-flex items-center gap-2 text-white/80 text-[13px] font-medium" data-ps="src/pages/services/[...slug].astro:audience">
+              <span class="w-2 h-2 rounded-full bg-emerald-400" data-ps="src/pages/services/[...slug].astro:kaf4ip"></span>
+              <span data-ps="src/pages/services/[...slug].astro:kaf4io">Available for {audience} in Grand Rapids & West Michigan</span>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content & Sidebar Layout Container (max-w-[1400px] same as everywhere else) -->
+  <section class="bg-background py-14 sm:py-20" data-ps="src/pages/services/[...slug].astro:body">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/pages/services/[...slug].astro:container">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start" data-ps="src/pages/services/[...slug].astro:grid">
+        
+        <!-- Main Article Content Column -->
+        <main class="lg:col-span-8 min-w-0" data-ps="src/pages/services/[...slug].astro:main">
+          <article
+            class="prose prose-lg max-w-none text-foreground prose-headings:font-heading prose-headings:text-foreground prose-headings:tracking-tight prose-a:text-primary hover:prose-a:underline prose-strong:text-foreground [&_.remark-toc]:hidden"
+            data-mdx-file={mdxFilePath}
+            data-mdx-type="services"
+            data-ps="src/pages/services/[...slug].astro:article"
+          >
+            <Content />
+            
+            <div class="mt-12 pt-8 border-t border-border not-prose flex flex-wrap items-center justify-between gap-4 bg-surface rounded-2xl p-6 sm:p-8" data-ps="src/pages/services/[...slug].astro:bodyCtaBox">
+              <div data-ps="src/pages/services/[...slug].astro:cmxcle">
+                <h3 class="text-[20px] font-bold text-foreground m-0 mb-1" data-ps="src/pages/services/[...slug].astro:qgwzlw">Ready to get started?</h3>
+                <p class="text-[14px] text-muted-foreground m-0" data-ps="src/pages/services/[...slug].astro:c2eglf">Schedule your appointment with Jordan Miller today.</p>
+              </div>
+              <div class="flex flex-wrap items-center gap-3" data-ps="src/pages/services/[...slug].astro:cmxcld">
+                <a href="/book/" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white rounded-full px-6 py-3 text-[14px] font-semibold no-underline shadow-xs" data-ps="src/pages/services/[...slug].astro:bodyBook">
+                  Book a visit
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" /></svg>
+                </a>
+                <a href={`tel:${SITE.phoneTel}`} class="inline-flex items-center gap-2 bg-white hover:bg-white/80 border border-border text-foreground rounded-full px-5 py-3 text-[14px] font-semibold no-underline" data-ps="src/pages/services/[...slug].astro:bodyCall">
+                  {SITE.phone}
+                </a>
+              </div>
+            </div>
+          </article>
+        </main>
+
+        <!-- Sidebar Column with TOC & About Jordan Miller -->
+        <aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-[calc(var(--nav-height)+1.5rem)]" data-ps="src/pages/services/[...slug].astro:sidebar">
+          
+          <!-- Table of Contents Panel -->
+          {tocHeadings.length > 0 && (
+            <div class="bg-surface rounded-2xl sm:rounded-3xl border border-border p-6 sm:p-7 shadow-xs" data-ps="src/pages/services/[...slug].astro:toc">
+              <h3 class="text-[16px] sm:text-[17px] font-bold text-foreground mb-4 flex items-center gap-2 m-0" data-ps="src/pages/services/[...slug].astro:tocHeading">
+                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                Table of Contents
+              </h3>
+              <nav class="space-y-1.5 text-[14px]" data-ps="src/pages/services/[...slug].astro:tocNav">
+                {tocHeadings.map((heading, idx) => (
+                  <a
+                    href={`#${heading.slug}`}
+                    class:list={[
+                      "block py-1 transition-colors hover:text-primary hover:underline",
+                      heading.depth === 2 ? "text-foreground font-semibold" : "text-muted-foreground pl-3 text-[13px]"
+                    ]}
+                    data-ps={`src/pages/services/[...slug].astro:tocLink-${idx}`}
+                  >
+                    {heading.text}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          )}
+
+          <!-- About Jordan Miller Panel -->
+          <div class="bg-surface rounded-2xl sm:rounded-3xl border border-border p-6 sm:p-7 shadow-xs" data-ps="src/pages/services/[...slug].astro:aboutJordan">
+            <div class="flex items-center gap-4 mb-4" data-ps="src/pages/services/[...slug].astro:aboutHeader">
+              <img
+                src="https://pagesmith-cdn.com/381bbb8d/images/jt-owner-1024.webp"
+                alt="Jordan Miller, Owner of JT's Heating Cooling & Plumbing"
+                class="w-16 h-16 rounded-full object-cover object-top border-2 border-white shadow-sm flex-shrink-0"
+                loading="lazy"
+                data-ps="src/pages/services/[...slug].astro:aboutImg"
+              />
+              <div data-ps="src/pages/services/[...slug].astro:cmxclc">
+                <h3 class="text-[17px] sm:text-[18px] font-bold text-foreground m-0 leading-snug" data-ps="src/pages/services/[...slug].astro:aboutName">
+                  Jordan Miller "JT"
+                </h3>
+                <p class="text-[12px] font-semibold tracking-wider text-primary uppercase m-0 mt-0.5" data-ps="src/pages/services/[...slug].astro:aboutTitle">
+                  Owner & Lead Technician
+                </p>
+                <p class="text-[12px] text-muted-foreground m-0" data-ps="src/pages/services/[...slug].astro:aboutLoc">
+                  Grand Rapids & West Michigan
+                </p>
+              </div>
+            </div>
+
+            <p class="text-[14px] text-muted-foreground leading-relaxed m-0 mb-5" data-ps="src/pages/services/[...slug].astro:aboutBio">
+              No commissioned salespeople, dispatch tiers, or surprise fees. When you call JT's, you talk directly with Jordan for straightforward diagnosis, honest advice, and clean workmanship.
+            </p>
+
+            <div class="space-y-2 pt-4 border-t border-border" data-ps="src/pages/services/[...slug].astro:aboutActions">
+              <a
+                href="/book/"
+                class="w-full bg-primary hover:bg-primary-hover text-white rounded-full py-3 px-5 text-[14px] font-semibold flex items-center justify-center gap-2 transition-all no-underline shadow-xs"
+                data-ps="src/pages/services/[...slug].astro:aboutBook"
+              >
+                Book with Jordan
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" /></svg>
+              </a>
+              <a
+                href={`tel:${SITE.phoneTel}`}
+                class="w-full bg-white hover:bg-white/80 border border-border text-foreground rounded-full py-2.5 px-5 text-[14px] font-semibold flex items-center justify-center gap-2 transition-colors no-underline"
+                data-ps="src/pages/services/[...slug].astro:aboutCall"
+              >
+                Call {SITE.phone}
+              </a>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-border/70 flex items-center justify-between text-[11px] font-medium text-muted-foreground" data-ps="src/pages/services/[...slug].astro:aboutTrust">
+              <span class="flex items-center gap-1" data-ps="src/pages/services/[...slug].astro:kaf4in"><svg class="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Licensed & Insured</span>
+              <span class="flex items-center gap-1" data-ps="src/pages/services/[...slug].astro:kaf4im"><svg class="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 5.0 Star Rated</span>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <FinalCTA />
+</BaseLayout>
