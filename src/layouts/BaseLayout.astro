@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation.astro';
 import Footer from '@/components/Footer.astro';
 import SEOHead from '@/components/SEOHead.astro';
 import { SITE } from '@/config/site';
+import { servicePageJsonLd, serviceSlugFromPath } from '@/config/service-page';
 
 export interface Props {
   title: string;
@@ -18,6 +19,8 @@ export interface Props {
 
 const { title, description, image, type, jsonLd, noIndex, canonicalUrl, lang } = Astro.props;
 const htmlLang = lang ?? Astro.currentLocale ?? (SITE as any).lang ?? 'en';
+const isServiceDetail = Boolean(serviceSlugFromPath(Astro.url.pathname));
+const resolvedJsonLd = (await servicePageJsonLd(Astro.url.pathname)) ?? jsonLd;
 ---
 
 <!DOCTYPE html>
@@ -31,7 +34,7 @@ const htmlLang = lang ?? Astro.currentLocale ?? (SITE as any).lang ?? 'en';
       description={description}
       image={image}
       type={type}
-      jsonLd={jsonLd}
+      jsonLd={resolvedJsonLd}
       noIndex={noIndex}
       canonicalUrl={canonicalUrl}
     />
@@ -40,9 +43,15 @@ const htmlLang = lang ?? Astro.currentLocale ?? (SITE as any).lang ?? 'en';
   </head>
     <body data-ps="src/layouts/BaseLayout.astro:4vj8al">
       <Navigation />
-      <main data-ps="src/layouts/BaseLayout.astro:yuyoow">
-        <slot />
-      </main>
+      {isServiceDetail ? (
+        <div>
+          <slot />
+        </div>
+      ) : (
+        <main data-ps="src/layouts/BaseLayout.astro:yuyoow">
+          <slot />
+        </main>
+      )}
       <Footer />
 
       <!-- Animation Styles -->
