@@ -1,15 +1,17 @@
 ---
 import { getCollection } from 'astro:content';
 import HeroReviewSlider from '@/components/HeroReviewSlider.astro';
+import { SCHEMA } from '@/config/jsonld';
 
 const reviews = (await getCollection('reviews')).sort(
   (a, b) => b.data.reviewDate.valueOf() - a.data.reviewDate.valueOf(),
 );
-const reviewCount = reviews.length;
+const reviewCount = SCHEMA.reviewCount;
+const listedCount = reviews.length;
 const avg =
-  reviewCount === 0
+  listedCount === 0
     ? 5
-    : Math.round((reviews.reduce((sum, r) => sum + r.data.rating, 0) / reviewCount) * 10) / 10;
+    : Math.round((reviews.reduce((sum, r) => sum + r.data.rating, 0) / listedCount) * 10) / 10;
 ---
 
 <!-- Full-bleed Hero -->

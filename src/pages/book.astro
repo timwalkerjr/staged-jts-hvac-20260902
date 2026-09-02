@@ -4,10 +4,32 @@ import BookHero from '@/components/book/BookHero.astro';
 import BookReviews from '@/components/book/BookReviews.astro';
 import BookForm from '@/components/book/BookForm.astro';
 import FinalCTA from '@/components/home/FinalCTA.astro';
+import { absoluteUrl, localBusiness, webPage } from '@/config/jsonld';
+
+const title = "Book a Visit | JT's Heating Cooling & Plumbing";
+const description =
+  'Request a service visit in under a minute for Grand Rapids and West Michigan. Call JT for current availability.';
+
+const jsonLd = [
+  webPage({
+    name: title,
+    description,
+    path: '/book/',
+    extra: {
+      potentialAction: {
+        '@type': 'ReserveAction',
+        name: 'Request a service visit',
+        target: absoluteUrl('/book/'),
+      },
+    },
+  }),
+  localBusiness(),
+];
 ---
 <BaseLayout
-  title="Book a Visit | JT's Heating Cooling & Plumbing"
-  description="Request a service visit in under a minute for Grand Rapids and West Michigan. Call JT for current availability."
+  title={title}
+  description={description}
+  jsonLd={jsonLd}
 >
   <BookHero />
   <BookReviews />

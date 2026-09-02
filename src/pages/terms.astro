@@ -1,0 +1,42 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SITE } from '@/config/site';
+---
+
+<BaseLayout
+  title={`Terms of Use | ${SITE.name}`}
+  description="Terms for using the JT's Heating Cooling & Plumbing website and requesting service."
+>
+  <section class="bg-[hsl(45_33%_98%)]">
+    <div class="max-w-[800px] mx-auto px-4 py-20 sm:py-24">
+      <p class="text-[12px] font-semibold uppercase tracking-wider text-muted-foreground mb-4">Legal</p>
+      <h1 class="text-[36px] md:text-[48px] font-semibold tracking-tight m-0 mb-6">Terms of Use</h1>
+      <p class="text-[16px] text-muted-foreground mb-10">Last updated September 2, 2026</p>
+      <div class="prose prose-lg max-w-none text-foreground">
+        <p>
+          This website is provided by JT's Heating Cooling & Plumbing in Grand Rapids, Michigan. By using the site or sending a booking or contact request, you agree to these terms.
+        </p>
+        <h2>Requests are not a confirmed appointment</h2>
+        <p>
+          Submitting the booking form or leaving a message is a request, not a scheduled job. JT will review availability and contact you to confirm. Service is first come, first served.
+        </p>
+        <h2>Quotes and work</h2>
+        <p>
+          Pricing depends on the home, the equipment, and the scope of work. You will receive a clear quote before work begins. Repair versus replacement is your decision after we explain the options.
+        </p>
+        <h2>Website content</h2>
+        <p>
+          Service descriptions and reviews on this site are for general information. They are not a guarantee of a specific result or price for your home.
+        </p>
+        <h2>Emergencies</h2>
+        <p>
+          For gas leaks or immediate safety hazards, call 911 and your utility company first, then call {SITE.phone}.
+        </p>
+        <h2>Questions</h2>
+        <p>
+          Call <a href={`tel:${SITE.phoneTel}`}>{SITE.phone}</a> or <a href="/contact/">send a message</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
