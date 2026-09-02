@@ -126,13 +126,13 @@ const isContact = currentPath === '/contact/' || currentPath.startsWith('/contac
     aria-label="Mobile navigation"
    data-ps="src/components/Navigation.astro:gqvsdc">
     <div class="flex flex-col gap-3" data-ps="src/components/Navigation.astro:gqvsdd">
-      <a href="/" class="font-heading text-[15px] font-semibold tracking-[0.04em] text-primary py-2 no-underline" data-ps="src/components/Navigation.astro:7vkjqo">Home</a>
-      <a href="/services/" class="font-heading text-[15px] font-semibold tracking-[0.04em] text-foreground/80 hover:text-primary py-2 no-underline" data-ps="src/components/Navigation.astro:7vkjqp">Services</a>
-      <a href="/pricing/" class="font-heading text-[15px] font-semibold tracking-[0.04em] text-foreground/80 hover:text-primary py-2 no-underline" data-ps="src/components/Navigation.astro:7vkjrb">Pricing</a>
-      <a href="/about/" class="font-heading text-[15px] font-semibold tracking-[0.04em] text-foreground/80 hover:text-primary py-2 no-underline" data-ps="src/components/Navigation.astro:7vkjrc">About</a>
-      <a href="/reviews/" class="font-heading text-[15px] font-semibold tracking-[0.04em] text-foreground/80 hover:text-primary py-2 no-underline" data-ps="src/components/Navigation.astro:7vkjrd">Reviews</a>
-      <a href="/area/" class="font-heading text-[15px] font-semibold tracking-[0.04em] text-foreground/80 hover:text-primary py-2 no-underline" data-ps="src/components/Navigation.astro:7vkjre">Service Area</a>
-      <a href="/contact/" class="font-heading text-[15px] font-semibold tracking-[0.04em] text-foreground/80 hover:text-primary py-2 no-underline" data-ps="src/components/Navigation.astro:7vkjrf">Contact</a>
+      <a href="/" class={`font-heading text-[15px] font-semibold tracking-[0.04em] py-2 no-underline ${isHome ? 'text-primary' : 'text-foreground/80 hover:text-primary'}`} data-ps="src/components/Navigation.astro:7vkjqo">Home</a>
+      <a href="/services/" class={`font-heading text-[15px] font-semibold tracking-[0.04em] py-2 no-underline ${isServices ? 'text-primary' : 'text-foreground/80 hover:text-primary'}`} data-ps="src/components/Navigation.astro:7vkjqp">Services</a>
+      <a href="/pricing/" class={`font-heading text-[15px] font-semibold tracking-[0.04em] py-2 no-underline ${isPricing ? 'text-primary' : 'text-foreground/80 hover:text-primary'}`} data-ps="src/components/Navigation.astro:7vkjrb">Pricing</a>
+      <a href="/about/" class={`font-heading text-[15px] font-semibold tracking-[0.04em] py-2 no-underline ${isAbout ? 'text-primary' : 'text-foreground/80 hover:text-primary'}`} data-ps="src/components/Navigation.astro:7vkjrc">About</a>
+      <a href="/reviews/" class={`font-heading text-[15px] font-semibold tracking-[0.04em] py-2 no-underline ${isReviews ? 'text-primary' : 'text-foreground/80 hover:text-primary'}`} data-ps="src/components/Navigation.astro:7vkjrd">Reviews</a>
+      <a href="/area/" class={`font-heading text-[15px] font-semibold tracking-[0.04em] py-2 no-underline ${isArea ? 'text-primary' : 'text-foreground/80 hover:text-primary'}`} data-ps="src/components/Navigation.astro:7vkjre">Service Area</a>
+      <a href="/contact/" class={`font-heading text-[15px] font-semibold tracking-[0.04em] py-2 no-underline ${isContact ? 'text-primary' : 'text-foreground/80 hover:text-primary'}`} data-ps="src/components/Navigation.astro:7vkjrf">Contact</a>
 
       <div class="pt-4 border-t border-border flex flex-col gap-3" data-ps="src/components/Navigation.astro:gqvsde">
         <a

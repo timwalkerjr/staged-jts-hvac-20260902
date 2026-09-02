@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SITE } from '@/config/site';
+---
+
+<BaseLayout
+  title={`Licensed & Insured | ${SITE.name}`}
+  description="JT's Heating Cooling & Plumbing is a licensed and insured, owner-operated HVAC and plumbing company in Grand Rapids, Michigan."
+>
+  <section class="bg-[hsl(45_33%_98%)]" data-ps="src/pages/insurance.astro:l7lcay">
+    <div class="max-w-[800px] mx-auto px-4 py-20 sm:py-24" data-ps="src/pages/insurance.astro:riqcip">
+      <p class="text-[12px] font-semibold uppercase tracking-wider text-muted-foreground mb-4" data-ps="src/pages/insurance.astro:6ktwnv">Trust</p>
+      <h1 class="text-[36px] md:text-[48px] font-semibold tracking-tight m-0 mb-6" data-ps="src/pages/insurance.astro:p83nq3">Licensed & insured</h1>
+      <div class="prose prose-lg max-w-none text-foreground" data-ps="src/pages/insurance.astro:riqcio">
+        <p data-ps="src/pages/insurance.astro:6ktwnw">
+          JT's Heating Cooling & Plumbing is fully licensed and insured in the state of Michigan. It is an owner-operated business — the person you talk to is the person who shows up.
+        </p>
+        <p data-ps="src/pages/insurance.astro:6ktwnx">
+          Happy to share insurance and licensing paperwork before any job. If you need a certificate for a property manager, HOA, or insurer, ask when you book or call {SITE.phone}.
+        </p>
+        <p data-ps="src/pages/insurance.astro:6ktwny">
+          <a href="/book/" data-ps="src/pages/insurance.astro:6t34on">Book a visit</a> or <a href="/contact/" data-ps="src/pages/insurance.astro:6t34oo">send a message</a> and we will get back to you.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

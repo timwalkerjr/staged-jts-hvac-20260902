@@ -12,7 +12,7 @@ export interface Props {
   publishedTime?: string;
   modifiedTime?: string;
   canonicalUrl?: string;
-  jsonLd?: Record<string, any>;
+  jsonLd?: Record<string, any> | Record<string, any>[];
   noIndex?: boolean;
 }
 
@@ -76,9 +76,9 @@ const ogImageURL = finalImage.startsWith('http') ? finalImage : new URL(finalIma
 <title>{title}</title>
 
 <!-- Structured Data / JSON-LD -->
-{jsonLd && (
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-)}
+{jsonLd && (Array.isArray(jsonLd) ? jsonLd : [jsonLd]).map((block) => (
+  <script type="application/ld+json" set:html={JSON.stringify(block)} />
+))}
 
-<link rel="icon" type="image/svg+xml" href="https://pagesmith-cdn.com/381bbb8d/favicons/favicon-6c9c6c82.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="https://pagesmith-cdn.com/381bbb8d/favicons/apple-touch-icon-6c9c6c82.png" />
+<link rel="icon" type="image/svg+xml" href="https://pagesmith-cdn.com/381bbb8d/favicons/favicon-0b7e44aa.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://pagesmith-cdn.com/381bbb8d/favicons/apple-touch-icon-0b7e44aa.png" />

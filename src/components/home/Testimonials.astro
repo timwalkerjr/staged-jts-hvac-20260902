@@ -1,11 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
+import { SCHEMA } from '@/config/jsonld';
 
 const allReviews = await getCollection('reviews');
 const sortedReviews = [...allReviews].sort(
   (a, b) => b.data.reviewDate.valueOf() - a.data.reviewDate.valueOf(),
 );
-const reviewCount = allReviews.length;
+const reviewCount = SCHEMA.reviewCount;
 const featuredReviews = sortedReviews.slice(0, 6);
 ---
 
@@ -36,7 +37,7 @@ const featuredReviews = sortedReviews.slice(0, 6);
               <span class="text-[13px] text-muted-foreground block" data-ps={`src/components/home/Testimonials.astro:jsx5kc-${idx}`}>Verified Google review · {review.data.reviewDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
             </div>
             <div class="flex text-amber-400 text-sm" data-ps={`src/components/home/Testimonials.astro:jqcpxu-${idx}`}>
-              {Array.from({ length: Math.round(review.data.rating) }).map((__psIdx2) => (
+              {Array.from({ length: Math.round(review.data.rating) }).map((_, __psIdx2) => (
                 <span data-ps={`src/components/home/Testimonials.astro:jsx5kb-${__psIdx2}`}>★</span>
               ))}
             </div>

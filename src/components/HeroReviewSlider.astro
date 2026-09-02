@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { SCHEMA } from '@/config/jsonld';
 
 const allReviews = await getCollection('reviews');
 const shuffled = [...allReviews].sort(() => Math.random() - 0.5);
@@ -26,7 +27,7 @@ const avg =
     >
       <div class="flex items-center gap-2 text-[12px] font-semibold text-white/90 tracking-wider uppercase mb-3" data-ps="src/components/HeroReviewSlider.astro:rating">
         <span class="text-amber-400 text-[14px]" data-ps="src/components/HeroReviewSlider.astro:yh4vdj">★</span>
-        <span data-ps="src/components/HeroReviewSlider.astro:yh4vdi">5.0 · 31 GOOGLE REVIEWS</span>
+        <span data-ps="src/components/HeroReviewSlider.astro:yh4vdi">{avg.toFixed(1)} · {SCHEMA.reviewCount} GOOGLE REVIEWS</span>
       </div>
       <div class="flex items-center gap-1 text-amber-400 text-[15px] mb-4" data-hero-stars data-ps="src/components/HeroReviewSlider.astro:stars">
         {Array.from({ length: Math.round(slides[0].rating) }).map(() => <span data-ps="src/components/HeroReviewSlider.astro:yh4vdh">★</span>)}

@@ -6,10 +6,36 @@ import AboutQuote from '@/components/about/AboutQuote.astro';
 import AboutWhyTrust from '@/components/about/AboutWhyTrust.astro';
 import AboutLifestyle from '@/components/about/AboutLifestyle.astro';
 import FinalCTA from '@/components/home/FinalCTA.astro';
+import { SCHEMA, businessId, localBusiness, webPage } from '@/config/jsonld';
+
+const title = 'About JT | Local HVAC Tech in Grand Rapids, MI';
+const description =
+  "Meet JT, owner of JT's Heating Cooling & Plumbing, serving Grand Rapids and West Michigan. Licensed, insured, and owner-operated.";
+
+const jsonLd = [
+  webPage({
+    type: 'AboutPage',
+    name: title,
+    description,
+    path: '/about/',
+  }),
+  localBusiness(),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Jordan Miller',
+    alternateName: 'JT',
+    jobTitle: 'Owner & Lead Technician',
+    image: SCHEMA.ownerImage,
+    description,
+    worksFor: { '@id': businessId() },
+  },
+];
 ---
 <BaseLayout
-  title="About JT | Local HVAC Tech in Grand Rapids, MI"
-  description="Meet JT, owner of JT's Heating Cooling & Plumbing, serving Grand Rapids and West Michigan. Licensed, insured, and owner-operated."
+  title={title}
+  description={description}
+  jsonLd={jsonLd}
 >
   <AboutHero />
   <AboutReviews />

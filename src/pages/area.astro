@@ -6,10 +6,25 @@ import AreaMap from '@/components/area/AreaMap.astro';
 import AreaCities from '@/components/area/AreaCities.astro';
 import AreaCoverage from '@/components/area/AreaCoverage.astro';
 import FinalCTA from '@/components/home/FinalCTA.astro';
+import { localBusiness, webPage } from '@/config/jsonld';
+
+const title = 'Service Area | Grand Rapids & West Michigan';
+const description =
+  "JT's Heating Cooling & Plumbing serves Grand Rapids, Kentwood, Wyoming, Rockford, and surrounding West Michigan communities. Call for current availability.";
+
+const jsonLd = [
+  webPage({
+    name: title,
+    description,
+    path: '/area/',
+  }),
+  localBusiness(),
+];
 ---
 <BaseLayout
-  title="Service Area | Grand Rapids & West Michigan"
-  description="JT's Heating Cooling & Plumbing serves Grand Rapids, Kentwood, Wyoming, Rockford, and surrounding West Michigan communities. Call for current availability."
+  title={title}
+  description={description}
+  jsonLd={jsonLd}
 >
   <AreaHero />
   <AreaReviews />

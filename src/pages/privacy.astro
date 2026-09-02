@@ -1,0 +1,42 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SITE } from '@/config/site';
+---
+
+<BaseLayout
+  title={`Privacy Policy | ${SITE.name}`}
+  description="How JT's Heating Cooling & Plumbing collects and uses information from booking and contact forms."
+>
+  <section class="bg-[hsl(45_33%_98%)]" data-ps="src/pages/privacy.astro:eocs6w">
+    <div class="max-w-[800px] mx-auto px-4 py-20 sm:py-24" data-ps="src/pages/privacy.astro:esgooh">
+      <p class="text-[12px] font-semibold uppercase tracking-wider text-muted-foreground mb-4" data-ps="src/pages/privacy.astro:brhx9z">Legal</p>
+      <h1 class="text-[36px] md:text-[48px] font-semibold tracking-tight m-0 mb-6" data-ps="src/pages/privacy.astro:g0kebt">Privacy Policy</h1>
+      <p class="text-[16px] text-muted-foreground mb-10" data-ps="src/pages/privacy.astro:brhxa0">Last updated September 2, 2026</p>
+      <div class="prose prose-lg max-w-none text-foreground" data-ps="src/pages/privacy.astro:esgooi">
+        <p data-ps="src/pages/privacy.astro:brhxa1">
+          JT's Heating Cooling & Plumbing (“JT’s,” “we”) is an owner-operated HVAC and plumbing business in Grand Rapids, Michigan. This page explains how we handle information you send us through this website.
+        </p>
+        <h2 data-ps="src/pages/privacy.astro:ghm1gu">What we collect</h2>
+        <p data-ps="src/pages/privacy.astro:brhxa2">
+          When you use the booking or contact form, we receive the details you submit — typically your name, phone number, email, ZIP code, address, a description of the job, and any photos you attach. Phone calls and texts to {SITE.phone} are handled directly by JT.
+        </p>
+        <h2 data-ps="src/pages/privacy.astro:ghm1gt">How we use it</h2>
+        <p data-ps="src/pages/privacy.astro:brhxa3">
+          We use that information only to respond to your request, schedule a visit, and follow up about the work. We do not sell your information or use it for third-party marketing.
+        </p>
+        <h2 data-ps="src/pages/privacy.astro:ghm1gs">Who sees it</h2>
+        <p data-ps="src/pages/privacy.astro:brhxa4">
+          Form submissions are delivered to JT through our form provider so we can read and reply. We do not share your information except as needed to complete the job you asked for, or if the law requires it.
+        </p>
+        <h2 data-ps="src/pages/privacy.astro:ghm1gr">How long we keep it</h2>
+        <p data-ps="src/pages/privacy.astro:brhxa5">
+          We keep contact and job details as long as needed to serve you and keep normal business records. You can ask us to update or delete information we hold by calling {SITE.phone}.
+        </p>
+        <h2 data-ps="src/pages/privacy.astro:ghm1gq">Questions</h2>
+        <p data-ps="src/pages/privacy.astro:najazv">
+          Call <a href={`tel:${SITE.phoneTel}`} data-ps="src/pages/privacy.astro:ivftzr">{SITE.phone}</a> or use the <a href="/contact/" data-ps="src/pages/privacy.astro:ivftzs">contact form</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
