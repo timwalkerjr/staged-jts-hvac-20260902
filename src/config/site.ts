@@ -1,8 +1,8 @@
 export const SITE = {
   name: 'JT\'s Heating Cooling & Plumbing',
-  title: 'JT\'s Heating Cooling & Plumbing',
+  title: 'JT\'s Heating Cooling & Plumbing | Grand Rapids, MI',
   description:
-    'Furnace, A/C, heat pump, mini-split, and water heater repair and installation across Grand Rapids and West Michigan by JT\'s Heating Cooling & Plumbing',
+    'Honest furnace, A/C, heat pump, mini-split, and water heater repair and installation in Grand Rapids and West Michigan. Licensed, insured, and owner-operated.',
   url:
     (typeof process !== 'undefined' && process.env.SITE_URL) ||
     'https://jts-hvac.netlify.app',
