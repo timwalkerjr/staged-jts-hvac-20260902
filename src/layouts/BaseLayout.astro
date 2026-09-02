@@ -10,7 +10,7 @@ export interface Props {
   description?: string;
   image?: string;
   type?: string;
-  jsonLd?: Record<string, any>;
+  jsonLd?: Record<string, any> | Record<string, any>[];
   noIndex?: boolean;
   canonicalUrl?: string;
   lang?: string;

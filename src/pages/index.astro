@@ -10,28 +10,25 @@ import Testimonials from '@/components/home/Testimonials.astro';
 import ServiceAreaGrid from '@/components/home/ServiceAreaGrid.astro';
 import FAQ from '@/components/home/FAQ.astro';
 import FinalCTA from '@/components/home/FinalCTA.astro';
+import { getCollection } from 'astro:content';
 import { SITE } from '@/config/site';
+import { faqPage, localBusiness, offerCatalog } from '@/config/jsonld';
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'HVACBusiness',
-  name: "JT's Heating Cooling & Plumbing",
-  description: SITE.description,
-  url: SITE.url,
-  telephone: SITE.phone,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Grand Rapids',
-    addressRegion: 'MI',
-    addressCountry: 'US'
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 42.9634,
-    longitude: -85.6681
-  },
-  priceRange: '$$'
-};
+const services = (await getCollection('services', ({ data }) => data.draft !== true))
+  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+
+const jsonLd = [
+  localBusiness({
+    hasOfferCatalog: offerCatalog(
+      services.map((entry) => ({
+        id: entry.id,
+        title: entry.data.title,
+        description: entry.data.seoDescription || entry.data.description,
+      })),
+    ),
+  }),
+  faqPage(),
+];
 ---
 
 <BaseLayout
