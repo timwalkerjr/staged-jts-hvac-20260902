@@ -4,6 +4,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import FinalCTA from '@/components/home/FinalCTA.astro';
 import HeroReviewSlider from '@/components/HeroReviewSlider.astro';
 import { SITE } from '@/config/site';
+import { absoluteUrl, businessId, extractFaqsFromMarkdown, faqPageFromItems, SERVICE_CITIES } from '@/config/jsonld';
 
 export async function getStaticPaths() {
   const entries = await getCollection('services', ({ data }) => data.draft !== true);
@@ -16,27 +17,34 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 const { title, description, image, audience, heroTitle, heroSubtext, seoTitle, seoDescription } = entry.data;
-const pageUrl = new URL(`/services/${entry.id}/`, SITE.url).toString();
+const pageUrl = absoluteUrl(`/services/${entry.id}/`);
 const mdxFilePath = `src/content/services/${entry.id}.mdx`;
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: title,
-  description: description,
-  url: pageUrl,
-  image,
-  areaServed: {
-    '@type': 'City',
-    name: 'Grand Rapids, MI',
+const serviceFaqs = extractFaqsFromMarkdown(entry.body ?? '');
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: title,
+    serviceType: title,
+    description: seoDescription || description,
+    url: pageUrl,
+    image,
+    areaServed: SERVICE_CITIES.map((name) => ({
+      '@type': 'City',
+      name,
+    })),
+    provider: {
+      '@id': businessId(),
+      '@type': 'HVACBusiness',
+      name: SITE.name,
+      telephone: SITE.phone,
+      url: SITE.url,
+    },
   },
-  provider: {
-    '@type': 'HVACBusiness',
-    name: SITE.name,
-    telephone: SITE.phone,
-    url: SITE.url,
-  },
-};
+  ...(serviceFaqs.length > 0 ? [faqPageFromItems(serviceFaqs)] : []),
+];
 
 const tocHeadings = headings ? headings.filter((h) => h.depth >= 2 && h.depth <= 3) : [];
 ---
@@ -98,7 +106,7 @@ const tocHeadings = headings ? headings.filter((h) => h.depth >= 2 && h.depth <=
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start" data-ps="src/pages/services/[...slug].astro:grid">
         
         <!-- Main Article Content Column -->
-        <main class="lg:col-span-8 min-w-0" data-ps="src/pages/services/[...slug].astro:main">
+        <div class="lg:col-span-8 min-w-0" data-ps="src/pages/services/[...slug].astro:articleCol">
           <article
             class="prose prose-lg max-w-none text-foreground prose-headings:font-heading prose-headings:text-foreground prose-headings:tracking-tight prose-a:text-primary hover:prose-a:underline prose-strong:text-foreground [&_.remark-toc]:hidden"
             data-mdx-file={mdxFilePath}
@@ -123,7 +131,7 @@ const tocHeadings = headings ? headings.filter((h) => h.depth >= 2 && h.depth <=
               </div>
             </div>
           </article>
-        </main>
+        </div>
 
         <!-- Sidebar Column with TOC & About Jordan Miller -->
         <aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-[calc(var(--nav-height)+1.5rem)]" data-ps="src/pages/services/[...slug].astro:sidebar">
